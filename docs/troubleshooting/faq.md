@@ -4,13 +4,14 @@
 
 ### What is OmniFetch?
 
-OmniFetch is a native SwiftUI app for iOS, iPadOS, and tvOS that provides unified monitoring and management for your media services. It supports Sonarr, Radarr, Lidarr, Readarr, Jellyseerr, SABnzbd, Prowlarr, and Plex.
+OmniFetch is a native SwiftUI app for iOS that provides unified monitoring and management for your media services. It supports Sonarr, Radarr, Lidarr, Jellyseerr, and SABnzbd, with iPad, Apple TV, and Mac support coming soon.
 
 ### Which devices are supported?
 
-- **iOS 17.0+** - iPhone and iPad
-- **tvOS 17.0+** - Apple TV
-- **macOS 14.0+** - Mac (via Mac Catalyst)
+- **iPhone**: iOS 17.0+ - **Available Now**
+- **iPad**: iPadOS 17.0+ - **Coming Soon**
+- **Apple TV**: tvOS 17.0+ - **Coming Soon**
+- **Mac**: macOS 14.0+ - **Coming Soon**
 
 ### Is OmniFetch free?
 
@@ -26,11 +27,9 @@ OmniFetch requires internet connectivity to communicate with your services. Howe
 
 API keys are found in different locations for each service:
 
-- **Sonarr/Radarr/Lidarr/Readarr**: Settings → General → Security → API Key
+- **Sonarr/Radarr/Lidarr**: Settings → General → Security → API Key
 - **Jellyseerr**: Settings → General → API Key  
 - **SABnzbd**: Config → General → Security → API Key
-- **Prowlarr**: Settings → General → Security → API Key
-- **Plex**: Account → Privacy → "Get Token" (requires Plex Pass)
 
 ### Can I use local network services?
 
@@ -194,11 +193,11 @@ You can view cached data offline, but real-time monitoring and notifications req
 
 ### How do I request new features?
 
-Feature requests can be submitted through the main OmniFetch GitHub repository. Popular requests are prioritized for future releases.
+Feature requests can be submitted through the app's feedback system or TestFlight feedback. Popular requests are prioritized for future releases.
 
 ### Will OmniFetch support more services?
 
-Service support is continually expanded based on user demand and API availability. Check the GitHub repository for planned integrations.
+Service support is continually expanded based on user demand and API availability. Updates on planned integrations are shared through app release notes.
 
 ### Is there a web version planned?
 
@@ -206,4 +205,4 @@ Currently, OmniFetch is focused on native Apple platform experiences. A web vers
 
 ---
 
-**Still have questions?** Check the [Troubleshooting Guide](common-issues.md) for more detailed solutions or visit the GitHub repository for additional support.
+**Still have questions?** Check the [Troubleshooting Guide](common-issues.md) for more detailed solutions or contact support through the app's feedback system.
