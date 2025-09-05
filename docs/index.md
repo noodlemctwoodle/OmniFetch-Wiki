@@ -1,7 +1,6 @@
-# OmniFetch Documentation
 
 <div align="center">
-  <h1>OmniFetch</h1>
+  <h1>OmniFetch Documentation</h1>
   <p><em>Comprehensive monitoring and management for your media services</em></p>
 </div>
 
@@ -16,25 +15,25 @@ OmniFetch is a powerful iOS, iPadOS, and tvOS application designed to streamline
 - **Native Experience**
 
     ---
-    
+
     Built with SwiftUI for optimal performance on all Apple platforms. Follows Apple's Human Interface Guidelines for familiar, intuitive interactions.
 
 - **Cross-Device Sync**
 
     ---
-    
+
     CloudKit integration keeps your configurations synchronized across iPhone, iPad, Apple TV, and Mac. Set up once, access everywhere.
 
 - **Real-Time Alerts**
 
     ---
-    
+
     Webhook-powered push notifications deliver instant alerts about downloads, requests, and system health directly to your devices.
 
 - **Comprehensive Monitoring**
 
     ---
-    
+
     Monitor download queues, system health, user requests, and library statistics across all your media services from a single interface.
 
 </div>
@@ -136,5 +135,3 @@ OmniFetch is built with cutting-edge Apple technologies:
 </div>
 
 ---
-
-*Built with ❤️ for the media management community*

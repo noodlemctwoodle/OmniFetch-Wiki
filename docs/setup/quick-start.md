@@ -57,8 +57,8 @@ API Key: xyz987uvw654rst321
 
 1. **Tap "Test Connection"** after entering details
 2. **Wait for Result**:
-   - ✅ **Success**: Connection working, proceed to save
-   - ❌ **Failed**: Check URL and API key, try again
+   - **Success**: Connection working, proceed to save
+   - **Failed**: Check URL and API key, try again
 3. **Save Service** once test passes
 
 ## Step 4: Enable Notifications
@@ -154,11 +154,11 @@ Once your first service is working:
 
 After completing quick start, you should have:
 
-- ✅ OmniFetch installed and permissions granted
-- ✅ At least one service configured and connected
-- ✅ Service showing green status on main screen
-- ✅ Test notification received successfully
-- ✅ Basic understanding of adding more services
+- **✓** OmniFetch installed and permissions granted
+- **✓** At least one service configured and connected
+- **✓** Service showing green status on main screen
+- **✓** Test notification received successfully
+- **✓** Basic understanding of adding more services
 
 ## Need Help?
 
@@ -169,4 +169,4 @@ If you encounter issues during setup:
 3. **Test Network Access**: Try accessing service URL from your device's browser
 4. **Review [Configuration Guide](configuration.md)** for detailed setup instructions
 
-You're now ready to monitor your media services with OmniFetch! 🎉
+You're now ready to monitor your media services with OmniFetch!
