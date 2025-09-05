@@ -11,7 +11,6 @@ OmniFetch supports monitoring and management of various media services. Each ser
 | [Sonarr](sonarr.md) | TV Shows | ✅ Full | Queue, Calendar, Library, Search |
 | [Radarr](radarr.md) | Movies | ✅ Full | Queue, Calendar, Library, Search |
 | [Lidarr](lidarr.md) | Music | ✅ Full | Queue, Calendar, Library, Search |
-| [Readarr](readarr.md) | Books | ✅ Full | Queue, Calendar, Library, Search |
 
 ### Request Management
 
@@ -23,20 +22,7 @@ OmniFetch supports monitoring and management of various media services. Each ser
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| [NZBGet](nzbget.md) | Usenet | ✅ Full | Queue, History, Statistics |
 | [SABnzbd](sabnzbd.md) | Usenet | ✅ Full | Queue, History, Statistics |
-
-### Indexers
-
-| Service | Type | Status | Features |
-|---------|------|--------|----------|
-| [Prowlarr](prowlarr.md) | Indexers | ✅ Full | Indexers, Search, Statistics |
-
-### Media Servers
-
-| Service | Type | Status | Features |
-|---------|------|--------|----------|
-| [Plex](plex.md) | Media Server | ✅ Full | Libraries, Sessions, Statistics |
 
 ## Common Configuration
 
