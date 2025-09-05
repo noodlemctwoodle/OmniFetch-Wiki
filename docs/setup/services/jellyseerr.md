@@ -1,6 +1,6 @@
 # Jellyseerr Configuration
 
-Jellyseerr manages media requests from users across your media stack. Unlike other services, Jellyseerr requires manual webhook configuration.
+Jellyseerr manages media requests from users across your media stack. OmniFetch can monitor Jellyseerr activity, and with a beta key, receive push notifications for events.
 
 ## Prerequisites
 
@@ -29,54 +29,64 @@ Jellyseerr manages media requests from users across your media stack. Unlike oth
 4. Tap **"Test Connection"** to verify settings
 5. Tap **"Save"** when the test passes
 
-## Webhook Setup (Manual Required)
+## Webhook Notifications (Beta)
 
-Jellyseerr requires manual webhook configuration - OmniFetch cannot create these automatically.
+Jellyseerr requires manual webhook configuration to enable push notifications. This feature is currently in beta testing.
 
-### 1. Get Webhook URL from OmniFetch
+### Prerequisites
+
+- Beta password (contact support for access)
+- OmniFetch app installed with Jellyseerr service added
+- Access to Jellyseerr web interface
+
+### Step 1: Configure Beta Password in OmniFetch
 
 1. Open OmniFetch app
-2. Go to **Settings** → **Notifications** → **Jellyseerr**
-3. Copy your unique webhook URL for Jellyseerr
+2. Go to **Settings** → **Debug** → **Notification Debug**
+3. In the **Beta Webhook Authentication** section:
+   - Enter the beta password provided by support
+   - Tap **Save Password** - you'll see a green confirmation
+4. Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
 
-### 2. Configure Webhook in Jellyseerr
+### Step 2: Configure Webhook in Jellyseerr
 
-1. Open Jellyseerr web interface
+1. Open **Jellyseerr** web interface
 2. Go to **Settings** → **Notifications**
 3. Click **Add Notification Agent** → **Webhook**
-4. Configure webhook settings:
-   - **Agent Name**: `OmniFetch Push Notifications`
-   - **Enable Agent**: Toggle ON
-   - **Webhook URL**: Paste your OmniFetch webhook URL from step 1
-   - **Authorization Header**: Leave blank (not required)
-   - **JSON Payload**: Use default (OmniFetch handles Jellyseerr format)
+4. Configure the webhook settings:
 
-### 3. Select Notification Types
+**Webhook Configuration:**
+- **Agent Name:** `OmniFetch Push Notifications`
+- **Webhook URL:** Will be provided with your beta access documentation
+  - You'll need to append your generated webhook ID to the provided base URL
+- **Authorization Header:** Will be provided with your beta password
+- **JSON Payload:** Use the default template provided by Jellyseerr
 
-Choose which events should trigger notifications:
+**Notification Types** (select desired events):
+- ✅ Media Requested
+- ✅ Media Approved  
+- ✅ Media Available
+- ✅ Media Failed
+- ✅ Media Declined
+- ✅ Media Pending
+- ✅ Issue Created
+- ✅ Issue Resolved
+- ✅ Issue Reopened
+- ✅ Issue Comment
 
-**Recommended Events:**
-- **Media Requested**: When users request new content
-- **Media Approved**: When requests are approved by admins
-- **Media Available**: When requested content becomes available
-- **Media Declined**: When requests are declined
-- **Media Failed**: When request processing fails
+### Step 3: Test Your Setup
 
-**Optional Events:**
-- **Issues Created**: When users report issues
-- **Issues Resolved**: When issues are fixed
-- **Issues Reopened**: When issues are reopened
-- **Issue Comments**: When comments are added to issues
+1. Click **Test** in the Jellyseerr webhook settings
+2. You should receive a test notification on your device
+3. If successful, click **Save** to enable the webhook
 
-### 4. Test Configuration
+**Example test messages:**
+- "🎬 Check, check... is this thing on? Testing from the projection booth!"
+- "🍿 Ladies and gentlemen, please silence your devices... except for this test notification!"
 
-1. Click **Test** in the Jellyseerr webhook configuration
-2. You should receive a push notification on your device
-3. Click **Save** when test succeeds
+## Supported Events (Beta)
 
-## Supported Events
-
-OmniFetch will send notifications for these Jellyseerr events:
+With beta access, OmniFetch can send notifications for these Jellyseerr events:
 
 ### Request Events
 
@@ -125,21 +135,26 @@ You'll receive clear, informative notifications like:
 - Verify API key hasn't been regenerated in Jellyseerr
 - Check that API key has proper permissions
 
-### Webhook Issues
+### Troubleshooting Webhook Issues
 
-**Webhook Test Fails in Jellyseerr:**
+**"Test failed" or "403 Forbidden":**
+- Ensure you've saved the beta password in **Notification Debug** settings
+- Verify the Authorization Header is correctly entered in Jellyseerr
+- Try generating a new webhook ID in OmniFetch
 
-- Ensure OmniFetch notification permissions are enabled
-- Check that Jellyseerr server can reach the internet
-- Verify webhook URL is copied correctly from OmniFetch
-- Try regenerating webhook URL in OmniFetch settings
+**"404 Not Found":**
+- The webhook URL may not be ready yet - wait 30 seconds and try again
+- Verify the webhook ID is correctly copied into the URL
 
 **No Notifications Received:**
-
 - Check iOS Settings → Notifications → OmniFetch → Allow Notifications
 - Ensure device has internet connection
-- Verify webhook events are selected in Jellyseerr notification agent
-- Test webhook configuration in Jellyseerr settings
+- Verify all notification types are selected in Jellyseerr
+- Test with manual notification in OmniFetch app
+
+**Invalid JSON Payload:**
+- Use the default Jellyseerr payload template
+- Do not modify the JSON structure
 
 ### Permission Issues
 

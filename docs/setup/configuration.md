@@ -11,32 +11,34 @@ Before configuring individual services, ensure OmniFetch is properly set up:
 
 ## Service Configuration Guides
 
-OmniFetch supports several media management services, each with specific setup requirements:
+OmniFetch supports several media management services. All services can be monitored, but webhook notifications require a private beta key.
 
-### Automatic Webhook Setup
-
-These services support automatic webhook configuration - OmniFetch creates the webhooks for you:
+### Supported Services
 
 - **[Sonarr Configuration](services/sonarr.md)** - TV show management and monitoring
 - **[Radarr Configuration](services/radarr.md)** - Movie management and monitoring  
 - **[Lidarr Configuration](services/lidarr.md)** - Music management and monitoring
+- **[Jellyseerr Configuration](services/jellyseerr.md)** - User request management
+- **[SABnzbd Configuration](services/sabnzbd.md)** - Usenet download client
 
-### Manual Webhook Setup Required
+### Webhook Support (Beta)
 
-These services require manual webhook configuration in their web interfaces:
+Webhook notifications are configured through OmniFetch's Notification Settings and require **beta access**. Beta testers receive:
+- Beta password for authentication
+- Webhook server URL
+- Setup documentation
 
-- **[Jellyseerr Configuration](services/jellyseerr.md)** - User request management (manual webhook setup)
-- **[SABnzbd Configuration](services/sabnzbd.md)** - Usenet download client (requires notification script)
+Without beta access, you can still monitor services through the app but won't receive push notifications for events. Contact support to request beta access.
 
 ## Configuration Quick Reference
 
-| Service | Port | Automatic Webhooks | Manual Setup Required |
-|---------|------|-------------------|---------------------|
-| **Sonarr** | 8989 | ✅ Yes | ❌ No |
-| **Radarr** | 7878 | ✅ Yes | ❌ No |
-| **Lidarr** | 8686 | ✅ Yes | ❌ No |
-| **Jellyseerr** | 5055 | ❌ No | ✅ Webhook |
-| **SABnzbd** | 8080 | ❌ No | ✅ Script |
+| Service | Default Port | Monitoring | Webhook Notifications |
+|---------|--------------|------------|---------------------|
+| **Sonarr** | 8989 | ✅ Available | 🔑 Beta Access Required |
+| **Radarr** | 7878 | ✅ Available | 🔑 Beta Access Required |
+| **Lidarr** | 8686 | ✅ Available | 🔑 Beta Access Required |
+| **Jellyseerr** | 5055 | ✅ Available | 🔑 Beta Access Required (Manual) |
+| **SABnzbd** | 8080 | ✅ Available | 🔑 Beta Access Required (Script) |
 
 ## General Setup Process
 
@@ -44,8 +46,8 @@ These services require manual webhook configuration in their web interfaces:
 2. **Locate API Key**: Find the API key in your service's settings
 3. **Add to OmniFetch**: Use the "Add Service" feature in OmniFetch
 4. **Test Connection**: Verify the connection works properly
-5. **Configure Notifications**: Set up webhooks (automatic or manual)
-6. **Test Notifications**: Ensure you receive test notifications
+5. **Configure Notifications** (Beta): If you have beta access, configure webhook notifications
+6. **Test Notifications** (Beta): Test webhook setup according to beta documentation
 
 ## Common Issues
 
