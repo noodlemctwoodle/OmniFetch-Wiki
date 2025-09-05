@@ -37,8 +37,9 @@ Webhook notifications require a **private beta key** to enable push notification
 
 1. **Beta Access**: You must have a private beta key
 2. **Enable in OmniFetch**: 
-   - Go to **Settings** → **Notifications**
-   - Enter your beta key when prompted
+   - Go to **Settings** → **Notification Settings** → **Push Notifications**
+   - Enter your beta key in the **Private Beta Key** field
+   - Save the key - you'll see a confirmation
    - Enable notifications for Radarr
 
 ### Without Beta Key

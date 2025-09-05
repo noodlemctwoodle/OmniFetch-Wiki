@@ -80,7 +80,7 @@ def main():
     # ============================================================================
     
     # Step 1: Replace with your webhook URL from OmniFetch app
-    # Go to Settings → Debug → Notification Debug → Generate Webhook ID
+    # Go to Settings → Developer → Generate Webhook ID
     # Copy the generated ID and replace PASTE_YOUR_ID_HERE below
     WEBHOOK_URL = "https://YOUR_WEBHOOK_DOMAIN/push/PASTE_YOUR_ID_HERE"
     
@@ -97,7 +97,7 @@ def main():
         print("❌ Error: Please edit the script and configure your webhook URL")
         print("1. Replace YOUR_WEBHOOK_DOMAIN with the domain from your beta documentation")
         print("2. Replace PASTE_YOUR_ID_HERE with your webhook ID from OmniFetch")
-        print("Get your webhook ID from: OmniFetch → Settings → Debug → Notification Debug")
+        print("Get your webhook ID from: OmniFetch → Settings → Developer")
         sys.exit(1)
     
     if "YOUR_BETA_PASSWORD_HERE" in BETA_PASSWORD:

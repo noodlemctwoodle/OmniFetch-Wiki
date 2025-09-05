@@ -39,14 +39,17 @@ Jellyseerr requires manual webhook configuration to enable push notifications. T
 - OmniFetch app installed with Jellyseerr service added
 - Access to Jellyseerr web interface
 
-### Step 1: Configure Beta Password in OmniFetch
+### Step 1: Configure Beta Access in OmniFetch
 
-1. Open OmniFetch app
-2. Go to **Settings** → **Debug** → **Notification Debug**
-3. In the **Beta Webhook Authentication** section:
-   - Enter the beta password provided by support
-   - Tap **Save Password** - you'll see a green confirmation
-4. Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
+1. **Enter Beta Key:**
+   - Go to **Settings** → **Notification Settings** → **Push Notifications**
+   - Enter your beta key in the **Private Beta Key** field
+   - Tap **Save** - you'll see a confirmation
+
+2. **Generate Webhook ID:**
+   - Go to **Settings** → **Developer** (or Debug menu)
+   - Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
+   - Keep this ID ready for Step 2
 
 ### Step 2: Configure Webhook in Jellyseerr
 
@@ -138,9 +141,9 @@ You'll receive clear, informative notifications like:
 ### Troubleshooting Webhook Issues
 
 **"Test failed" or "403 Forbidden":**
-- Ensure you've saved the beta password in **Notification Debug** settings
+- Ensure you've saved the beta key in **Notification Settings** → **Push Notifications**
 - Verify the Authorization Header is correctly entered in Jellyseerr
-- Try generating a new webhook ID in OmniFetch
+- Try generating a new webhook ID in **Settings** → **Developer**
 
 **"404 Not Found":**
 - The webhook URL may not be ready yet - wait 30 seconds and try again

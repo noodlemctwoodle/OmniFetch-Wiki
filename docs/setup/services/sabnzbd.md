@@ -41,14 +41,17 @@ SABnzbd requires a Python notification script to send webhooks since it doesn't 
 - Access to SABnzbd server file system for script installation
 - Python 3 installed on your SABnzbd server
 
-### Step 1: Configure Beta Password in OmniFetch
+### Step 1: Configure Beta Access in OmniFetch
 
-1. Open OmniFetch app
-2. Go to **Settings** → **Debug** → **Notification Debug**
-3. In the **Beta Webhook Authentication** section:
-   - Enter the beta password provided by support
-   - Tap **Save Password** - you'll see a green confirmation
-4. Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
+1. **Enter Beta Key:**
+   - Go to **Settings** → **Notification Settings** → **Push Notifications**
+   - Enter your beta key in the **Private Beta Key** field
+   - Tap **Save** - you'll see a confirmation
+
+2. **Generate Webhook ID:**
+   - Go to **Settings** → **Developer** (or Debug menu)
+   - Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
+   - Keep this ID ready for the script configuration
 
 ### Step 2: Download and Configure the Notification Script
 
@@ -162,8 +165,8 @@ You'll receive clear, informative notifications like:
 
 **"403 Forbidden" Error:**
 - Beta password may be incorrect in the script
-- Ensure you've saved the beta password in OmniFetch first
-- Try generating a new webhook ID
+- Ensure you've saved the beta key in **Notification Settings** → **Push Notifications**
+- Try generating a new webhook ID in **Settings** → **Developer**
 
 **No Notifications Received:**
 - Check iOS Settings → Notifications → OmniFetch → Allow Notifications

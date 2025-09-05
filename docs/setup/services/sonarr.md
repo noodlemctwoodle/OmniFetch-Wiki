@@ -37,8 +37,9 @@ Webhook notifications require a **private beta key** to enable push notification
 
 1. **Beta Access**: You must have a private beta key
 2. **Enable in OmniFetch**: 
-   - Go to **Settings** → **Notifications**
-   - Enter your beta key when prompted
+   - Go to **Settings** → **Notification Settings** → **Push Notifications**
+   - Enter your beta key in the **Private Beta Key** field
+   - Save the key - you'll see a confirmation
    - Enable notifications for Sonarr
 
 ### Without Beta Key
@@ -114,7 +115,7 @@ You'll receive clear, informative notifications like:
 
 - Check iOS Settings → Notifications → OmniFetch → Allow Notifications
 - Ensure device has internet connection
-- Verify beta key is entered correctly in OmniFetch settings
+- Verify beta key is entered correctly in **Notification Settings** → **Push Notifications**
 - Check that notifications are enabled for Sonarr in OmniFetch
 - Try re-entering beta key if notifications stop working
 
