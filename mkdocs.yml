@@ -7,7 +7,7 @@ repo_name: noodlemctwoodle/OmniFetch-Wiki
 repo_url: https://github.com/noodlemctwoodle/OmniFetch-Wiki
 
 # Copyright
-copyright: Copyright &copy; 2024 OmniFetch
+copyright: Copyright &copy; 2025 OmniFetch
 
 # Configuration
 theme:
@@ -94,14 +94,11 @@ nav:
     - Sonarr: services/sonarr.md
     - Radarr: services/radarr.md
     - Lidarr: services/lidarr.md
-    - Readarr: services/readarr.md
     - Jellyseerr: services/jellyseerr.md
-    - NZBGet: services/nzbget.md
     - SABnzbd: services/sabnzbd.md
-    - Prowlarr: services/prowlarr.md
-    - Plex: services/plex.md
   - Features:
     - Notifications: features/notifications.md
+    - Webhooks: features/webhooks.md
     - Widgets: features/widgets.md
     - CloudKit Sync: features/cloudkit-sync.md
   - Troubleshooting:
