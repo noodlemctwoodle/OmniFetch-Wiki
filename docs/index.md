@@ -1,4 +1,4 @@
-# 📱 OmniFetch Documentation
+# OmniFetch Documentation
 
 <div align="center">
   <h1>OmniFetch</h1>
@@ -7,31 +7,31 @@
 
 Welcome to the documentation for **OmniFetch** - a native SwiftUI application that provides unified monitoring and management for your entire media stack.
 
-## :material-rocket-launch: Overview
+## Overview
 
 OmniFetch is a powerful iOS, iPadOS, and tvOS application designed to streamline your media service management. With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your services from anywhere.
 
 <div class="grid cards" markdown>
 
-- :house_with_garden: **Native Experience**
+- **Native Experience**
 
     ---
     
     Built with SwiftUI for optimal performance on all Apple platforms. Follows Apple's Human Interface Guidelines for familiar, intuitive interactions.
 
-- :cloud: **Cross-Device Sync**
+- **Cross-Device Sync**
 
     ---
     
     CloudKit integration keeps your configurations synchronized across iPhone, iPad, Apple TV, and Mac. Set up once, access everywhere.
 
-- :bell: **Real-Time Alerts**
+- **Real-Time Alerts**
 
     ---
     
     Webhook-powered push notifications deliver instant alerts about downloads, requests, and system health directly to your devices.
 
-- :bar_chart: **Comprehensive Monitoring**
+- **Comprehensive Monitoring**
 
     ---
     
@@ -39,58 +39,58 @@ OmniFetch is a powerful iOS, iPadOS, and tvOS application designed to streamline
 
 </div>
 
-## :material-server: Supported Services
+## Supported Services
 
 OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| **[Sonarr](services/sonarr.md)** :tv: | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| **[Radarr](services/radarr.md)** :movie_camera: | Movies | Library management, download tracking, health monitoring |
-| **[Lidarr](services/lidarr.md)** :musical_note: | Music | Album monitoring, artist management, release tracking |
-| **[Jellyseerr](services/jellyseerr.md)** :busts_in_silhouette: | Requests | Request approval, user management, issue tracking |
-| **[SABnzbd](services/sabnzbd.md)** :arrow_down: | Downloads | Queue management, completion tracking, system alerts |
+| ![Sonarr](assets/images/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| ![Radarr](assets/images/radarr-logo.png){ width="32" } **[Radarr](services/radarr.md)** | Movies | Library management, download tracking, health monitoring |
+| ![Lidarr](assets/images/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr.md)** | Music | Album monitoring, artist management, release tracking |
+| ![Jellyseerr](assets/images/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr.md)** | Requests | Request approval, user management, issue tracking |
+| ![SABnzbd](assets/images/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd.md)** | Downloads | Queue management, completion tracking, system alerts |
 
-## :star: Key Features
+## Key Features
 
 === "Core Features"
 
-    - :arrows_counterclockwise: **Real-time monitoring** of all your services
-    - :cloud: **CloudKit sync** across all your devices
-    - :bell: **Push notifications** for important events
-    - :art: **Native SwiftUI** interface optimized for each platform
+    - **Real-time monitoring** of all your services
+    - **CloudKit sync** across all your devices
+    - **Push notifications** for important events
+    - **Native SwiftUI** interface optimized for each platform
 
 === "Advanced Features"
 
-    - :iphone: **Home screen widgets** for quick status checks
-    - :link: **Webhook integration** for instant notifications
-    - :crescent_moon: **Dark mode** support with system integration
-    - :accessibility: **Full accessibility** support with VoiceOver
+    - **Home screen widgets** for quick status checks
+    - **Webhook integration** for instant notifications
+    - **Dark mode** support with system integration
+    - **Full accessibility** support with VoiceOver
 
 === "Platform Features"
 
-    - :computer: **iPad optimization** with split-view support
-    - :tv: **Apple TV interface** with remote navigation
-    - :desktop_computer: **Mac Catalyst** support for desktop usage
-    - :focus: **Focus mode integration** for notification management
+    - **iPad optimization** with split-view support
+    - **Apple TV interface** with remote navigation
+    - **Mac Catalyst** support for desktop usage
+    - **Focus mode integration** for notification management
 
-## :rocket: Getting Started
+## Getting Started
 
 <div class="grid cards" markdown>
 
-- [:material-download: **Installation**](setup/installation.md)
+- [**Installation**](setup/installation.md)
 
     ---
 
     Download and install OmniFetch on your devices. Available for iOS 17.0+, tvOS 17.0+, and macOS 14.0+.
 
-- [:material-rocket-launch-outline: **Quick Start**](setup/quick-start.md)
+- [**Quick Start**](setup/quick-start.md)
 
     ---
 
     Get up and running in minutes with our step-by-step setup guide. Configure your first service and test notifications.
 
-- [:material-cog: **Configuration**](setup/configuration.md)
+- [**Configuration**](setup/configuration.md)
 
     ---
 
@@ -98,7 +98,7 @@ OmniFetch integrates seamlessly with these popular media services:
 
 </div>
 
-## :material-devices: Platform Support
+## Platform Support
 
 | Platform | Version | Features |
 |----------|---------|----------|
@@ -107,27 +107,27 @@ OmniFetch integrates seamlessly with these popular media services:
 | **Apple TV** | tvOS 17.0+ | Remote navigation, living room experience |
 | **Mac** | macOS 14.0+ | Catalyst app, desktop workflows |
 
-## :material-code-tags: Modern Architecture
+## Modern Architecture
 
 OmniFetch is built with cutting-edge Apple technologies:
 
-- :material-code-braces: **SwiftUI** - Declarative user interface framework
-- :material-database: **SwiftData** - Local data persistence and caching
-- :material-cloud: **CloudKit** - Cross-device synchronization
-- :material-lightning-bolt: **Swift Concurrency** - Modern async/await patterns
-- :material-eye: **@Observable** - Reactive state management (iOS 17+)
+- **SwiftUI** - Declarative user interface framework
+- **SwiftData** - Local data persistence and caching
+- **CloudKit** - Cross-device synchronization
+- **Swift Concurrency** - Modern async/await patterns
+- **@Observable** - Reactive state management (iOS 17+)
 
-## :material-help: Need Help?
+## Need Help?
 
 <div class="grid cards" markdown>
 
-- [:material-wrench: **Troubleshooting**](troubleshooting/common-issues.md)
+- [**Troubleshooting**](troubleshooting/common-issues.md)
 
     ---
 
     Solutions to common issues with service connections, notifications, and sync problems.
 
-- [:material-help-circle: **FAQ**](troubleshooting/faq.md)
+- [**FAQ**](troubleshooting/faq.md)
 
     ---
 

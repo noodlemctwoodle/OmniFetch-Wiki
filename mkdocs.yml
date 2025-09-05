@@ -2,9 +2,9 @@ site_name: OmniFetch Documentation
 site_url: https://noodlemctwoodle.github.io/OmniFetch-Wiki
 site_description: Comprehensive documentation for OmniFetch - A SwiftUI application for monitoring and managing media services
 
-# Repository
-repo_name: noodlemctwoodle/OmniFetch-Wiki
-repo_url: https://github.com/noodlemctwoodle/OmniFetch-Wiki
+# Repository (commented out to hide from header)
+# repo_name: noodlemctwoodle/OmniFetch-Wiki
+# repo_url: https://github.com/noodlemctwoodle/OmniFetch-Wiki
 
 # Copyright
 copyright: Copyright &copy; 2025 OmniFetch
@@ -64,7 +64,6 @@ theme:
     - search.suggest
     - toc.follow
   icon:
-    repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
     tag:

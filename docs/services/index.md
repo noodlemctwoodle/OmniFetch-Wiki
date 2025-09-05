@@ -8,21 +8,21 @@ OmniFetch supports monitoring and management of various media services. Each ser
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| [Sonarr](sonarr.md) | TV Shows | ✅ Full | Queue, Calendar, Library, Search |
-| [Radarr](radarr.md) | Movies | ✅ Full | Queue, Calendar, Library, Search |
-| [Lidarr](lidarr.md) | Music | ✅ Full | Queue, Calendar, Library, Search |
+| ![Sonarr](../assets/images/sonarr-logo.png){ width="24" } [Sonarr](sonarr.md) | TV Shows | ✅ Full | Queue, Calendar, Library, Search |
+| ![Radarr](../assets/images/radarr-logo.png){ width="24" } [Radarr](radarr.md) | Movies | ✅ Full | Queue, Calendar, Library, Search |
+| ![Lidarr](../assets/images/lidarr-logo.png){ width="24" } [Lidarr](lidarr.md) | Music | ✅ Full | Queue, Calendar, Library, Search |
 
 ### Request Management
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| [Jellyseerr](jellyseerr.md) | Requests | ✅ Full | Requests, Approvals, Search |
+| ![Jellyseerr](../assets/images/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr.md) | Requests | ✅ Full | Requests, Approvals, Search |
 
 ### Download Clients
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| [SABnzbd](sabnzbd.md) | Usenet | ✅ Full | Queue, History, Statistics |
+| ![SABnzbd](../assets/images/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd.md) | Usenet | ✅ Full | Queue, History, Statistics |
 
 ## Common Configuration
 
