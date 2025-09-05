@@ -143,7 +143,15 @@ nav:
   - Getting Started:
     - Installation: setup/installation.md
     - Quick Start: setup/quick-start.md
-    - Configuration: setup/configuration.md
+    - OmniFetch App: setup/omnifetch-app.md
+  - Configuration:
+    - Overview: setup/configuration.md
+    - Service Setup:
+      - Sonarr: setup/services/sonarr.md
+      - Radarr: setup/services/radarr.md
+      - Lidarr: setup/services/lidarr.md
+      - Jellyseerr: setup/services/jellyseerr.md
+      - SABnzbd: setup/services/sabnzbd.md
   - Services:
     - Overview: services/index.md
     - Sonarr: services/sonarr.md
