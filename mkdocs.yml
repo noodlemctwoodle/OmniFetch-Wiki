@@ -86,8 +86,6 @@ theme:
 plugins:
   - search:
       lang: en
-  - git-revision-date-localized:
-      enable_creation_date: true
   - minify:
       minify_html: true
 
@@ -97,13 +95,6 @@ extra_css:
 
 # Extra configuration
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/noodlemctwoodle/OmniFetch
-      name: OmniFetch on GitHub
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/omnifetch
-      name: OmniFetch on Twitter
   generator: false
 
 # Extensions

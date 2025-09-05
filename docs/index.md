@@ -8,7 +8,7 @@ Welcome to the documentation for **OmniFetch** - a native SwiftUI application th
 
 ## Overview
 
-OmniFetch is a powerful iOS, iPadOS, and tvOS application designed to streamline your media service management. With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your services from anywhere.
+OmniFetch is a powerful iOS application designed to streamline your media service management. With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your services from anywhere. Support for iPad, Apple TV, and Mac is coming soon.
 
 <div class="grid cards" markdown>
 
@@ -22,7 +22,7 @@ OmniFetch is a powerful iOS, iPadOS, and tvOS application designed to streamline
 
     ---
 
-    CloudKit integration keeps your configurations synchronized across iPhone, iPad, Apple TV, and Mac. Set up once, access everywhere.
+    CloudKit integration keeps your configurations synchronized across all your Apple devices. Currently supports iPhone, with iPad, Apple TV, and Mac support coming soon.
 
 - **Real-Time Alerts**
 
@@ -68,10 +68,10 @@ OmniFetch integrates seamlessly with these popular media services:
 
 === "Platform Features"
 
-    - **iPad optimization** with split-view support
-    - **Apple TV interface** with remote navigation
-    - **Mac Catalyst** support for desktop usage
-    - **Focus mode integration** for notification management
+    - **iPhone optimization** with full iOS integration
+    - **iPad support** coming soon with split-view and multitasking
+    - **Apple TV interface** coming soon with remote navigation
+    - **Mac Catalyst** support coming soon for desktop usage
 
 ## Getting Started
 
@@ -81,7 +81,7 @@ OmniFetch integrates seamlessly with these popular media services:
 
     ---
 
-    Download and install OmniFetch on your devices. Available for iOS 17.0+, tvOS 17.0+, and macOS 14.0+.
+    Download and install OmniFetch on your iPhone. Currently available for iOS 17.0+, with iPad, Apple TV, and Mac support coming soon.
 
 - [**Quick Start**](setup/quick-start.md)
 
@@ -99,12 +99,12 @@ OmniFetch integrates seamlessly with these popular media services:
 
 ## Platform Support
 
-| Platform | Version | Features |
-|----------|---------|----------|
-| **iPhone** | iOS 17.0+ | Full feature set, widgets, notifications |
-| **iPad** | iPadOS 17.0+ | Split-view, multitasking, larger layouts |
-| **Apple TV** | tvOS 17.0+ | Remote navigation, living room experience |
-| **Mac** | macOS 14.0+ | Catalyst app, desktop workflows |
+| Platform | Version | Status | Features |
+|----------|---------|---------|----------|
+| **iPhone** | iOS 17.0+ | **Available Now** | Full feature set, widgets, notifications |
+| **iPad** | iPadOS 17.0+ | **Coming Soon** | Split-view, multitasking, larger layouts |
+| **Apple TV** | tvOS 17.0+ | **Coming Soon** | Remote navigation, living room experience |
+| **Mac** | macOS 14.0+ | **Coming Soon** | Catalyst app, desktop workflows |
 
 ## Modern Architecture
 
