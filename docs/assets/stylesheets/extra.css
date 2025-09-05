@@ -1,0 +1,284 @@
+/* Custom styles for OmniFetch Documentation */
+
+:root {
+  --md-primary-fg-color: #3949AB;
+  --md-primary-fg-color--light: #5C6BC0;
+  --md-primary-fg-color--dark: #303F9F;
+  --md-accent-fg-color: #FF6F00;
+  --omnifetch-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --omnifetch-blue: #3949AB;
+  --omnifetch-purple: #764ba2;
+}
+
+/* Enhanced header with gradient */
+.md-header {
+  background: var(--omnifetch-gradient);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo styling */
+.md-header__button.md-logo {
+  padding: 0.2rem;
+}
+
+.md-header__button.md-logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+/* Navigation tabs with enhanced styling */
+.md-tabs {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.md-tabs__item {
+  margin: 0 0.2rem;
+}
+
+.md-tabs__link {
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.md-tabs__link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.md-tabs__link--active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+}
+
+/* Enhanced cards for home page */
+.md-typeset .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.md-typeset .card {
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .card {
+  background: linear-gradient(145deg, #2d3748, #1a202c);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .card:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Service status badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-left: 0.5rem;
+}
+
+.status-badge.supported {
+  background: #E8F5E8;
+  color: #2E7D32;
+  border: 1px solid #81C784;
+}
+
+[data-md-color-scheme="slate"] .status-badge.supported {
+  background: rgba(46, 125, 50, 0.2);
+  color: #81C784;
+}
+
+/* Enhanced admonitions */
+.md-typeset .admonition {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+.md-typeset .admonition.info {
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+}
+
+.md-typeset .admonition.tip {
+  background: linear-gradient(135deg, #E8F5E8, #C8E6C9);
+}
+
+.md-typeset .admonition.warning {
+  background: linear-gradient(135deg, #FFF3E0, #FFCC02);
+}
+
+.md-typeset .admonition.note {
+  background: linear-gradient(135deg, #F3E5F5, #E1BEE7);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced buttons and links */
+.md-typeset .md-button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.7rem 1.5rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.md-typeset .md-button--primary {
+  background: var(--omnifetch-gradient);
+  border: none;
+}
+
+/* Enhanced code blocks */
+.md-typeset .highlight {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.md-typeset .highlight pre {
+  margin: 0;
+}
+
+/* Table improvements */
+.md-typeset table:not([class]) {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  margin: 1.5rem 0;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--omnifetch-gradient);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(57, 73, 171, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Footer improvements */
+.md-footer {
+  background: var(--omnifetch-gradient);
+}
+
+/* Search improvements */
+.md-search__input {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.md-search__input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* Icon enhancements */
+.md-typeset h1:before,
+.md-typeset h2:before {
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--omnifetch-gradient);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: baseline;
+}
+
+/* Responsive improvements */
+@media screen and (max-width: 76.25em) {
+  .md-nav--primary .md-nav__title[for="__drawer"] {
+    background: var(--omnifetch-gradient);
+  }
+  
+  .md-nav__source {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+}
+
+/* Loading animation for better UX */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Custom emoji styles */
+.md-typeset img.twemoji {
+  vertical-align: text-bottom;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--omnifetch-gradient);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color--dark);
+}
