@@ -1,6 +1,6 @@
 # SABnzbd Configuration
 
-SABnzbd handles Usenet downloads and post-processing. Unlike other services, SABnzbd requires a notification script for webhook integration with OmniFetch.
+SABnzbd handles Usenet downloads and post-processing. OmniFetch can monitor SABnzbd activity, and with a beta key, receive push notifications for events.
 
 ## Prerequisites
 
@@ -30,79 +30,85 @@ SABnzbd handles Usenet downloads and post-processing. Unlike other services, SAB
 4. Tap **"Test Connection"** to verify settings
 5. Tap **"Save"** when the test passes
 
-## Webhook Setup (Script Required)
+## Webhook Notifications (Beta)
 
-SABnzbd requires a notification script for webhook integration - this cannot be automated.
+SABnzbd requires a Python notification script to send webhooks since it doesn't have native webhook support. This feature is currently in beta testing.
 
-### 1. Get Notification Script
+### Prerequisites
 
-Download the SABnzbd notification script:
+- Beta password (contact support for access)
+- OmniFetch app installed with SABnzbd service added
+- Access to SABnzbd server file system for script installation
+- Python 3 installed on your SABnzbd server
+
+### Step 1: Configure Beta Password in OmniFetch
 
 1. Open OmniFetch app
-2. Go to **Settings** → **Notifications** → **SABnzbd**
-3. Copy your unique webhook URL
-4. Download the OmniFetch notification script template
-5. Edit the script with your webhook details
+2. Go to **Settings** → **Debug** → **Notification Debug**
+3. In the **Beta Webhook Authentication** section:
+   - Enter the beta password provided by support
+   - Tap **Save Password** - you'll see a green confirmation
+4. Tap **Generate Webhook ID** - this copies a unique identifier to your clipboard
 
-### 2. Configure the Script
+### Step 2: Download and Configure the Notification Script
 
-Edit the script file with your specific settings:
+1. Download the SABnzbd notification script from the documentation (see below)
+2. **Edit the script** in a text editor:
+   - Find the line: `WEBHOOK_URL = "https://YOUR_WEBHOOK_DOMAIN/push/PASTE_YOUR_ID_HERE"`
+   - Replace `YOUR_WEBHOOK_DOMAIN` with the domain provided in your beta documentation
+   - Replace `PASTE_YOUR_ID_HERE` with the ID you copied from OmniFetch
+   - Replace `YOUR_BETA_PASSWORD_HERE` with the password provided separately
+3. Save the file as `omnifetch-webhook.py`
 
-```python
-#!/usr/bin/env python3
-# OmniFetch SABnzbd Notification Script
+### Step 3: Install the Script
 
-import sys
-import requests
+Place the script in your SABnzbd scripts directory:
 
-# Your unique OmniFetch webhook URL
-WEBHOOK_URL = "https://your-webhook-url-here"
-
-# Script continues with SABnzbd integration...
-```
-
-### 3. Install the Script
-
-Place the script in SABnzbd's scripts directory:
-
-#### Linux/macOS
+**Linux/Mac:**
 ```bash
-# Copy to SABnzbd scripts directory
-cp omnifetch-notify.py ~/.sabnzbd/scripts/
-chmod +x ~/.sabnzbd/scripts/omnifetch-notify.py
+cp omnifetch-webhook.py ~/.sabnzbd/scripts/
+chmod +x ~/.sabnzbd/scripts/omnifetch-webhook.py
 ```
 
-#### Windows
+**Windows:**
 ```
 Copy to: C:\Users\[username]\AppData\Local\sabnzbd\scripts\
 ```
 
-#### Docker/Unraid
+**Docker/Unraid:**
 ```bash
-# Mount scripts directory and copy
-docker cp omnifetch-notify.py sabnzbd:/config/scripts/
-docker exec sabnzbd chmod +x /config/scripts/omnifetch-notify.py
+docker cp omnifetch-webhook.py sabnzbd:/config/scripts/
+docker exec sabnzbd chmod +x /config/scripts/omnifetch-webhook.py
 ```
 
-### 4. Configure SABnzbd Notifications
+### Step 4: Configure SABnzbd
 
-1. Open SABnzbd web interface
+1. Open **SABnzbd** web interface
 2. Go to **Config** → **Notifications**
-3. Enable **Script** notifications
-4. Configure script settings:
-   - **Script**: Select `omnifetch-notify.py` from dropdown
-   - **Parameters**: Leave blank (script handles parameters)
-   - **Enable script for**: Choose events to monitor
+3. Enable **notification script**
+4. Select **omnifetch-webhook.py** from the script dropdown
+5. Leave the **Parameters** field empty (URL is configured in the script)
 
-### 5. Test the Setup
+**Select Event Triggers:**
+- ✅ **startup** - SABnzbd started
+- ✅ **download** - Download completed  
+- ✅ **complete** - All downloads finished
+- ✅ **failed** - Download failed
+- ✅ **warning** - Warning occurred
+- ✅ **error** - Error occurred
+- ✅ **pause** - Downloads paused
+- ✅ **unpause** - Downloads resumed
+- ✅ **queue_done** - Queue finished
 
-1. In SABnzbd notifications, click **Test Notification Script**
+### Step 5: Test Your Setup
+
+1. In SABnzbd notifications settings, click **Test Notification Script**
 2. You should receive a push notification on your device
-3. Check SABnzbd logs for any script errors
+3. If successful, click **Save Changes**
 
-## Supported Events
+## Supported Events (Beta)
 
-OmniFetch will send notifications for these SABnzbd events:
+With beta access, OmniFetch can send notifications for these SABnzbd events:
 
 ### Download Events
 
@@ -140,21 +146,30 @@ You'll receive clear, informative notifications like:
 
 ## Common Configuration Issues
 
-### Script Installation Problems
+### Troubleshooting Script Issues
 
 **Script Not Appearing in Dropdown:**
-
 - Check script file permissions (must be executable on Linux/macOS)
 - Verify script is in correct SABnzbd scripts directory
 - Restart SABnzbd service after adding script
 - Check SABnzbd logs for script loading errors
 
-**Script Execution Fails:**
+**Script Test Fails:**
+- Verify you've edited the script with your webhook ID
+- Ensure beta password is correctly entered in the script
+- Check Python 3 is installed: `python3 --version`
+- Test script manually: `python3 omnifetch-webhook.py test`
 
-- Verify Python 3 is installed and accessible
-- Check script file encoding (should be UTF-8)
-- Ensure webhook URL is correctly configured in script
-- Test script manually from command line
+**"403 Forbidden" Error:**
+- Beta password may be incorrect in the script
+- Ensure you've saved the beta password in OmniFetch first
+- Try generating a new webhook ID
+
+**No Notifications Received:**
+- Check iOS Settings → Notifications → OmniFetch → Allow Notifications
+- Verify event triggers are selected in SABnzbd
+- Check SABnzbd logs for script execution output
+- Ensure your device has internet connection
 
 ### Connection Problems
 
@@ -172,60 +187,40 @@ You'll receive clear, informative notifications like:
 - Verify API key hasn't been regenerated in SABnzbd
 - Check that API authentication is properly configured
 
-### Notification Issues
 
-**No Notifications Received:**
+## Python Script Template
 
-- Check iOS Settings → Notifications → OmniFetch → Allow Notifications
-- Ensure device has internet connection
-- Verify script notifications are enabled in SABnzbd
-- Test webhook URL directly to confirm it's working
-- Check SABnzbd logs for script execution errors
+The complete Python script for SABnzbd webhook notifications is included below. Beta testers will receive the beta password separately.
 
-**Partial Notifications:**
-
-- Review which events are enabled in SABnzbd script configuration
-- Check script logic for event handling
-- Verify webhook URL permissions and rate limits
-- Monitor SABnzbd logs during download events
+??? example "View Python Script (omnifetch-webhook.py)"
+    
+    ```python
+    #!/usr/bin/env python3
+    """
+    SABnzbd Webhook Notification Script for OmniFetch
+    """
+    
+    [Download the full script here](omnifetch-webhook.py)
+    
+    **Configuration Required:**
+    1. Replace `PASTE_YOUR_ID_HERE` with your webhook ID from OmniFetch
+    2. Replace `YOUR_BETA_PASSWORD_HERE` with the beta password provided separately
+    
+    **Installation:**
+    - Save as `omnifetch-webhook.py` in your SABnzbd scripts directory
+    - Make executable: `chmod +x omnifetch-webhook.py` (Linux/Mac)
+    - Configure in SABnzbd Config → Notifications
 
 ## Advanced Configuration
-
-### Script Customization
-
-#### Event Filtering
-
-Modify the script to handle only specific events:
-
-```python
-# Only notify for important events
-IMPORTANT_EVENTS = ['complete', 'failed', 'warning']
-
-if event_type not in IMPORTANT_EVENTS:
-    sys.exit(0)  # Skip notification
-```
-
-#### Custom Message Formatting
-
-Personalize notification messages:
-
-```python
-# Custom message templates
-MESSAGES = {
-    'complete': f"✅ {filename} downloaded successfully ({size})",
-    'failed': f"❌ {filename} download failed: {status}",
-    'warning': f"⚠️ System warning: {message}"
-}
-```
 
 ### Multiple SABnzbd Instances
 
 For complex setups with multiple SABnzbd instances:
 
 1. Use descriptive names: "Main Downloads", "4K Downloads", "TV Downloads"
-2. Each instance requires separate script installation
-3. Use different webhook URLs for different instances
-4. Configure different notification priorities
+2. Each instance requires its own API key configuration
+3. Configure different refresh intervals for different instances
+4. Set different notification priorities in OmniFetch
 
 ### Performance Optimization
 
@@ -238,20 +233,6 @@ Configure SABnzbd categories for better organization:
 - **Music**: Audio files with different handling
 - **Software**: Non-media downloads
 
-#### Post-Processing Scripts
-
-Integrate OmniFetch notifications with existing post-processing:
-
-```python
-# Chain with other scripts
-import subprocess
-
-# Run existing post-processing
-subprocess.run(['/path/to/existing/script.py'] + sys.argv[1:])
-
-# Then send OmniFetch notification
-send_omnifetch_notification(...)
-```
 
 ### Storage Management
 

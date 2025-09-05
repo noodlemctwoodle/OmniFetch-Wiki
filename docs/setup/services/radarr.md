@@ -1,6 +1,6 @@
 # Radarr Configuration
 
-Radarr handles automated movie downloading and management. OmniFetch integrates seamlessly with Radarr through automatic webhook setup.
+Radarr handles automated movie downloading and management. OmniFetch can monitor Radarr activity, and with a beta key, receive push notifications for events.
 
 ## Prerequisites
 
@@ -29,31 +29,31 @@ Radarr handles automated movie downloading and management. OmniFetch integrates 
 4. Tap **"Test Connection"** to verify settings
 5. Tap **"Save"** when the test passes
 
-## Webhook Setup (Automatic)
+## Webhook Notifications (Beta)
 
-OmniFetch automatically creates webhook connections for Radarr - no manual configuration required!
+Webhook notifications require a **private beta key** to enable push notifications for Radarr events.
 
-### Verification Steps
+### Setup Requirements
 
-1. **After adding service**: OmniFetch creates the webhook automatically
-2. **Verify setup**: Go to Radarr web interface
-   - Navigate to **Settings** → **Connect** → **Connections**
-   - You should see an **"OmniFetch"** webhook connection
-3. **Test webhook**: Click **Test** on the OmniFetch connection
-4. **Receive notification**: You should get a push notification confirming setup
+1. **Beta Access**: You must have a private beta key
+2. **Enable in OmniFetch**: 
+   - Go to **Settings** → **Notifications**
+   - Enter your beta key when prompted
+   - Enable notifications for Radarr
 
-### If Webhook Creation Fails
+### Without Beta Key
 
-If automatic webhook creation doesn't work:
+Without a beta key, you can still:
+- Monitor Radarr activity through the app
+- View queue, history, and calendar
+- Check system health and status
+- Manually refresh for updates
 
-1. Check that Radarr can reach the internet
-2. Verify your API key has sufficient permissions
-3. Try removing and re-adding the service in OmniFetch
-4. Check Radarr logs for any connection errors
+Push notifications for events listed below require beta access.
 
-## Supported Events
+## Supported Events (Beta)
 
-OmniFetch will send notifications for these Radarr events:
+With beta access, OmniFetch can send notifications for these Radarr events:
 
 ### Core Events
 
@@ -105,21 +105,21 @@ You'll receive clear, informative notifications like:
 - Verify API key hasn't been regenerated in Radarr
 - Check that API key has sufficient permissions
 
-### Webhook Issues
+### Notification Issues (Beta)
 
-**Webhook Test Fails:**
+**No Beta Key:**
 
-- Ensure OmniFetch notification permissions are enabled in iOS Settings
-- Check that Radarr server can reach the internet
-- Verify webhook URL is correct in Radarr connections
-- Try removing and re-adding the service in OmniFetch
+- Webhook notifications require a private beta key
+- Contact support to request beta access
+- Without beta key, only manual monitoring is available
 
-**No Notifications Received:**
+**No Notifications Received (With Beta Key):**
 
 - Check iOS Settings → Notifications → OmniFetch → Allow Notifications
 - Ensure device has internet connection
-- Verify webhook events are enabled in Radarr connection settings
-- Test with manual notification in OmniFetch app
+- Verify beta key is entered correctly in OmniFetch settings
+- Check that notifications are enabled for Radarr in OmniFetch
+- Try re-entering beta key if notifications stop working
 
 ## Advanced Configuration
 
