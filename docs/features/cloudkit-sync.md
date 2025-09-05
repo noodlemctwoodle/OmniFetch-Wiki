@@ -80,10 +80,10 @@ OmniFetch shows sync status in several ways:
 
 ### Status Types
 
-**✅ Synced**: Service is up to date across all devices
-**🔄 Syncing**: Currently uploading or downloading changes
-**❌ Error**: Sync failed - requires attention
-**⏸️ Paused**: Sync temporarily disabled or offline
+**Synced**: Service is up to date across all devices
+**Syncing**: Currently uploading or downloading changes
+**Error**: Sync failed - requires attention
+**Paused**: Sync temporarily disabled or offline
 
 ## Troubleshooting Sync Issues
 
