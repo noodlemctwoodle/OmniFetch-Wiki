@@ -312,6 +312,101 @@
   }
 }
 
+/* Mobile table improvements */
+@media screen and (max-width: 48em) {
+  /* Hide table headers and make table responsive */
+  .md-typeset table:not([class]) {
+    border: none;
+    box-shadow: none;
+  }
+  
+  .md-typeset table:not([class]) thead {
+    display: none;
+  }
+  
+  .md-typeset table:not([class]) tbody {
+    display: block;
+  }
+  
+  .md-typeset table:not([class]) tr {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .md-typeset table:not([class]) tr:hover {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .md-typeset table:not([class]) td {
+    display: block;
+    border: none;
+    padding: 0.5rem 0;
+    text-align: left;
+  }
+  
+  .md-typeset table:not([class]) td:first-child {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--omnifetch-blue);
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(2):before {
+    content: "Type: ";
+    font-weight: 600;
+    color: var(--omnifetch-blue);
+    margin-right: 0.5rem;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(3):before {
+    content: "Status: ";
+    font-weight: 600;
+    color: var(--omnifetch-blue);
+    margin-right: 0.5rem;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(4):before {
+    content: "Features: ";
+    font-weight: 600;
+    color: var(--omnifetch-blue);
+    margin-right: 0.5rem;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(4) {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {
+    background: rgba(45, 55, 72, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+    background: rgba(45, 55, 72, 0.95);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:first-child {
+    border-bottom-color: var(--omnifetch-purple);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(2):before,
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(3):before,
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(4):before {
+    color: var(--omnifetch-purple);
+  }
+}
+
 /* Loading animation for better UX */
 @keyframes fadeInUp {
   from {
