@@ -6,7 +6,7 @@ This guide provides an overview of configuring OmniFetch and links to detailed s
 
 Before configuring individual services, ensure OmniFetch is properly set up:
 
-1. **[OmniFetch App Configuration](omnifetch-app.md)** - Configure the app itself, permissions, and global settings
+1. **[OmniFetch App Configuration](../app/settings/initial-setup.md)** - Configure the app itself, permissions, and global settings
 2. **Service Configuration** - Set up your individual media services (see below)
 
 ## Service Configuration Guides
@@ -15,15 +15,16 @@ OmniFetch supports several media management services. All services can be monito
 
 ### Supported Services
 
-- **[Sonarr Configuration](services/sonarr.md)** - TV show management and monitoring
-- **[Radarr Configuration](services/radarr.md)** - Movie management and monitoring  
-- **[Lidarr Configuration](services/lidarr.md)** - Music management and monitoring
-- **[Jellyseerr Configuration](services/jellyseerr.md)** - User request management
-- **[SABnzbd Configuration](services/sabnzbd.md)** - Usenet download client
+- **[Sonarr Configuration](../services/sonarr/setup.md)** - TV show management and monitoring
+- **[Radarr Configuration](../services/radarr/setup.md)** - Movie management and monitoring  
+- **[Lidarr Configuration](../services/lidarr/setup.md)** - Music management and monitoring
+- **[Jellyseerr Configuration](../services/jellyseerr/setup.md)** - User request management
+- **[SABnzbd Configuration](../services/sabnzbd/setup.md)** - Usenet download client
 
 ### Webhook Support (Beta)
 
 Webhook notifications are configured through OmniFetch's Notification Settings and require **beta access**. Beta testers receive:
+
 - Beta password for authentication
 - Webhook server URL
 - Setup documentation

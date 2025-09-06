@@ -11,7 +11,7 @@ OmniFetch is a native SwiftUI app for iOS that provides unified monitoring and m
 - **iPhone**: iOS 17.0+ - **Available Now**
 - **iPad**: iPadOS 17.0+ - **Coming Soon**
 - **Apple TV**: tvOS 17.0+ - **Coming Soon**
-- **Mac**: macOS 14.0+ - **Coming Soon**
+- **Mac**: macOS (Apple Silicon Only) - **Coming Soon**
 
 ### Is OmniFetch free?
 
@@ -81,6 +81,7 @@ CloudKit automatically synchronizes your service configurations, app preferences
 ### What if sync isn't working?
 
 Common solutions:
+
 - Ensure same Apple ID on all devices
 - Check that iCloud is enabled in device settings
 - Verify internet connectivity on all devices
@@ -100,6 +101,7 @@ Yes, but OmniFetch uses minimal iCloud storage - typically less than 1MB for mos
 ### Why is OmniFetch using battery?
 
 Background activity is normal for monitoring apps. To optimize battery usage:
+
 - Increase refresh intervals for less critical services
 - Disable background refresh for services you check manually
 - Use Wi-Fi instead of cellular when possible
@@ -112,6 +114,7 @@ Default refresh intervals vary by service and data type, typically 5-15 minutes.
 ### Can I reduce network usage?
 
 Yes:
+
 - Increase refresh intervals in service settings
 - Disable automatic refresh on cellular data
 - Use local network services when possible
@@ -141,6 +144,7 @@ Currently, configurations are automatically backed up via CloudKit sync. Manual 
 ### "Connection Failed" errors
 
 Most common causes:
+
 - Incorrect URL format (ensure http:// or https://)
 - Service is offline or unreachable
 - Wrong port number
@@ -150,6 +154,7 @@ Most common causes:
 ### "Unauthorized" errors
 
 Usually indicates:
+
 - Incorrect API key
 - API key was regenerated in service
 - Extra spaces when copying API key
@@ -158,6 +163,7 @@ Usually indicates:
 ### Services show old data
 
 Try these solutions:
+
 - Pull down to refresh manually
 - Check service refresh intervals
 - Verify service is responding normally
@@ -166,6 +172,7 @@ Try these solutions:
 ### Widgets not updating
 
 Common fixes:
+
 - Enable Background App Refresh for OmniFetch
 - Check that services are configured correctly in main app
 - Remove and re-add widget if severely outdated
@@ -176,6 +183,7 @@ Common fixes:
 ### What data does OmniFetch collect?
 
 OmniFetch is designed with privacy in mind:
+
 - No personal data is transmitted to external servers
 - API keys are stored securely in your device's keychain
 - CloudKit sync uses end-to-end encryption

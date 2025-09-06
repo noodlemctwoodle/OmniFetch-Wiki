@@ -33,12 +33,15 @@ Complete guide for adding Jellyseerr to OmniFetch.
    - **Jellyfin**: Connect through Jellyfin integration
 
 #### Local Connection
+
 ![Add Service Jellyseerr Local](../../assets/images/add-service/add-service-jellyseerr-local-iphone-16-pro.png)
 
 #### Plex Integration
+
 ![Add Service Jellyseerr Plex](../../assets/images/add-service/add-service-jellyseerr-plex-iphone-16-pro.png)
 
 #### Jellyfin Integration
+
 ![Add Service Jellyseerr Jellyfin](../../assets/images/add-service/add-service-jellyseerr-jellyfin-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
@@ -46,6 +49,7 @@ Complete guide for adding Jellyseerr to OmniFetch.
 #### For Local Connection
 
 **Server Address**
+
 - Enter hostname or IP address only
 - **Examples**:
   - Remote: `jellyseerr.mydomain.com`
@@ -53,26 +57,31 @@ Complete guide for adding Jellyseerr to OmniFetch.
   - Docker: `jellyseerr` (container name)
 
 **Port**
+
 - Default Jellyseerr port: `5055`
 - Change if using custom port
 
 **Use HTTPS**
+
 - Enable if using SSL/TLS
 - Most local installations use HTTP
 
 **API Key**
+
 - Paste the API key you copied from Jellyseerr
 - Ensure no extra spaces before or after
 
 #### For Plex Integration
 
 **Plex Server Details**
+
 - Configure Plex server connection
 - Jellyseerr requests will integrate with Plex
 
 #### For Jellyfin Integration
 
-**Jellyfin Server Details**  
+**Jellyfin Server Details**
+
 - Configure Jellyfin server connection
 - Jellyseerr requests will integrate with Jellyfin
 
@@ -88,6 +97,7 @@ For additional configuration options, tap **Advanced Settings**:
 ![Advanced Settings Jellyseerr](../../assets/images/add-service/add-service-jellyseer-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
+
 - Custom timeout settings
 - SSL certificate validation
 - Request headers
@@ -104,11 +114,13 @@ For additional configuration options, tap **Advanced Settings**:
 3. Look for the success message
 
 **If test succeeds:**
+
 - ✅ Connection established
 - ✅ API key valid
 - ✅ Jellyseerr version compatible
 
 **If test fails:**
+
 - ❌ Check URL format and accessibility
 - ❌ Verify API key is correct
 - ❌ Ensure Jellyseerr is running
@@ -156,6 +168,9 @@ For webhook notifications, you need a unique ID:
    - Request Declined
    - New Request (if admin)
 
+!!! tip "Push Notification Examples"
+    See what Jellyseerr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+
 ## Request Management
 
 ### View Requests
@@ -168,11 +183,13 @@ For webhook notifications, you need a unique ID:
 ### Request Actions
 
 **For Administrators:**
+
 - Approve pending requests
 - Decline requests with reason
 - View request details and comments
 
 **For Users:**
+1
 - View your submitted requests
 - Check approval status
 - See availability notifications

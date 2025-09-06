@@ -9,7 +9,7 @@ Webhook notifications provide real-time push notifications when events occur in 
 ## Prerequisites
 
 - OmniFetch app with Radarr configured
-- Private beta key from support
+- Private beta key from Discord
 - iOS push notifications enabled
 
 ## Setup Process
@@ -21,6 +21,9 @@ Webhook notifications provide real-time push notifications when events occur in 
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
+6. Enable the button to on
+
+![Radarr Push Notifications](../../assets/images/push-notifications/radarr-push-notifications.png)
 
 ### Step 2: Automatic Webhook Configuration
 
@@ -55,37 +58,44 @@ Once beta access is enabled:
 ### Core Events
 
 #### Download/Import Completed
+
 - **Event**: Movie successfully downloaded and imported
 - **Includes**: Quality upgrades
 - **Notification**: "Movie Name (2023) downloaded successfully"
 
 #### Media Grabbed
+
 - **Event**: Movie grabbed from indexer
 - **Notification**: "Movie Name (2023) grabbed from IndexerName"
 
 #### Test Notification
+
 - **Event**: Manual test from Radarr
 - **Notification**: "Test notification from Radarr"
 
 ### File Management Events
 
 #### Files Renamed
+
 - **Event**: Movie files renamed/organized
 - **Notification**: "Movie Name (2023) renamed"
 
 #### Movie Deleted
+
 - **Event**: Movie file deleted from disk
 - **Notification**: "Movie Name (2023) deleted"
 
 ### Library Events
 
 #### Movie Deleted
+
 - **Event**: Movie removed from Radarr
 - **Notification**: "Movie Name (2023) removed from library"
 
 ### System Events
 
 #### Health Issues
+
 - **Event**: Radarr detects system problems
 - **Priority**: High
 - **Examples**:
@@ -94,6 +104,7 @@ Once beta access is enabled:
   - "Root folder missing"
 
 #### Application Updates
+
 - **Event**: Radarr update available
 - **Notification**: "Radarr update available: v4.0.9"
 
@@ -109,22 +120,26 @@ Once beta access is enabled:
 ### Recommended Settings
 
 **Essential Notifications:**
+
 - ✅ Download/Import Completed
 - ✅ Health Issues
 - ✅ Download Failed
 
 **Optional Notifications:**
+
 - ⚪ Media Grabbed
 - ⚪ Files Renamed
 - ⚪ Quality Upgraded
 
 **Avoid Overload:**
+
 - ❌ Test notifications (after initial test)
 - ❌ Verbose file operations
 
 ### Notification Sounds
 
 Configure custom sounds:
+
 1. iOS Settings → Notifications → OmniFetch
 2. Choose notification sound
 3. Or set per-service sounds in app
@@ -136,6 +151,7 @@ Configure custom sounds:
 **Issue**: OmniFetch connection not appearing in Radarr
 
 **Solutions:**
+
 1. Verify beta key is saved
 2. Edit and re-save Radarr in OmniFetch
 3. Check Radarr API permissions
@@ -146,6 +162,7 @@ Configure custom sounds:
 **Issue**: Test notification doesn't arrive
 
 **Check:**
+
 - iOS notification permissions
 - Beta key validity
 - Internet connectivity
@@ -156,6 +173,7 @@ Configure custom sounds:
 **Issue**: Receiving multiple notifications for same event
 
 **Fix:**
+
 1. Remove any manual webhook configurations
 2. Ensure only one OmniFetch connection exists
 3. Disable Radarr's built-in notifications
@@ -165,16 +183,17 @@ Configure custom sounds:
 **Issue**: Webhook returns authentication error
 
 **Solutions:**
+
 - Re-enter beta key in OmniFetch
 - Generate new webhook (if using manual setup)
 - Contact support for key verification
 
 ## Advanced Configuration
 
-
 ### Performance Optimization
 
 **Best Practices:**
+
 - Limit notifications to essential events
 - Use quiet hours for overnight periods
 - Group notifications when possible
@@ -183,6 +202,7 @@ Configure custom sounds:
 ### Debug Information
 
 For troubleshooting:
+
 1. Go to **Settings** → **Developer**
 2. Enable **Debug Logging**
 3. Check webhook status and errors
@@ -191,6 +211,7 @@ For troubleshooting:
 ## Beta Limitations
 
 Current beta limitations:
+
 - Webhook URL changes require reconfiguration
 - Some events may have delays
 - Rate limiting during high activity

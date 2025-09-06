@@ -75,18 +75,21 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Not Receiving Notifications
 
 **Check iOS Settings**:
+
 1. Settings → Notifications → OmniFetch
 2. Ensure "Allow Notifications" is enabled
 3. Verify "Lock Screen", "Notification Center", and "Banners" are enabled
 4. Check that "Sounds" is not set to "None"
 
 **Check OmniFetch Settings**:
+
 1. Settings → Notifications → Enable Notifications
 2. Verify specific events are enabled for each service
 3. Check that quiet hours aren't blocking notifications
 4. Ensure service webhooks are properly configured
 
 **Network/Device Issues**:
+
 - Check internet connection on device
 - Try toggling airplane mode on/off
 - Restart OmniFetch app
@@ -95,12 +98,14 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Delayed Notifications
 
 **Common Causes**:
+
 - Poor internet connection causing delays
 - iOS Low Power Mode delaying background processes
 - Service delays in sending webhook notifications
 - High server load on notification service
 
 **Solutions**:
+
 - Ensure strong internet connection
 - Disable Low Power Mode
 - Check service logs for webhook delivery timing
@@ -109,11 +114,13 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Duplicate Notifications
 
 **Causes**:
+
 - Service sending duplicate events due to configuration issues
 - OmniFetch app installed on multiple devices with same CloudKit sync enabled
 - Other notification apps or services also configured for the same events
 
 **Solutions**:
+
 - Check service webhook settings for proper configuration
 - Remove and re-add service in OmniFetch if notifications seem duplicated
 - Verify CloudKit sync settings if using multiple devices
@@ -122,11 +129,13 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Webhook Test Fails
 
 **Service-Side Issues**:
+
 1. **Internet Access**: Ensure service server can reach external webhooks
 2. **Firewall**: Check outbound connections are allowed
 3. **Service Configuration**: Verify service allows webhook connections
 
 **OmniFetch Issues**:
+
 1. **Permissions**: Ensure notification permissions are granted
 2. **Registration**: Device may need re-registration with notification service
 3. **Network**: Check device internet connection
@@ -136,12 +145,14 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Services Not Syncing
 
 **iCloud Requirements**:
+
 - Same Apple ID on all devices
 - iCloud enabled in device settings
 - Sufficient iCloud storage available
 - Stable internet connection
 
 **Troubleshooting Steps**:
+
 1. **Sign Out/In**: Sign out of iCloud and back in on affected devices
 2. **Network Check**: Ensure all devices have internet access
 3. **Force Sync**: Close and reopen OmniFetch on all devices
@@ -150,11 +161,13 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Sync Conflicts
 
 **When They Occur**:
+
 - Simultaneous changes on multiple devices
 - Network interruptions during sync
 - Different versions of OmniFetch on different devices
 
 **Resolution**:
+
 - OmniFetch automatically resolves most conflicts
 - Manual resolution may require removing and re-adding affected services
 - Latest changes generally take priority in conflict resolution
@@ -164,6 +177,7 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 **Symptoms**: Some settings sync but others don't
 
 **Solutions**:
+
 - Wait longer - some data takes more time to sync
 - Check iCloud storage availability
 - Force refresh by restarting app on all devices
@@ -174,16 +188,19 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Widget Not Updating
 
 **iOS Settings**:
+
 - Background App Refresh must be enabled for OmniFetch
 - Check that Low Power Mode isn't blocking updates
 - Ensure adequate device storage for caching
 
 **OmniFetch Settings**:
+
 - Verify services are configured correctly
 - Check that service connections are working
 - Ensure refresh intervals are appropriate
 
 **Manual Refresh**:
+
 - Pull down on widget to force refresh
 - Open OmniFetch app to trigger background sync
 - Remove and re-add widget if updates remain stalled
@@ -191,11 +208,13 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Widget Showing "No Data"
 
 **Service Issues**:
+
 - Verify services are configured and connected in main app
 - Test service connections in OmniFetch settings
 - Check that services are accessible from device
 
 **Widget Configuration**:
+
 - Long-press widget and check configuration
 - Ensure correct service is selected
 - Verify widget has permission to access service data
@@ -205,12 +224,14 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Slow App Performance
 
 **Common Causes**:
+
 - Too many services configured
 - Very frequent refresh intervals
 - Large amounts of cached data
 - Older device with limited resources
 
 **Solutions**:
+
 - Reduce number of configured services
 - Increase refresh intervals
 - Clear app cache in settings
@@ -219,6 +240,7 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### High Battery Usage
 
 **Optimization Tips**:
+
 - Reduce refresh frequency for less critical services
 - Disable background refresh for services you check manually
 - Turn off notifications for non-essential events
@@ -227,6 +249,7 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Network Usage
 
 **Reducing Data Usage**:
+
 - Configure longer refresh intervals
 - Disable automatic refreshing on cellular
 - Use local network services when possible
@@ -256,6 +279,7 @@ If issues persist after trying these solutions:
 ### Reporting Issues
 
 When reporting problems:
+
 - Include OmniFetch version number
 - Describe steps to reproduce the issue
 - Include relevant error messages

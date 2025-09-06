@@ -14,6 +14,23 @@ Receive instant notifications on your iPhone, iPad, and Apple TV when important 
 - Automatic grouping by service
 - Sound and vibration customization
 
+#### Push Notification Examples
+
+**Sonarr Notifications:**
+![Sonarr Push Notifications](../assets/images/push-notifications/sonarr-push-notifications.png)
+
+**Radarr Notifications:**
+![Radarr Push Notifications](../assets/images/push-notifications/radarr-push-notifications.png)
+
+**Lidarr Notifications:**
+![Lidarr Push Notifications](../assets/images/push-notifications/lidarr-push-notifications.png)
+
+**Jellyseerr Notifications:**
+![Jellyseerr Push Notifications](../assets/images/push-notifications/jellyseerr-push-notifications.png)
+
+**SABnzbd Notifications:**
+![SABnzbd Push Notifications](../assets/images/push-notifications/sabnzbd-push-notifications.png)
+
 ### Webhook Notifications
 Advanced webhook integration for real-time event delivery from your services. See the [Webhooks Guide](webhooks.md) for detailed setup instructions.
 

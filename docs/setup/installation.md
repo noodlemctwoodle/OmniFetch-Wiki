@@ -23,7 +23,6 @@ Join the TestFlight beta to get early access to new features:
 2. **Request Beta Access** by contacting the developer for a TestFlight invitation
 3. **Install OmniFetch** from TestFlight once you receive the invitation
 
-
 ## Next Steps
 
 After successful installation, proceed to the [Quick Start Guide](quick-start.md) to configure your first media service and start monitoring your stack.

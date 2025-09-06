@@ -23,6 +23,9 @@ Webhook notifications provide real-time push notifications when download events 
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
+6. Enable the button to on
+
+![SABnzbd Push Notifications](../../assets/images/push-notifications/sabnzbd-push-notifications.png)
 
 ### Step 2: Generate Webhook ID
 
@@ -37,6 +40,7 @@ Webhook notifications provide real-time push notifications when download events 
 Download the OmniFetch webhook script:
 
 **omnifetch-webhook.py**:
+
 ```python
 #!/usr/bin/env python3
 """
@@ -196,21 +200,25 @@ if __name__ == "__main__":
 ### Download Events
 
 #### Download Complete
+
 - **Trigger**: File successfully downloaded and processed
 - **Notification**: "Download Complete: FileName downloaded successfully"
 - **Status**: Success
 
 #### Download Failed - Verification
+
 - **Trigger**: Download failed verification check
 - **Notification**: "Verification Failed: FileName failed verification"
 - **Status**: Error
 
 #### Download Failed - Unpack
+
 - **Trigger**: Download failed to extract/unpack
 - **Notification**: "Unpack Failed: FileName failed to unpack"  
 - **Status**: Error
 
 #### Download Failed - Both
+
 - **Trigger**: Download failed both verification and unpack
 - **Notification**: "Download Failed: FileName failed verification and unpack"
 - **Status**: Error
@@ -218,6 +226,7 @@ if __name__ == "__main__":
 ### Queue Events
 
 #### Queue Complete
+
 - **Trigger**: All downloads in queue finished
 - **Notification**: "Queue Complete: All downloads finished"
 - **Status**: Success
@@ -234,11 +243,13 @@ if __name__ == "__main__":
 ### Recommended Settings
 
 **Essential Notifications:**
+
 - ✅ Download Complete
 - ✅ Download Failed (all types)
 - ✅ Queue Complete
 
 **Optional Notifications:**
+
 - ⚪ Individual file completions
 - ⚪ Speed limit changes
 - ⚪ Pause/Resume events
@@ -246,6 +257,7 @@ if __name__ == "__main__":
 ### Notification Sounds
 
 Configure custom sounds:
+
 1. iOS Settings → Notifications → OmniFetch
 2. Choose notification sound
 3. Or set SABnzbd-specific sounds in app
@@ -257,6 +269,7 @@ Configure custom sounds:
 **Issue**: No notifications received from SABnzbd
 
 **Check:**
+
 1. Script is in correct SABnzbd scripts directory
 2. Script has execute permissions (`chmod +x`)
 3. Python 3 is available on system
@@ -267,6 +280,7 @@ Configure custom sounds:
 **Issue**: Script logs show authentication error
 
 **Solutions:**
+
 - Verify beta password in script
 - Re-generate webhook ID in OmniFetch
 - Check WEBHOOK_URL format
@@ -277,6 +291,7 @@ Configure custom sounds:
 **Issue**: Python errors in SABnzbd logs
 
 **Check:**
+
 - Python 3.6+ is installed
 - Script syntax is correct
 - All required modules available
@@ -287,6 +302,7 @@ Configure custom sounds:
 **Issue**: Script runs but no notification arrives
 
 **Check:**
+
 - Webhook URL is accessible
 - Beta key is valid in OmniFetch
 - Network connectivity from SABnzbd server
@@ -341,6 +357,7 @@ def send_notification(event_type, title, message, status="info"):
 ### Dependencies
 
 The script requires:
+
 - Python 3.6 or later
 - Standard library modules only:
   - `sys` - Command line arguments
@@ -359,6 +376,7 @@ The script requires:
 ## Beta Limitations
 
 Current beta limitations:
+
 - Manual script installation required
 - Python 3.6+ dependency
 - Limited error recovery

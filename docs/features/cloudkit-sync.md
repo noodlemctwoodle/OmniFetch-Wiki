@@ -9,18 +9,21 @@ CloudKit sync ensures that your OmniFetch setup is consistent across all your de
 ## What Gets Synced
 
 ### Service Configurations
+
 - **Service Details**: Names, URLs, and connection settings
 - **Authentication**: API keys and credentials (encrypted)
 - **Custom Settings**: Service-specific preferences and options
 - **Connection Status**: Last known status and health information
 
-### App Preferences  
+### App Preferences
+
 - **Notification Settings**: Push notification preferences per service
 - **Display Options**: Theme, layout, and interface preferences
 - **Widget Configuration**: Home screen widget settings and data sources
 - **Refresh Intervals**: How often to check services for updates
 
 ### User Data
+
 - **Favorites**: Starred or bookmarked content
 - **History**: Recently viewed items and search history
 - **Custom Lists**: User-created collections and watchlists
@@ -29,6 +32,7 @@ CloudKit sync ensures that your OmniFetch setup is consistent across all your de
 ## Setting Up CloudKit Sync
 
 ### Prerequisites
+
 - **iCloud Account**: Must be signed in to iCloud on all devices
 - **iCloud Drive**: Enable iCloud Drive in device settings
 - **Same Apple ID**: All devices must use the same Apple ID
@@ -53,6 +57,7 @@ To verify sync is working:
 ## Sync Process
 
 ### Automatic Syncing
+
 CloudKit sync happens automatically in the background:
 
 - **Real-Time**: Changes sync within seconds when devices are online
@@ -61,6 +66,7 @@ CloudKit sync happens automatically in the background:
 - **Conflict Resolution**: Automatic handling of conflicting changes
 
 ### Manual Sync
+
 Force a manual sync when needed:
 
 1. **Pull to Refresh**: Pull down on main service list
@@ -71,6 +77,7 @@ Force a manual sync when needed:
 ## Sync Status
 
 ### Indicators
+
 OmniFetch shows sync status in several ways:
 
 - **Cloud Icons**: Indicate sync status next to services
@@ -90,18 +97,21 @@ OmniFetch shows sync status in several ways:
 ### Common Problems
 
 **Services Not Syncing:**
+
 - Verify iCloud is enabled and signed in on all devices
 - Check internet connection on affected devices
 - Ensure devices are using the same Apple ID
 - Try signing out and back in to iCloud
 
 **Sync Conflicts:**
+
 - OmniFetch automatically resolves most conflicts
 - Manual resolution may be required for major differences
 - Check sync status in settings for conflict details
 - Clear local data and re-sync if problems persist
 
 **Slow Syncing:**
+
 - Poor internet connection can delay sync
 - iCloud service outages may affect sync speed
 - Background App Refresh must be enabled
@@ -110,6 +120,7 @@ OmniFetch shows sync status in several ways:
 ### Advanced Troubleshooting
 
 **Reset CloudKit Data:**
+
 1. Go to OmniFetch Settings → CloudKit Sync
 2. Tap "Reset CloudKit Data" (this will clear all synced data)
 3. Confirm the reset action
@@ -117,6 +128,7 @@ OmniFetch shows sync status in several ways:
 5. Data will sync to other devices automatically
 
 **Check iCloud Status:**
+
 - iOS Settings → [Your Name] → iCloud
 - Verify iCloud Drive is enabled
 - Check available iCloud storage space
@@ -125,19 +137,23 @@ OmniFetch shows sync status in several ways:
 ## Privacy & Security
 
 ### Data Encryption
+
 - All synced data is encrypted in transit and at rest
 - API keys and passwords are encrypted with additional security
 - Apple cannot access your personal OmniFetch data
 - Local device encryption provides additional security layer
 
 ### Data Control
+
 - **Your Data**: All data remains under your control
 - **No Sharing**: Data is never shared with third parties
 - **Local Fallback**: App works fully even without CloudKit
 - **Delete Anytime**: You can disable sync and delete cloud data anytime
 
 ### Apple's Privacy
+
 CloudKit sync follows Apple's strict privacy guidelines:
+
 - End-to-end encryption for sensitive data
 - No ads or tracking based on your data
 - Apple doesn't scan or analyze your OmniFetch content
@@ -146,6 +162,7 @@ CloudKit sync follows Apple's strict privacy guidelines:
 ## Managing Sync
 
 ### Sync Settings
+
 Control how CloudKit sync behaves:
 
 - **Auto-Sync**: Enable/disable automatic syncing
@@ -154,6 +171,7 @@ Control how CloudKit sync behaves:
 - **Conflict Resolution**: Choose how to handle sync conflicts
 
 ### Storage Management
+
 Monitor and manage your CloudKit usage:
 
 - **Storage Used**: View how much iCloud space OmniFetch uses
@@ -164,18 +182,21 @@ Monitor and manage your CloudKit usage:
 ## Best Practices
 
 ### Optimal Sync Experience
+
 - **Stable Network**: Use Wi-Fi for initial sync of large configurations
 - **Regular Updates**: Keep OmniFetch updated on all devices
 - **Consistent Usage**: Regular app usage helps maintain sync accuracy
 - **Backup Important Data**: Export critical configurations as backup
 
 ### Multi-Device Workflow
+
 - **Primary Device**: Designate one device for major configuration changes
 - **Consistent Timing**: Make changes when other devices can sync quickly
 - **Verify Changes**: Check that important changes sync to all devices
 - **Avoid Conflicts**: Don't make simultaneous changes on multiple devices
 
 ### Performance Tips
+
 - **Background Refresh**: Enable Background App Refresh for best sync performance
 - **Good Storage**: Maintain adequate free space on all devices
 - **Network Quality**: Stable internet improves sync reliability
@@ -184,12 +205,14 @@ Monitor and manage your CloudKit usage:
 ## Limitations
 
 ### CloudKit Limits
+
 - **Storage**: Limited by your iCloud storage plan
 - **Frequency**: Sync frequency limited by Apple's CloudKit quotas
 - **Device Limit**: Works with devices signed into the same Apple ID
 - **Network Required**: Cannot sync without internet connection
 
 ### Service Limitations
+
 - **Local-Only Services**: Services only accessible on local network don't sync status
 - **Large Data**: Very large datasets may sync slowly
 - **Real-Time Limits**: Not all changes sync instantly

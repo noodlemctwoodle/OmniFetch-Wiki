@@ -6,6 +6,8 @@
 
 Welcome to the documentation for **OmniFetch** - a native SwiftUI application that provides unified monitoring and management for your entire media stack.
 
+![OmniFetch](assets/images/discovery.png)
+
 ## Overview
 
 OmniFetch is a powerful iOS application designed to streamline your media service management. With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your services from anywhere. Support for iPad, Apple TV, and Mac is coming soon.
@@ -44,11 +46,11 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| ![Sonarr](assets/images/service-icons/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| ![Radarr](assets/images/service-icons/radarr-logo.png){ width="32" } **[Radarr](services/radarr.md)** | Movies | Library management, download tracking, health monitoring |
-| ![Lidarr](assets/images/service-icons/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr.md)** | Music | Album monitoring, artist management, release tracking |
-| ![Jellyseerr](assets/images/service-icons/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr.md)** | Requests | Request approval, user management, issue tracking |
-| ![SABnzbd](assets/images/service-icons/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd.md)** | Downloads | Queue management, completion tracking, system alerts |
+| ![Sonarr](assets/images/service-icons/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr/index.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| ![Radarr](assets/images/service-icons/radarr-logo.png){ width="32" } **[Radarr](services/radarr/index.md)** | Movies | Library management, download tracking, health monitoring |
+| ![Lidarr](assets/images/service-icons/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr/index.md)** | Music | Album monitoring, artist management, release tracking |
+| ![Jellyseerr](assets/images/service-icons/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr/index.md)** | Requests | Request approval, user management, issue tracking |
+| ![SABnzbd](assets/images/service-icons/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd/index.md)** | Downloads | Queue management, completion tracking, system alerts |
 
 ## Key Features
 
@@ -135,3 +137,5 @@ OmniFetch is built with cutting-edge Apple technologies:
 </div>
 
 ---
+
+[def]: docs/assets/images/discovery.png

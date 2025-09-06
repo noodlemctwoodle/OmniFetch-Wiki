@@ -130,6 +130,9 @@ If you have beta access:
    - Health Issues ✅
    - Movie Deleted
 
+!!! tip "Push Notification Examples"
+    See what Radarr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+
 ## Verification Steps
 
 After setup, verify everything works:

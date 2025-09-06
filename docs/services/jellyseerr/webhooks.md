@@ -22,37 +22,42 @@ Webhook notifications provide real-time push notifications when request events o
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
+6. 6. Enable the button to on
+
+![Jellyseerr Push Notifications](../../assets/images/push-notifications/jellyseerr-push-notifications.png)
 
 ### Step 2: Generate Webhook ID
 
-1. In OmniFetch, go to **Settings** → **Developer**
+1. In OmniFetch, go to **Settings** → Tap **About OmniFetch** 5x → **Notification Debug**
 2. Tap **"Generate ID for Service"**
-3. Select **Jellyseerr**
-4. Copy the generated unique ID
-5. Keep this ID for webhook configuration
+3. Copy the generated unique ID
+4. Keep this ID for webhook configuration
 
 ### Step 3: Configure Webhook in Jellyseerr
 
 1. Open Jellyseerr web interface
-2. Navigate to **Settings** → **Notifications**
-3. Click **Add New Notification**
-4. Select **Webhook** as notification type
+2. Navigate to **Settings** → **Notifications**  →  **Webhook**
+3. Check Enable Agent
 
 #### Webhook Configuration
 
 **Name**: `OmniFetch`
 
-**Webhook URL**: 
-```
+**Webhook URL**:
+
+```text
 https://YOUR_WEBHOOK_DOMAIN/push/YOUR_GENERATED_ID_HERE
 ```
+
 Replace `YOUR_GENERATED_ID_HERE` with the ID from Step 2.
 
 **Authorization Header**:
-```
+
+```text
 Bearer YOUR_BETA_PASSWORD_HERE
 ```
-This password is provided separately by support.
+
+This password is provided separately in Discord.
 
 **JSON Payload**: Use the default Jellyseerr webhook payload
 
@@ -61,6 +66,7 @@ This password is provided separately by support.
 Enable these notification triggers:
 
 **Essential Events:**
+
 - ✅ Media Requested
 - ✅ Media Auto-Approved  
 - ✅ Media Approved
@@ -69,6 +75,7 @@ Enable these notification triggers:
 - ✅ Media Failed
 
 **Optional Events:**
+
 - ⚪ Issue Reported
 - ⚪ Issue Resolved
 - ⚪ Issue Reopened
@@ -85,40 +92,49 @@ Enable these notification triggers:
 ### Request Events
 
 #### Media Requested
+
 - **Event**: New content request submitted
 - **Notification**: "New request: Movie/Show Name by Username"
 
 #### Media Auto-Approved
+
 - **Event**: Request automatically approved
 - **Notification**: "Auto-approved: Movie/Show Name"
 
 #### Media Approved
+
 - **Event**: Admin manually approved request
 - **Notification**: "Approved: Movie/Show Name"
 
 #### Media Declined
+
 - **Event**: Admin declined request
 - **Notification**: "Declined: Movie/Show Name - Reason"
 
 #### Media Available
+
 - **Event**: Requested content is now available
 - **Notification**: "Available: Movie/Show Name ready to watch"
 
 #### Media Failed
+
 - **Event**: Download/processing failed
 - **Notification**: "Failed: Movie/Show Name download failed"
 
 ### Issue Events
 
 #### Issue Reported
+
 - **Event**: User reports issue with content
 - **Notification**: "Issue reported: Movie/Show Name"
 
 #### Issue Resolved
+
 - **Event**: Admin resolves reported issue
 - **Notification**: "Issue resolved: Movie/Show Name"
 
 #### Issue Reopened
+
 - **Event**: Resolved issue reopened
 - **Notification**: "Issue reopened: Movie/Show Name"
 
@@ -134,11 +150,13 @@ Enable these notification triggers:
 ### Recommended Settings
 
 **For Administrators:**
+
 - ✅ Media Requested (new requests)
 - ✅ Issue Reported (user issues)
 - ✅ Media Failed (processing failures)
 
 **For Users:**
+
 - ✅ Media Approved (your requests approved)
 - ✅ Media Available (ready to watch)
 - ✅ Media Declined (with reasons)
@@ -146,6 +164,7 @@ Enable these notification triggers:
 ### Notification Sounds
 
 Configure custom sounds:
+
 1. iOS Settings → Notifications → OmniFetch
 2. Choose notification sound
 3. Or set Jellyseerr-specific sounds in app
@@ -157,6 +176,7 @@ Configure custom sounds:
 **Issue**: No notifications received from Jellyseerr
 
 **Check:**
+
 1. Webhook URL is correct with your unique ID
 2. Authorization header includes correct beta password
 3. Webhook is enabled in Jellyseerr
@@ -167,6 +187,7 @@ Configure custom sounds:
 **Issue**: Webhook returns authentication error
 
 **Solutions:**
+
 - Verify beta password in authorization header
 - Re-generate webhook ID in OmniFetch
 - Contact support for beta password verification
@@ -176,6 +197,7 @@ Configure custom sounds:
 **Issue**: Receiving multiple notifications for same event
 
 **Fix:**
+
 1. Ensure only one OmniFetch webhook exists
 2. Check for duplicate notification rules
 3. Disable any other webhook integrations
@@ -185,6 +207,7 @@ Configure custom sounds:
 **Issue**: Test webhook doesn't send notification
 
 **Check:**
+
 - Beta key is valid and saved in OmniFetch
 - Webhook URL format is correct
 - Authorization header is properly formatted
@@ -210,10 +233,10 @@ You can customize the JSON payload sent to OmniFetch:
 }
 ```
 
-
 ### Rate Limiting
 
 Webhooks are subject to rate limits:
+
 - Maximum 100 notifications per hour
 - Burst limit of 10 per minute
 - Failed webhooks retry with backoff
@@ -240,6 +263,7 @@ For troubleshooting:
 ## Beta Limitations
 
 Current beta limitations:
+
 - Manual webhook configuration required
 - Single webhook URL format
 - Limited to specific event types

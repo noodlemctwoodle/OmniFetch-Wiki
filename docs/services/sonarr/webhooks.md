@@ -1,6 +1,6 @@
 # Sonarr Webhook Notifications
 
-Configure push notifications for Sonarr events using webhooks (beta feature).
+Configure push notifications for Sonarr events using webhooks (private beta feature).
 
 ## Overview
 
@@ -21,6 +21,9 @@ Webhook notifications provide real-time push notifications when events occur in 
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
+6. Enable the button to on
+
+![Sonarr Push Notifications](../../assets/images/push-notifications/sonarr-push-notifications.png)
 
 ### Step 2: Automatic Webhook Configuration
 
@@ -55,37 +58,44 @@ Once beta access is enabled:
 ### Core Events
 
 #### Download/Import Completed
+
 - **Event**: Episode successfully downloaded and imported
 - **Includes**: Quality upgrades
 - **Notification**: "Show Name S01E01 downloaded successfully"
 
 #### Media Grabbed
+
 - **Event**: Episode grabbed from indexer
 - **Notification**: "Show Name S01E01 grabbed from IndexerName"
 
 #### Test Notification
+
 - **Event**: Manual test from Sonarr
 - **Notification**: "Test notification from Sonarr"
 
 ### File Management Events
 
 #### Files Renamed
+
 - **Event**: Episode files renamed/organized
 - **Notification**: "3 episodes renamed in Show Name"
 
 #### Episode Deleted
+
 - **Event**: Episode file deleted from disk
 - **Notification**: "Show Name S01E01 deleted"
 
 ### Library Events
 
 #### Series Deleted
+
 - **Event**: TV series removed from Sonarr
 - **Notification**: "Show Name removed from library"
 
 ### System Events
 
 #### Health Issues
+
 - **Event**: Sonarr detects system problems
 - **Priority**: High
 - **Examples**:
@@ -94,6 +104,7 @@ Once beta access is enabled:
   - "Root folder missing"
 
 #### Application Updates
+
 - **Event**: Sonarr update available
 - **Notification**: "Sonarr update available: v3.0.9"
 
@@ -109,22 +120,26 @@ Once beta access is enabled:
 ### Recommended Settings
 
 **Essential Notifications:**
+
 - ✅ Download/Import Completed
 - ✅ Health Issues
 - ✅ Download Failed
 
 **Optional Notifications:**
+
 - ⚪ Media Grabbed
 - ⚪ Files Renamed
 - ⚪ Quality Upgraded
 
 **Avoid Overload:**
+
 - ❌ Test notifications (after initial test)
 - ❌ Verbose file operations
 
 ### Notification Sounds
 
 Configure custom sounds:
+
 1. iOS Settings → Notifications → OmniFetch
 2. Choose notification sound
 3. Or set per-service sounds in app
@@ -136,6 +151,7 @@ Configure custom sounds:
 **Issue**: OmniFetch connection not appearing in Sonarr
 
 **Solutions:**
+
 1. Verify beta key is saved
 2. Edit and re-save Sonarr in OmniFetch
 3. Check Sonarr API permissions
@@ -146,6 +162,7 @@ Configure custom sounds:
 **Issue**: Test notification doesn't arrive
 
 **Check:**
+
 - iOS notification permissions
 - Beta key validity
 - Internet connectivity
@@ -156,6 +173,7 @@ Configure custom sounds:
 **Issue**: Receiving multiple notifications for same event
 
 **Fix:**
+
 1. Remove any manual webhook configurations
 2. Ensure only one OmniFetch connection exists
 3. Disable Sonarr's built-in notifications
@@ -165,6 +183,7 @@ Configure custom sounds:
 **Issue**: Webhook returns authentication error
 
 **Solutions:**
+
 - Re-enter beta key in OmniFetch
 - Generate new webhook (if using manual setup)
 - Contact support for key verification
@@ -173,13 +192,7 @@ Configure custom sounds:
 
 ### Performance Optimization
 
-**Best Practices:**
-- Limit notifications to essential events
-- Use quiet hours for overnight periods
-- Group notifications when possible
-- Monitor webhook response times
-
-### Debug Information
+## Debug Information
 
 For troubleshooting:
 1. Go to **Settings** → **Developer**
@@ -190,6 +203,7 @@ For troubleshooting:
 ## Beta Limitations
 
 Current beta limitations:
+
 - Webhook URL changes require reconfiguration
 - Some events may have delays
 - Rate limiting during high activity

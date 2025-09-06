@@ -21,6 +21,9 @@ Webhook notifications provide real-time push notifications when events occur in 
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
+6. Enable the button to on
+
+![Lidarr Push Notifications](../../assets/images/push-notifications/lidarr-push-notifications.png)
 
 ### Step 2: Automatic Webhook Configuration
 

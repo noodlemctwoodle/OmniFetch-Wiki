@@ -36,6 +36,25 @@ Access notification settings from **Settings** → **Notification Settings**.
 - **Schedule**: Configure daily quiet times
 - **Override**: Allow critical notifications
 
+## Push Notification Examples
+
+Here are examples of what notifications look like for each service:
+
+**Sonarr Notifications:**
+![Sonarr Push Notifications](../../assets/images/push-notifications/sonarr-push-notifications.png)
+
+**Radarr Notifications:**
+![Radarr Push Notifications](../../assets/images/push-notifications/radarr-push-notifications.png)
+
+**Lidarr Notifications:**
+![Lidarr Push Notifications](../../assets/images/push-notifications/lidarr-push-notifications.png)
+
+**Jellyseerr Notifications:**
+![Jellyseerr Push Notifications](../../assets/images/push-notifications/jellyseerr-push-notifications.png)
+
+**SABnzbd Notifications:**
+![SABnzbd Push Notifications](../../assets/images/push-notifications/sabnzbd-push-notifications.png)
+
 ## Service-Specific Settings
 
 Configure notifications for each service independently.
