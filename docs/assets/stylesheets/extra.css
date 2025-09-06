@@ -3,8 +3,35 @@
 /* Remove default image borders globally */
 .md-typeset img {
   border: none !important;
-  outline: none;
+  outline: none !important;
   box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Additional specificity for Material theme overrides */
+.md-content img,
+.md-typeset .md-content img,
+article img,
+.md-typeset article img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+}
+
+/* Ensure no borders in any context */
+img, 
+img:hover,
+img:focus,
+img:active {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 :root {
