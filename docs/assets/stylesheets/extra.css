@@ -312,6 +312,65 @@
   }
 }
 
+/* Mobile image optimizations */
+@media screen and (max-width: 48em) {
+  /* Make all images responsive on mobile */
+  .md-typeset img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Specific sizing for screenshot images */
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 90%;
+    width: auto;
+    max-height: 500px;
+    object-fit: contain;
+  }
+  
+  /* Even smaller for inline service icons */
+  .md-typeset img[src*="service-icons"] {
+    max-width: 24px;
+    max-height: 24px;
+    display: inline-block;
+    margin: 0 0.3rem 0 0;
+    box-shadow: none;
+  }
+  
+  /* Optimize images in admonitions */
+  .md-typeset .admonition img {
+    max-width: 85%;
+    margin: 0.5rem auto;
+  }
+  
+  /* Center align images */
+  .md-typeset p img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Tablet-specific image sizing */
+@media screen and (min-width: 48em) and (max-width: 76.25em) {
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 80%;
+    display: block;
+    margin: 1.5rem auto;
+  }
+}
+
 /* Mobile table improvements */
 @media screen and (max-width: 48em) {
   /* Hide table headers and make table responsive */
@@ -430,6 +489,35 @@
   height: 1.2em;
 }
 
+
+/* Image performance optimizations */
+.md-typeset img {
+  /* Add loading attribute via CSS for browsers that support it */
+  content-visibility: auto;
+}
+
+/* Ensure images don't cause layout shift */
+.md-typeset img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize large images with blur-up effect */
+.md-typeset img[src*="push-notifications"],
+.md-typeset img[src*="add-service"],
+.md-typeset img[src*="Settings"],
+.md-typeset img[src*="onboarding"],
+.md-typeset img[src*="discovery"] {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  transition: opacity 0.3s ease-in-out;
+}
+
+[data-md-color-scheme="slate"] .md-typeset img[src*="push-notifications"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="add-service"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="Settings"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="onboarding"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="discovery"] {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+}
 
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
