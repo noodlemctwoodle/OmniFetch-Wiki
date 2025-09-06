@@ -28,7 +28,9 @@ Complete guide for adding Sonarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Sonarr**
 
+<div class="iphone-mockup">
 ![Add Service Sonarr](../../assets/images/Add-Service/Add%20Service%20Sonarr%20-%20iPhone%2016%20Pro.png)
+</div>
 
 ### Step 3: Configure Connection
 
@@ -62,7 +64,9 @@ Enter your Sonarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
+<div class="iphone-mockup">
 ![Advanced Settings Sonarr](../../assets/images/Add-Service/Add%20Service%20Sonarr-AdvSettings%20-%20iPhone%2016%20Pro.png)
+</div>
 
 **Advanced Options Include:**
 - Custom timeout settings
