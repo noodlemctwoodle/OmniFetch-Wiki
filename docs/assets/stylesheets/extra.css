@@ -1,5 +1,12 @@
 /* Custom styles for OmniFetch Documentation */
 
+/* Remove default image borders globally */
+.md-typeset img {
+  border: none !important;
+  outline: none;
+  box-shadow: none !important;
+}
+
 :root {
   --md-primary-fg-color: #3949AB;
   --md-primary-fg-color--light: #5C6BC0;
@@ -546,6 +553,8 @@
 .md-typeset img[src*="discovery"] {
   background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
   transition: opacity 0.3s ease-in-out;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 [data-md-color-scheme="slate"] .md-typeset img[src*="push-notifications"],
