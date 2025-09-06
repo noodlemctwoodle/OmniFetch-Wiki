@@ -1,12 +1,14 @@
 /* Custom styles for OmniFetch Documentation */
 
-/* Remove default image borders globally */
+/* Remove default image borders globally and preserve transparency */
 .md-typeset img {
   border: none !important;
   outline: none !important;
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 /* Additional specificity for Material theme overrides */
@@ -19,9 +21,11 @@ article img,
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
+  background: none !important;
+  background-color: transparent !important;
 }
 
-/* Ensure no borders in any context */
+/* Ensure no borders in any context and preserve alpha channel */
 img, 
 img:hover,
 img:focus,
@@ -32,6 +36,8 @@ img:active {
   border-color: transparent !important;
   box-shadow: none !important;
   outline: none !important;
+  background: none !important;
+  background-color: transparent !important;
 }
 
 :root {
@@ -574,13 +580,14 @@ img:active {
   aspect-ratio: attr(width) / attr(height);
 }
 
-/* Optimize large images with blur-up effect */
+/* Optimize large images - remove backgrounds that interfere with alpha channel */
 .md-typeset img[src*="push-notifications"],
 .md-typeset img[src*="add-service"],
 .md-typeset img[src*="Settings"],
 .md-typeset img[src*="onboarding"],
 .md-typeset img[src*="discovery"] {
-  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  background: none !important;
+  background-color: transparent !important;
   transition: opacity 0.3s ease-in-out;
   border: none !important;
   box-shadow: none !important;
@@ -591,7 +598,8 @@ img:active {
 [data-md-color-scheme="slate"] .md-typeset img[src*="Settings"],
 [data-md-color-scheme="slate"] .md-typeset img[src*="onboarding"],
 [data-md-color-scheme="slate"] .md-typeset img[src*="discovery"] {
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+  background: none !important;
+  background-color: transparent !important;
 }
 
 /* Custom scrollbar for webkit browsers */
