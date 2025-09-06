@@ -411,16 +411,19 @@ img:active {
   }
 }
 
-/* Mobile table improvements - consistent card system */
+/* Mobile table improvements - adaptive system */
 @media screen and (max-width: 48em) {
-  /* Hide table headers and make table responsive */
+  /* Show tables as proper responsive tables, not cards */
   .md-typeset table:not([class]) {
-    border: none;
-    box-shadow: none;
-    display: block;
+    display: table;
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 1rem 0;
-    padding: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.85em;
   }
   
   .md-typeset table:not([class]) thead {
@@ -428,51 +431,55 @@ img:active {
   }
   
   .md-typeset table:not([class]) tbody {
-    display: block;
-    width: 100%;
-    margin: 0;
+    display: table-row-group;
   }
   
   .md-typeset table:not([class]) tr {
-    display: block;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    margin: 0 0 1rem 0;
-    padding: 1.25rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    min-height: auto;
-    overflow: hidden;
+    display: table-row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .md-typeset table:not([class]) tr:last-child {
+    border-bottom: none;
   }
   
   .md-typeset table:not([class]) tr:hover {
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    background: rgba(0, 0, 0, 0.02);
   }
   
   .md-typeset table:not([class]) td {
-    display: block;
+    display: table-cell;
+    padding: 0.75rem 0.5rem;
+    vertical-align: top;
     border: none;
-    padding: 0.3rem 0;
-    text-align: left;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    line-height: 1.4;
     word-wrap: break-word;
-    overflow-wrap: break-word;
   }
   
   .md-typeset table:not([class]) td:first-child {
-    display: block;
     font-weight: 600;
-    font-size: 1.1em;
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--omnifetch-blue);
-    line-height: 1.3;
+    font-size: 0.9em;
+    padding-left: 0.75rem;
+    width: 30%;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(2) {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.7);
+    width: 25%;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(3) {
+    font-weight: 600;
+    font-size: 0.8em;
+    width: 25%;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(4) {
+    font-size: 0.75em;
+    color: rgba(0, 0, 0, 0.6);
+    width: 20%;
+    padding-right: 0.75rem;
   }
   
   /* Dynamic labels based on table structure - remove all hardcoded labels */
@@ -481,77 +488,27 @@ img:active {
   }
   
   
-  /* Ensure proper spacing for last item */
-  .md-typeset table:not([class]) tr:last-child {
-    margin-bottom: 2rem;
-  }
   
-  /* Consistent styling for all table cell types */
-  .md-typeset table:not([class]) td:not(:first-child) {
-    font-size: 0.9em;
-    margin: 0.4rem 0;
-    padding: 0.2rem 0;
-    line-height: 1.4;
-  }
-  
-  /* Second column - usually version, type, or secondary info */
-  .md-typeset table:not([class]) td:nth-child(2) {
-    color: rgba(0, 0, 0, 0.8);
-    font-weight: 500;
-    font-size: 0.9em;
-  }
-  
-  /* Third column - usually status */
-  .md-typeset table:not([class]) td:nth-child(3) {
-    margin-top: 0.6rem;
-    padding-top: 0.6rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    font-weight: 600;
-    font-size: 0.95em;
-    color: rgba(0, 0, 0, 0.9);
-  }
-  
-  /* Fourth column - usually features/description */
-  .md-typeset table:not([class]) td:nth-child(4) {
-    margin-top: 0.6rem;
-    padding-top: 0.6rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    font-size: 0.85em;
-    color: rgba(0, 0, 0, 0.75);
-    line-height: 1.5;
-  }
-  
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {
-    background: rgba(45, 55, 72, 0.8);
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) {
     border-color: rgba(255, 255, 255, 0.1);
   }
   
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
-    background: rgba(45, 55, 72, 0.95);
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
   }
   
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:first-child {
-    border-bottom-color: var(--omnifetch-purple);
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:hover {
+    background: rgba(255, 255, 255, 0.05);
   }
   
   [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(2) {
     color: rgba(255, 255, 255, 0.8);
   }
   
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(3) {
-    border-top-color: rgba(255, 255, 255, 0.1);
-  }
-  
   [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(4) {
-    border-top-color: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.7);
   }
   
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(2):before,
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(3):before,
-  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(4):before {
-    color: var(--omnifetch-purple);
-  }
 }
 
 /* Loading animation for better UX */
