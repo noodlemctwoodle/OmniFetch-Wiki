@@ -143,22 +143,33 @@ nav:
   - Getting Started:
     - Installation: setup/installation.md
     - Quick Start: setup/quick-start.md
-    - OmniFetch App: setup/omnifetch-app.md
-  - Configuration:
-    - Overview: setup/configuration.md
-    - Service Setup:
-      - Sonarr: setup/services/sonarr.md
-      - Radarr: setup/services/radarr.md
-      - Lidarr: setup/services/lidarr.md
-      - Jellyseerr: setup/services/jellyseerr.md
-      - SABnzbd: setup/services/sabnzbd.md
+  - OmniFetch App:
+    - Overview: app/index.md
+    - Settings:
+      - Initial Setup: app/settings/initial-setup.md
+      - Notifications: app/settings/notifications.md
   - Services:
     - Overview: services/index.md
-    - Sonarr: services/sonarr.md
-    - Radarr: services/radarr.md
-    - Lidarr: services/lidarr.md
-    - Jellyseerr: services/jellyseerr.md
-    - SABnzbd: services/sabnzbd.md
+    - Sonarr:
+      - Overview: services/sonarr/index.md
+      - Setup: services/sonarr/setup.md
+      - Webhooks: services/sonarr/webhooks.md
+    - Radarr:
+      - Overview: services/radarr/index.md
+      - Setup: setup/services/radarr.md
+      - Webhooks: setup/services/radarr.md
+    - Lidarr:
+      - Overview: services/lidarr.md
+      - Setup: setup/services/lidarr.md
+      - Webhooks: setup/services/lidarr.md
+    - Jellyseerr:
+      - Overview: services/jellyseerr.md
+      - Setup: setup/services/jellyseerr.md
+      - Webhooks: setup/services/jellyseerr.md
+    - SABnzbd:
+      - Overview: services/sabnzbd.md
+      - Setup: setup/services/sabnzbd.md
+      - Script: setup/services/omnifetch-webhook.py
   - Features:
     - Notifications: features/notifications.md
     - Webhooks: features/webhooks.md
