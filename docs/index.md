@@ -44,11 +44,11 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| ![Sonarr](assets/images/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| ![Radarr](assets/images/radarr-logo.png){ width="32" } **[Radarr](services/radarr.md)** | Movies | Library management, download tracking, health monitoring |
-| ![Lidarr](assets/images/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr.md)** | Music | Album monitoring, artist management, release tracking |
-| ![Jellyseerr](assets/images/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr.md)** | Requests | Request approval, user management, issue tracking |
-| ![SABnzbd](assets/images/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd.md)** | Downloads | Queue management, completion tracking, system alerts |
+| ![Sonarr](assets/images/service-icons/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| ![Radarr](assets/images/service-icons/radarr-logo.png){ width="32" } **[Radarr](services/radarr.md)** | Movies | Library management, download tracking, health monitoring |
+| ![Lidarr](assets/images/service-icons/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr.md)** | Music | Album monitoring, artist management, release tracking |
+| ![Jellyseerr](assets/images/service-icons/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr.md)** | Requests | Request approval, user management, issue tracking |
+| ![SABnzbd](assets/images/service-icons/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd.md)** | Downloads | Queue management, completion tracking, system alerts |
 
 ## Key Features
 

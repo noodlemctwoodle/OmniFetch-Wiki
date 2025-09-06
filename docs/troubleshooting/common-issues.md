@@ -109,15 +109,15 @@ This guide covers the most frequently encountered issues when using OmniFetch an
 ### Duplicate Notifications
 
 **Causes**:
-- Multiple webhook configurations for same service
-- Service sending duplicate events
-- OmniFetch app installed on multiple devices with same settings
+- Service sending duplicate events due to configuration issues
+- OmniFetch app installed on multiple devices with same CloudKit sync enabled
+- Other notification apps or services also configured for the same events
 
 **Solutions**:
-- Check service webhook settings for duplicates
-- Remove and re-add service in OmniFetch
-- Verify webhook URLs are unique per device
-- Check if other notification apps are also configured
+- Check service webhook settings for proper configuration
+- Remove and re-add service in OmniFetch if notifications seem duplicated
+- Verify CloudKit sync settings if using multiple devices
+- Check if other notification apps are also configured for the same services
 
 ### Webhook Test Fails
 

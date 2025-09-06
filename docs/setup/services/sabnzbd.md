@@ -216,14 +216,9 @@ The complete Python script for SABnzbd webhook notifications is included below. 
 
 ## Advanced Configuration
 
-### Multiple SABnzbd Instances
+### Service Configuration
 
-For complex setups with multiple SABnzbd instances:
-
-1. Use descriptive names: "Main Downloads", "4K Downloads", "TV Downloads"
-2. Each instance requires its own API key configuration
-3. Configure different refresh intervals for different instances
-4. Set different notification priorities in OmniFetch
+OmniFetch currently supports one SABnzbd instance. Future versions will support multiple instances for different download setups.
 
 ### Performance Optimization
 

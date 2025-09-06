@@ -58,7 +58,7 @@ OmniFetch supports automatic webhook setup for Sonarr:
 
 ## Tips
 
-- Use descriptive names for multiple Sonarr instances
+- Use descriptive names when configuring your Sonarr instance
 - Enable quality profiles that match your preferences
 - Configure download clients properly for best results
 - Regularly check health warnings for system issues

@@ -121,13 +121,9 @@ You'll receive clear, informative notifications like:
 
 ## Advanced Configuration
 
-### Multiple Sonarr Instances
+### Service Configuration
 
-You can add multiple Sonarr instances (e.g., for different quality profiles):
-
-1. Use descriptive names: "TV Shows 1080p", "TV Shows 4K", "Anime"
-2. Each instance gets its own webhook configuration
-3. Configure different notification sounds for different instances
+OmniFetch currently supports one Sonarr instance. Future versions will support multiple instances for different setups.
 
 ### Notification Filtering
 

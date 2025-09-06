@@ -123,37 +123,9 @@ You'll receive clear, informative notifications like:
 
 ## Advanced Configuration
 
-### Multiple Lidarr Instances
+### Service Configuration
 
-You can add multiple Lidarr instances for different music collections:
-
-1. Use descriptive names: "Music FLAC", "Music MP3", "Classical Music"
-2. Each instance gets its own webhook configuration
-3. Configure different notification sounds for different instances
-
-### Quality Profile Considerations
-
-#### Lossless Collection (FLAC)
-
-- **Name**: "Music FLAC"
-- **Purpose**: Audiophile-quality collection
-- **Quality**: FLAC, 24-bit when available
-- **Size**: Large file sizes
-- **Note**: Best for dedicated listening setups
-
-#### Compressed Collection (MP3)
-
-- **Name**: "Music MP3"
-- **Purpose**: Portable/streaming collection
-- **Quality**: 320kbps MP3 or V0 VBR
-- **Size**: Moderate file sizes
-- **Note**: Good balance of quality and storage
-
-#### Specialized Collections
-
-- **Classical**: Different organizational needs
-- **Podcasts**: Episode-based rather than album-based
-- **Live Recordings**: Bootlegs and concert recordings
+OmniFetch currently supports one Lidarr instance. Future versions will support multiple instances for different music collections.
 
 ### Notification Filtering
 

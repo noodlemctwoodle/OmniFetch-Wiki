@@ -8,21 +8,21 @@ OmniFetch supports monitoring and management of various media services. Each ser
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![Sonarr](../assets/images/sonarr-logo.png){ width="24" } [Sonarr](sonarr.md) | TV Shows | **Supported** | Queue, Calendar, Library, Search |
-| ![Radarr](../assets/images/radarr-logo.png){ width="24" } [Radarr](radarr.md) | Movies | **Supported** | Queue, Calendar, Library, Search |
-| ![Lidarr](../assets/images/lidarr-logo.png){ width="24" } [Lidarr](lidarr.md) | Music | **Supported** | Queue, Calendar, Library, Search |
+| ![Sonarr](../assets/images/service-icons/sonarr-logo.png){ width="24" } [Sonarr](sonarr.md) | TV Shows | **Supported** | Queue, Calendar, Library, Search |
+| ![Radarr](../assets/images/service-icons/radarr-logo.png){ width="24" } [Radarr](radarr.md) | Movies | **Supported** | Queue, Calendar, Library, Search |
+| ![Lidarr](../assets/images/service-icons/lidarr-logo.png){ width="24" } [Lidarr](lidarr.md) | Music | **Supported** | Queue, Calendar, Library, Search |
 
 ### Request Management
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![Jellyseerr](../assets/images/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr.md) | Requests | **Supported** | Requests, Approvals, Search |
+| ![Jellyseerr](../assets/images/service-icons/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr.md) | Requests | **Supported** | Requests, Approvals, Search |
 
 ### Download Clients
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![SABnzbd](../assets/images/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd.md) | Usenet | **Supported** | Queue, History, Statistics |
+| ![SABnzbd](../assets/images/service-icons/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd.md) | Usenet | **Supported** | Queue, History, Statistics |
 
 ## Common Configuration
 

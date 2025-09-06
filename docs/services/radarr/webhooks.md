@@ -171,12 +171,6 @@ Configure custom sounds:
 
 ## Advanced Configuration
 
-### Multiple Radarr Instances
-
-Each Radarr instance gets its own webhook:
-- Separate notification settings
-- Independent event configuration
-- Different notification sounds possible
 
 ### Performance Optimization
 

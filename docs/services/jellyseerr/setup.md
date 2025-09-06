@@ -33,13 +33,13 @@ Complete guide for adding Jellyseerr to OmniFetch.
    - **Jellyfin**: Connect through Jellyfin integration
 
 #### Local Connection
-![Add Service Jellyseerr Local](../../assets/images/Add-Service/Add%20Service%20Jellyseerr-Local%20-%20iPhone%2016%20Pro.png)
+![Add Service Jellyseerr Local](../../assets/images/add-service/add-service-jellyseerr-local-iphone-16-pro.png)
 
 #### Plex Integration
-![Add Service Jellyseerr Plex](../../assets/images/Add-Service/Add%20Service%20Jellyseerr-Plex%20-%20iPhone%2016%20Pro.png)
+![Add Service Jellyseerr Plex](../../assets/images/add-service/add-service-jellyseerr-plex-iphone-16-pro.png)
 
 #### Jellyfin Integration
-![Add Service Jellyseerr Jellyfin](../../assets/images/Add-Service/Add%20Service%20Jellyseerr-JellyFin%20-%20iPhone%2016%20Pro.png)
+![Add Service Jellyseerr Jellyfin](../../assets/images/add-service/add-service-jellyseerr-jellyfin-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
 
@@ -85,7 +85,7 @@ Complete guide for adding Jellyseerr to OmniFetch.
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Jellyseerr](../../assets/images/Add-Service/Add%20Service%20Jellyseer-AdvSettings%20-%20iPhone%2016%20Pro.png)
+![Advanced Settings Jellyseerr](../../assets/images/add-service/add-service-jellyseer-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
 - Custom timeout settings
@@ -176,29 +176,6 @@ For webhook notifications, you need a unique ID:
 - View your submitted requests
 - Check approval status
 - See availability notifications
-
-## Multiple Jellyseerr Instances
-
-You can add multiple Jellyseerr instances if needed:
-
-### Common Use Cases
-
-#### Primary Instance
-- **Name**: "Jellyseerr"
-- **Purpose**: Main request system
-- **Users**: All family members
-
-#### Secondary Instance
-- **Name**: "Jellyseerr Kids"
-- **Purpose**: Child-friendly content only
-- **Users**: Limited access
-
-### Managing Multiple Instances
-
-- Use descriptive names
-- Configure separate webhook IDs
-- Set different notification preferences
-- Monitor resource usage
 
 ## Verification Steps
 

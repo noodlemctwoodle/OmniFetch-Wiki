@@ -29,7 +29,7 @@ Complete guide for adding Sonarr to OmniFetch.
 4. From **Service Type** dropdown, select **Sonarr**
 
 <div class="iphone-mockup">
-![Add Service Sonarr](../../assets/images/Add-Service/Add%20Service%20Sonarr%20-%20iPhone%2016%20Pro.png)
+![Add Service Sonarr](../../assets/images/add-service/add-service-sonarr-iphone-16-pro.png)
 </div>
 
 ### Step 3: Configure Connection
@@ -65,7 +65,7 @@ Enter your Sonarr connection details:
 For additional configuration options, tap **Advanced Settings**:
 
 <div class="iphone-mockup">
-![Advanced Settings Sonarr](../../assets/images/Add-Service/Add%20Service%20Sonarr-AdvSettings%20-%20iPhone%2016%20Pro.png)
+![Advanced Settings Sonarr](../../assets/images/add-service/add-service-sonarr-advsettings-iphone-16-pro.png)
 </div>
 
 **Advanced Options Include:**
@@ -129,34 +129,6 @@ If you have beta access:
    - Quality Upgraded
    - Health Issues ✅
    - Series Deleted
-
-## Multiple Sonarr Instances
-
-You can add multiple Sonarr instances for different purposes.
-
-### Common Configurations
-
-#### Main TV Shows
-- **Name**: "TV Shows"
-- **Purpose**: Primary TV show collection
-- **Quality**: 1080p standard
-
-#### 4K Library
-- **Name**: "TV Shows 4K"
-- **Purpose**: High-quality 4K content
-- **Quality**: 2160p HDR
-
-#### Anime Collection
-- **Name**: "Anime"
-- **Purpose**: Anime-specific settings
-- **Quality**: Varies by source
-
-### Managing Multiple Instances
-
-- Use clear, descriptive names
-- Set different notification sounds
-- Configure appropriate refresh intervals
-- Monitor resource usage
 
 ## Verification Steps
 

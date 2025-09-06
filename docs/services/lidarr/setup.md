@@ -28,7 +28,7 @@ Complete guide for adding Lidarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Lidarr**
 
-![Add Service Lidarr](../../assets/images/Add-Service/Add%20Service%20Lidarr%20-%20iPhone%2016%20Pro.png)
+![Add Service Lidarr](../../assets/images/add-service/add-service-lidarr-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your Lidarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Lidarr](../../assets/images/Add-Service/Add%20Service%20Lidarr-AdvSettings%20-%20iPhone%2016%20Pro.png)
+![Advanced Settings Lidarr](../../assets/images/add-service/add-service-lidarr-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
 - Custom timeout settings
@@ -129,34 +129,6 @@ If you have beta access:
    - Quality Upgraded
    - Health Issues ✅
    - Artist Deleted
-
-## Multiple Lidarr Instances
-
-You can add multiple Lidarr instances for different purposes.
-
-### Common Configurations
-
-#### Main Music
-- **Name**: "Music"
-- **Purpose**: Primary music collection
-- **Quality**: FLAC standard
-
-#### High Quality
-- **Name**: "Music HQ"
-- **Purpose**: Audiophile collection
-- **Quality**: FLAC 24-bit
-
-#### Genres
-- **Name**: "Classical Music"
-- **Purpose**: Genre-specific collection
-- **Quality**: High bitrate MP3/FLAC
-
-### Managing Multiple Instances
-
-- Use clear, descriptive names
-- Set different notification sounds
-- Configure appropriate refresh intervals
-- Monitor resource usage
 
 ## Verification Steps
 

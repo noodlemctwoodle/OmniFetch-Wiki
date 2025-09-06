@@ -124,13 +124,9 @@ You'll receive clear, informative notifications like:
 
 ## Advanced Configuration
 
-### Multiple Radarr Instances
+### Service Configuration
 
-You can add multiple Radarr instances (e.g., for different quality profiles):
-
-1. Use descriptive names: "Movies 1080p", "Movies 4K", "Foreign Films"
-2. Each instance gets its own webhook configuration
-3. Configure different notification sounds for different instances
+OmniFetch currently supports one Radarr instance. Future versions will support multiple instances for different setups.
 
 ### Notification Filtering
 
@@ -148,30 +144,6 @@ To reduce notification volume:
 - Keep Radarr updated for best compatibility
 - Regular API key rotation for security
 
-## Quality Profile Considerations
-
-When setting up multiple Radarr instances:
-
-### Standard Setup (1080p)
-
-- **Name**: "Movies 1080p"
-- **Purpose**: General movie collection
-- **Quality**: 1080p BluRay/WEB-DL
-- **Size**: Moderate file sizes
-
-### 4K Setup
-
-- **Name**: "Movies 4K"
-- **Purpose**: Premium quality collection
-- **Quality**: 2160p BluRay/WEB-DL
-- **Size**: Large file sizes
-- **Note**: Requires 4K-capable playback devices
-
-### Specialty Collections
-
-- **Foreign Films**: Different language requirements
-- **Documentaries**: Separate organization
-- **Kids Movies**: Family-appropriate content filtering
 
 ## Next Steps
 

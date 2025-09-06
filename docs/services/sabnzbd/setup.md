@@ -28,7 +28,7 @@ Complete guide for adding SABnzbd to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **SABnzbd**
 
-![Add Service SABnzbd](../../assets/images/Add-Service/Add%20Service%20SABnzbd%20-%20iPhone%2016%20Pro.png)
+![Add Service SABnzbd](../../assets/images/add-service/add-service-sabnzbd-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your SABnzbd connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings SABnzbd](../../assets/images/Add-Service/Add%20Service%20SABnzbd-AdvSettings%20-%20iPhone%2016%20Pro.png)
+![Advanced Settings SABnzbd](../../assets/images/add-service/add-service-sabnzbd-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
 - Custom timeout settings
@@ -163,29 +163,6 @@ Control bandwidth usage:
 - Set speed limits for different times
 - Pause all downloads
 - Resume with speed restrictions
-
-## Multiple SABnzbd Instances
-
-You can add multiple SABnzbd instances if needed:
-
-### Common Use Cases
-
-#### Primary Instance
-- **Name**: "SABnzbd Main"
-- **Purpose**: General downloads
-- **Speed**: Full bandwidth
-
-#### Secondary Instance
-- **Name**: "SABnzbd Slow"
-- **Purpose**: Background downloads
-- **Speed**: Limited bandwidth
-
-### Managing Multiple Instances
-
-- Use descriptive names
-- Configure separate webhook scripts
-- Set different notification preferences
-- Monitor total bandwidth usage
 
 ## Verification Steps
 

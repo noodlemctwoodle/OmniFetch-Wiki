@@ -317,13 +317,6 @@ def handle_disk_space_low():
     )
 ```
 
-### Multiple SABnzbd Instances
-
-For multiple instances:
-- Generate separate IDs for each instance
-- Use different script copies with unique IDs
-- Configure separate notification preferences
-- Use same beta password for all
 
 ### Logging and Debugging
 
@@ -376,8 +369,8 @@ Current beta limitations:
 **Q: Why does SABnzbd need a script instead of automatic webhook setup?**
 A: SABnzbd's notification system is script-based, requiring custom Python scripts for external webhooks.
 
-**Q: Can I use the same script for multiple SABnzbd instances?**
-A: No, each instance needs its own script copy with unique webhook ID.
+**Q: Does OmniFetch support multiple SABnzbd instances?**
+A: Currently, OmniFetch supports one SABnzbd instance per configuration. Multiple instance support is planned for future releases.
 
 **Q: What happens if the script fails?**
 A: SABnzbd continues normal operation; only notifications are affected.

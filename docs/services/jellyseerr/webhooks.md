@@ -210,13 +210,6 @@ You can customize the JSON payload sent to OmniFetch:
 }
 ```
 
-### Multiple Jellyseerr Instances
-
-Each instance requires its own webhook:
-- Generate separate IDs for each instance
-- Use same beta password for all
-- Configure different notification sounds
-- Monitor webhook performance
 
 ### Rate Limiting
 
@@ -257,8 +250,8 @@ Current beta limitations:
 **Q: Why isn't webhook configuration automatic like other services?**
 A: Jellyseerr requires manual webhook setup due to its notification system architecture.
 
-**Q: Can I use the same webhook for multiple Jellyseerr instances?**
-A: No, each instance needs its own unique webhook ID.
+**Q: Does OmniFetch support multiple Jellyseerr instances?**
+A: Currently, OmniFetch supports one Jellyseerr instance per configuration. Multiple instance support is planned for future releases.
 
 **Q: What happens if my beta password changes?**
 A: Update the authorization header in all Jellyseerr webhook configurations.

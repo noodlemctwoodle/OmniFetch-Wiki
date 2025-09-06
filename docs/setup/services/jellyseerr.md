@@ -215,14 +215,9 @@ Customize which notifications you receive:
 4. **Low Priority**: Comments, Issues Resolved
 5. **Disable**: Test notifications after initial setup
 
-### Multiple Jellyseerr Instances
+### Service Configuration
 
-For complex setups with multiple Jellyseerr instances:
-
-1. Use descriptive names: "Main Requests", "4K Requests", "Family Requests"
-2. Each instance requires separate webhook configuration
-3. Configure different notification sounds for different instances
-4. Consider different user bases for different instances
+OmniFetch currently supports one Jellyseerr instance. Future versions will support multiple instances for different request setups.
 
 ## Performance Tips
 

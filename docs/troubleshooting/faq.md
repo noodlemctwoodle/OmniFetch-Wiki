@@ -126,7 +126,7 @@ Yes:
 
 ### Can I monitor multiple instances of the same service?
 
-Yes! You can add multiple Sonarr instances, multiple Radarr instances, etc. Use descriptive names to distinguish between them (e.g., "Movies 4K", "TV Shows", "Anime").
+Currently, OmniFetch supports one instance per service type (one Sonarr, one Radarr, etc.). Support for multiple instances of the same service is planned for future releases.
 
 ### Do widgets work without the app running?
 

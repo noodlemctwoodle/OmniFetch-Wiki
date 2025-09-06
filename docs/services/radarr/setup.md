@@ -28,7 +28,7 @@ Complete guide for adding Radarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Radarr**
 
-![Add Service Radarr](../../assets/images/Add-Service/Add%20Service%20Radarr%20-%20iPhone%2016%20Pro.png)
+![Add Service Radarr](../../assets/images/add-service/add-service-radarr-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your Radarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Radarr](../../assets/images/Add-Service/Add%20Service%20Radarr-AdvSettings%20-%20iPhone%2016%20Pro.png)
+![Advanced Settings Radarr](../../assets/images/add-service/add-service-radarr-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
 - Custom timeout settings
@@ -129,34 +129,6 @@ If you have beta access:
    - Quality Upgraded
    - Health Issues ✅
    - Movie Deleted
-
-## Multiple Radarr Instances
-
-You can add multiple Radarr instances for different purposes.
-
-### Common Configurations
-
-#### Main Movies
-- **Name**: "Movies"
-- **Purpose**: Primary movie collection
-- **Quality**: 1080p standard
-
-#### 4K Library
-- **Name**: "Movies 4K"
-- **Purpose**: High-quality 4K content
-- **Quality**: 2160p HDR
-
-#### International Films
-- **Name**: "Foreign Films"
-- **Purpose**: Non-English content
-- **Quality**: Varies by source
-
-### Managing Multiple Instances
-
-- Use clear, descriptive names
-- Set different notification sounds
-- Configure appropriate refresh intervals
-- Monitor resource usage
 
 ## Verification Steps
 

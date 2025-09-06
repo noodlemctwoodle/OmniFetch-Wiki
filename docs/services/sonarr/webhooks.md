@@ -171,13 +171,6 @@ Configure custom sounds:
 
 ## Advanced Configuration
 
-### Multiple Sonarr Instances
-
-Each Sonarr instance gets its own webhook:
-- Separate notification settings
-- Independent event configuration
-- Different notification sounds possible
-
 ### Performance Optimization
 
 **Best Practices:**
