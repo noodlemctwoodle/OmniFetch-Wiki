@@ -377,6 +377,8 @@
   .md-typeset table:not([class]) {
     border: none;
     box-shadow: none;
+    display: block;
+    width: 100%;
   }
   
   .md-typeset table:not([class]) thead {
@@ -385,34 +387,42 @@
   
   .md-typeset table:not([class]) tbody {
     display: block;
+    width: 100%;
   }
   
   .md-typeset table:not([class]) tr {
     display: block;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 1rem;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    min-height: auto;
+    overflow: visible;
   }
   
   .md-typeset table:not([class]) tr:hover {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
   
   .md-typeset table:not([class]) td {
     display: block;
     border: none;
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     text-align: left;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .md-typeset table:not([class]) td:first-child {
     display: flex;
     align-items: center;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.15em;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--omnifetch-blue);
@@ -423,6 +433,7 @@
     font-weight: 600;
     color: var(--omnifetch-blue);
     margin-right: 0.5rem;
+    display: inline-block;
   }
   
   .md-typeset table:not([class]) td:nth-child(3):before {
@@ -430,6 +441,7 @@
     font-weight: 600;
     color: var(--omnifetch-blue);
     margin-right: 0.5rem;
+    display: inline-block;
   }
   
   .md-typeset table:not([class]) td:nth-child(4):before {
@@ -437,13 +449,18 @@
     font-weight: 600;
     color: var(--omnifetch-blue);
     margin-right: 0.5rem;
-    display: block;
-    margin-bottom: 0.25rem;
+    display: inline-block;
   }
   
   .md-typeset table:not([class]) td:nth-child(4) {
-    font-size: 0.9em;
-    line-height: 1.5;
+    font-size: 0.95em;
+    line-height: 1.6;
+    padding-bottom: 0.5rem;
+  }
+  
+  /* Ensure proper spacing for last item */
+  .md-typeset table:not([class]) tr:last-child {
+    margin-bottom: 2rem;
   }
   
   [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {

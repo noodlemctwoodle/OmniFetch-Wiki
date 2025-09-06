@@ -21,6 +21,7 @@ Before starting, ensure you have:
 ![OmniFetch Onboarding](../assets/images/Settings/onboarding.png)
 
 The onboarding screen highlights the benefits of iCloud sync:
+
 - ✅ Sync settings across all devices
 - ✅ Automatic backup to iCloud  
 - ✅ Private and secure
