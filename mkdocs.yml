@@ -13,8 +13,8 @@ copyright: Copyright &copy; 2025 OmniFetch
 theme:
   name: material
   language: en
-  logo: assets/images/Icon-iOS-Default-1024x1024@1x.png
-  favicon: assets/images/Icon-iOS-Default-1024x1024@1x.png
+  logo: assets/images/omnifetch-icon.png
+  favicon: assets/images/omnifetch-icon.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
