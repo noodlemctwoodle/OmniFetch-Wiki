@@ -335,67 +335,6 @@
   height: 1.2em;
 }
 
-/* iPhone Mockup Styling */
-.iphone-mockup {
-  position: relative;
-  display: inline-block;
-  margin: 2rem auto;
-  max-width: 320px;
-  text-align: center;
-  background-image: url('../images/iPhone%2016%20Pro%20-%20Black%20Titanium%20-%20Portrait.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.iphone-mockup img {
-  width: 85%;
-  height: auto;
-  margin: 5.5% auto 6% auto;
-  border-radius: 36px;
-  display: block;
-  box-shadow: none;
-  border: none;
-}
-
-/* Auto-style iPhone screenshots */
-.md-typeset img[src*="iPhone 16 Pro"] {
-  display: block;
-  margin: 2rem auto;
-  max-width: 280px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #fff;
-  padding: 0;
-}
-
-[data-md-color-scheme="slate"] .md-typeset img[src*="iPhone 16 Pro"] {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6), 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-/* Center iPhone screenshots */
-.md-typeset p:has(img[src*="iPhone 16 Pro"]) {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-/* Responsive iPhone mockups */
-@media screen and (max-width: 768px) {
-  .iphone-mockup,
-  .md-typeset img[src*="iPhone 16 Pro"] {
-    max-width: 260px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .iphone-mockup,
-  .md-typeset img[src*="iPhone 16 Pro"] {
-    max-width: 220px;
-  }
-}
 
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
