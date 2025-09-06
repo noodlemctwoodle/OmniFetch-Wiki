@@ -488,6 +488,13 @@ img:active {
     font-weight: 600;
     padding-left: 0.75rem;
     color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+  
+  /* Center images in table cells */
+  .md-typeset table:not([class]) td img {
+    display: block;
+    margin: 0 auto;
   }
   
   .md-typeset table:not([class]) td:nth-child(2) {
