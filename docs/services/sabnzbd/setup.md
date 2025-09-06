@@ -213,4 +213,4 @@ After setup, verify everything works:
 - [Configure webhook notifications](webhooks.md)
 - [Set up queue monitoring](features/queue.md)
 - [Configure history tracking](features/history.md)
-- [Troubleshoot issues](troubleshooting/common.md)
+- [Troubleshoot issues](../../troubleshooting/common-issues.md)

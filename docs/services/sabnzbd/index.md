@@ -10,18 +10,12 @@ SABnzbd is an open-source binary newsreader written in Python. It's the most pop
 
 ### Setup & Configuration
 - **[Initial Setup](setup.md)** - Add SABnzbd to OmniFetch
-- **[API Configuration](api-configuration.md)** - API key and connection settings
+- **[API Configuration](setup.md)** - API key and connection settings
 - **[Webhook Notifications](webhooks.md)** - Beta webhook configuration
 
 ### Features
-- **[Queue Monitoring](features/queue.md)** - Monitor download queue
-- **[History Tracking](features/history.md)** - Download history and statistics
-- **[Speed Control](features/speed.md)** - Bandwidth management
 
 ### Troubleshooting
-- **[Connection Issues](troubleshooting/connection.md)** - Fix connection problems
-- **[Notification Issues](troubleshooting/notifications.md)** - Webhook troubleshooting
-- **[Common Problems](troubleshooting/common.md)** - Frequently encountered issues
 
 ## Quick Links
 

@@ -10,19 +10,11 @@ Sonarr is a PVR for Usenet and BitTorrent users. It monitors multiple RSS feeds 
 
 ### Setup & Configuration
 - **[Initial Setup](setup.md)** - Add Sonarr to OmniFetch
-- **[API Configuration](api-configuration.md)** - API key and connection settings
 - **[Webhook Notifications](webhooks.md)** - Beta webhook configuration
 
-### Features
-- **[Queue Monitoring](features/queue.md)** - Monitor download queue
-- **[Calendar View](features/calendar.md)** - Upcoming episode calendar
-- **[Series Management](features/series.md)** - View and manage TV series
-- **[History Tracking](features/history.md)** - Download and activity history
-
 ### Troubleshooting
-- **[Connection Issues](troubleshooting/connection.md)** - Fix connection problems
-- **[Notification Issues](troubleshooting/notifications.md)** - Webhook troubleshooting
-- **[Common Problems](troubleshooting/common.md)** - Frequently encountered issues
+- **[Common Issues](../../troubleshooting/common-issues.md)** - Frequently encountered issues
+- **[FAQ](../../troubleshooting/faq.md)** - Questions and answers
 
 ## Quick Links
 

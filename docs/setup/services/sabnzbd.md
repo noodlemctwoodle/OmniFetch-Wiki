@@ -61,7 +61,7 @@ SABnzbd requires a Python notification script to send webhooks since it doesn't 
    - Replace `YOUR_WEBHOOK_DOMAIN` with the domain provided in your beta documentation
    - Replace `PASTE_YOUR_ID_HERE` with the ID you copied from OmniFetch
    - Replace `YOUR_BETA_PASSWORD_HERE` with the password provided separately
-3. Save the file as `omnifetch-webhook.py`
+3. Save the file as `../../services/sabnzbd/omnifetch-webhook.py`
 
 ### Step 3: Install the Script
 
@@ -69,8 +69,8 @@ Place the script in your SABnzbd scripts directory:
 
 **Linux/Mac:**
 ```bash
-cp omnifetch-webhook.py ~/.sabnzbd/scripts/
-chmod +x ~/.sabnzbd/scripts/omnifetch-webhook.py
+cp ../../services/sabnzbd/omnifetch-webhook.py ~/.sabnzbd/scripts/
+chmod +x ~/.sabnzbd/scripts/../../services/sabnzbd/omnifetch-webhook.py
 ```
 
 **Windows:**
@@ -80,8 +80,8 @@ Copy to: C:\Users\[username]\AppData\Local\sabnzbd\scripts\
 
 **Docker/Unraid:**
 ```bash
-docker cp omnifetch-webhook.py sabnzbd:/config/scripts/
-docker exec sabnzbd chmod +x /config/scripts/omnifetch-webhook.py
+docker cp ../../services/sabnzbd/omnifetch-webhook.py sabnzbd:/config/scripts/
+docker exec sabnzbd chmod +x /config/scripts/../../services/sabnzbd/omnifetch-webhook.py
 ```
 
 ### Step 4: Configure SABnzbd
@@ -89,7 +89,7 @@ docker exec sabnzbd chmod +x /config/scripts/omnifetch-webhook.py
 1. Open **SABnzbd** web interface
 2. Go to **Config** → **Notifications**
 3. Enable **notification script**
-4. Select **omnifetch-webhook.py** from the script dropdown
+4. Select **../../services/sabnzbd/omnifetch-webhook.py** from the script dropdown
 5. Leave the **Parameters** field empty (URL is configured in the script)
 
 **Select Event Triggers:**
@@ -161,7 +161,7 @@ You'll receive clear, informative notifications like:
 - Verify you've edited the script with your webhook ID
 - Ensure beta password is correctly entered in the script
 - Check Python 3 is installed: `python3 --version`
-- Test script manually: `python3 omnifetch-webhook.py test`
+- Test script manually: `python3 ../../services/sabnzbd/omnifetch-webhook.py test`
 
 **"403 Forbidden" Error:**
 - Beta password may be incorrect in the script
@@ -195,7 +195,7 @@ You'll receive clear, informative notifications like:
 
 The complete Python script for SABnzbd webhook notifications is included below. Beta testers will receive the beta password separately.
 
-??? example "View Python Script (omnifetch-webhook.py)"
+??? example "View Python Script (../../services/sabnzbd/omnifetch-webhook.py)"
     
     ```python
     #!/usr/bin/env python3
@@ -203,15 +203,15 @@ The complete Python script for SABnzbd webhook notifications is included below. 
     SABnzbd Webhook Notification Script for OmniFetch
     """
     
-    [Download the full script here](omnifetch-webhook.py)
+    [Download the full script here](../../services/sabnzbd/omnifetch-webhook.py)
     
     **Configuration Required:**
     1. Replace `PASTE_YOUR_ID_HERE` with your webhook ID from OmniFetch
     2. Replace `YOUR_BETA_PASSWORD_HERE` with the beta password provided separately
     
     **Installation:**
-    - Save as `omnifetch-webhook.py` in your SABnzbd scripts directory
-    - Make executable: `chmod +x omnifetch-webhook.py` (Linux/Mac)
+    - Save as `../../services/sabnzbd/omnifetch-webhook.py` in your SABnzbd scripts directory
+    - Make executable: `chmod +x ../../services/sabnzbd/omnifetch-webhook.py` (Linux/Mac)
     - Configure in SABnzbd Config → Notifications
 
 ## Advanced Configuration

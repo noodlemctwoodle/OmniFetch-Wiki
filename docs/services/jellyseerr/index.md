@@ -10,18 +10,12 @@ Jellyseerr is a fork of Overseerr for Jellyfin and Emby servers. It's a request 
 
 ### Setup & Configuration
 - **[Initial Setup](setup.md)** - Add Jellyseerr to OmniFetch
-- **[API Configuration](api-configuration.md)** - API key and connection settings
+- **[API Configuration](setup.md)** - API key and connection settings
 - **[Webhook Notifications](webhooks.md)** - Beta webhook configuration
 
 ### Features
-- **[Request Monitoring](features/requests.md)** - Monitor pending requests
-- **[Activity Tracking](features/activity.md)** - Recent activity and approvals
-- **[Statistics View](features/statistics.md)** - Request statistics and insights
 
 ### Troubleshooting
-- **[Connection Issues](troubleshooting/connection.md)** - Fix connection problems
-- **[Notification Issues](troubleshooting/notifications.md)** - Webhook troubleshooting
-- **[Common Problems](troubleshooting/common.md)** - Frequently encountered issues
 
 ## Quick Links
 

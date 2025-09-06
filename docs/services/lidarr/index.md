@@ -10,19 +10,12 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. OmniFetch 
 
 ### Setup & Configuration
 - **[Initial Setup](setup.md)** - Add Lidarr to OmniFetch
-- **[API Configuration](api-configuration.md)** - API key and connection settings
+- **[API Configuration](setup.md)** - API key and connection settings
 - **[Webhook Notifications](webhooks.md)** - Beta webhook configuration
 
 ### Features
-- **[Queue Monitoring](features/queue.md)** - Monitor download queue
-- **[Calendar View](features/calendar.md)** - Upcoming album releases
-- **[Music Management](features/music.md)** - View and manage music library
-- **[History Tracking](features/history.md)** - Download and activity history
 
 ### Troubleshooting
-- **[Connection Issues](troubleshooting/connection.md)** - Fix connection problems
-- **[Notification Issues](troubleshooting/notifications.md)** - Webhook troubleshooting
-- **[Common Problems](troubleshooting/common.md)** - Frequently encountered issues
 
 ## Quick Links
 

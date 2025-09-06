@@ -226,4 +226,4 @@ After setup, verify everything works:
 - [Configure webhook notifications](webhooks.md)
 - [Set up request monitoring](features/requests.md)
 - [Configure activity tracking](features/activity.md)
-- [Troubleshoot issues](troubleshooting/common.md)
+- [Troubleshoot issues](../../troubleshooting/common-issues.md)
