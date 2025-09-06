@@ -395,8 +395,8 @@
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
-    margin-bottom: 1rem;
-    padding: 1.2rem;
+    margin: 0 0 1.5rem 0;
+    padding: 1.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     width: 100%;
     box-sizing: border-box;
@@ -429,7 +429,7 @@
   }
   
   .md-typeset table:not([class]) td:nth-child(2):before {
-    content: "Type: ";
+    content: "Version: ";
     font-weight: 600;
     color: var(--omnifetch-blue);
     margin-right: 0.5rem;
@@ -445,7 +445,7 @@
   }
   
   .md-typeset table:not([class]) td:nth-child(4):before {
-    content: "Features: ";
+    content: "Notifications: ";
     font-weight: 600;
     color: var(--omnifetch-blue);
     margin-right: 0.5rem;
@@ -461,6 +461,26 @@
   /* Ensure proper spacing for last item */
   .md-typeset table:not([class]) tr:last-child {
     margin-bottom: 2rem;
+  }
+  
+  /* Platform support table specific improvements */
+  .md-typeset table:not([class]) td:nth-child(2) {
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0.3rem 0;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(3) {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+  }
+  
+  /* Remove labels for simple 3-column tables */
+  .md-typeset table:not([class]) td:nth-child(2):before,
+  .md-typeset table:not([class]) td:nth-child(3):before {
+    display: none;
   }
   
   [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {
