@@ -102,6 +102,6 @@ After initial setup, verify:
 ## Next Steps
 
 - [Configure additional services](../../services/index.md)
-- [Set up widgets](../features/widgets.md)
+- [Set up widgets](../../features/widgets.md)
 - [Configure notifications](notifications.md)
-- [Enable CloudKit sync](cloudkit-sync.md)
+- [Enable CloudKit sync](../../features/cloudkit-sync.md)
