@@ -156,20 +156,21 @@ nav:
       - Webhooks: services/sonarr/webhooks.md
     - Radarr:
       - Overview: services/radarr/index.md
-      - Setup: setup/services/radarr.md
-      - Webhooks: setup/services/radarr.md
+      - Setup: services/radarr/setup.md
+      - Webhooks: services/radarr/webhooks.md
     - Lidarr:
-      - Overview: services/lidarr.md
-      - Setup: setup/services/lidarr.md
-      - Webhooks: setup/services/lidarr.md
+      - Overview: services/lidarr/index.md
+      - Setup: services/lidarr/setup.md
+      - Webhooks: services/lidarr/webhooks.md
     - Jellyseerr:
-      - Overview: services/jellyseerr.md
-      - Setup: setup/services/jellyseerr.md
-      - Webhooks: setup/services/jellyseerr.md
+      - Overview: services/jellyseerr/index.md
+      - Setup: services/jellyseerr/setup.md
+      - Webhooks: services/jellyseerr/webhooks.md
     - SABnzbd:
-      - Overview: services/sabnzbd.md
-      - Setup: setup/services/sabnzbd.md
-      - Script: setup/services/omnifetch-webhook.py
+      - Overview: services/sabnzbd/index.md
+      - Setup: services/sabnzbd/setup.md
+      - Webhooks: services/sabnzbd/webhooks.md
+      - Script: services/sabnzbd/omnifetch-webhook.py
   - Features:
     - Notifications: features/notifications.md
     - Webhooks: features/webhooks.md
