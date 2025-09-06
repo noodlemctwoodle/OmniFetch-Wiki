@@ -46,11 +46,11 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| ![Sonarr](assets/images/service-icons/sonarr-logo.png){ width="32" } **[Sonarr](services/sonarr/index.md)** | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| ![Radarr](assets/images/service-icons/radarr-logo.png){ width="32" } **[Radarr](services/radarr/index.md)** | Movies | Library management, download tracking, health monitoring |
-| ![Lidarr](assets/images/service-icons/lidarr-logo.png){ width="32" } **[Lidarr](services/lidarr/index.md)** | Music | Album monitoring, artist management, release tracking |
-| ![Jellyseerr](assets/images/service-icons/jellyseerr-logo.png){ width="32" } **[Jellyseerr](services/jellyseerr/index.md)** | Requests | Request approval, user management, issue tracking |
-| ![SABnzbd](assets/images/service-icons/sabnzbd-logo.png){ width="32" } **[SABnzbd](services/sabnzbd/index.md)** | Downloads | Queue management, completion tracking, system alerts |
+| [![Sonarr](assets/images/service-icons/sonarr-logo.png){ width="32" }](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| [![Radarr](assets/images/service-icons/radarr-logo.png){ width="32" }](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
+| [![Lidarr](assets/images/service-icons/lidarr-logo.png){ width="32" }](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
+| [![Jellyseerr](assets/images/service-icons/jellyseerr-logo.png){ width="32" }](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
+| [![SABnzbd](assets/images/service-icons/sabnzbd-logo.png){ width="32" }](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Key Features
 
