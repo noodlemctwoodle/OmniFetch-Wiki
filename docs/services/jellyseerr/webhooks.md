@@ -1,10 +1,12 @@
-# Jellyseerr Webhook Notifications
+# Jellyseerr Webhook Notifications (Private Beta)
 
 Configure push notifications for Jellyseerr events using webhooks (beta feature).
 
 ## Overview
 
 Webhook notifications provide real-time push notifications when request events occur in Jellyseerr. This feature requires beta access and manual webhook configuration.
+
+> **Note**: The webhook setup process has been streamlined. OmniFetch now automatically generates and stores your webhook URL when you enable Jellyseerr notifications, making it easy to retrieve later from the Notification Debug screen.
 
 ## Prerequisites
 
@@ -22,46 +24,62 @@ Webhook notifications provide real-time push notifications when request events o
 3. Enter your **Private Beta Key** in the designated field
 4. Tap **Save** - look for green confirmation
 5. Beta features are now activated
-6. 6. Enable the button to on
+6. Enable the button to on
 
 ![Jellyseerr Push Notifications](../../assets/images/push-notifications/jellyseerr-push-notifications.png)
 
-### Step 2: Generate Webhook ID
+### Step 2: Enable Jellyseerr Notifications
 
-1. In OmniFetch, go to **Settings** → Tap **About OmniFetch** 5x → **Notification Debug**
-2. Tap **"Generate ID for Service"**
-3. Copy the generated unique ID
-4. Keep this ID for webhook configuration
+1. In OmniFetch, go to **Settings** → **Notification Settings**
+2. Find **Jellyseerr** in the service list
+3. Toggle the switch to **ON**
+4. The webhook URL will be automatically generated
 
-### Step 3: Configure Webhook in Jellyseerr
+### Step 3: Retrieve Webhook URL
+
+1. Go to **Settings** → Tap **About OmniFetch** 5x → **Notification Debug**
+2. Scroll to **Webhook URLs** section
+3. Find your **Jellyseerr Webhook URL**
+4. Tap **Copy** to copy the URL to clipboard
+5. Keep this URL for the next step
+
+### Step 4: Configure Webhook in Jellyseerr
 
 1. Open Jellyseerr web interface
 2. Navigate to **Settings** → **Notifications**  →  **Webhook**
-3. Check Enable Agent
+3. Check **Enable Agent**
 
 #### Webhook Configuration
 
 **Name**: `OmniFetch`
 
 **Webhook URL**:
-
-```text
-https://YOUR_WEBHOOK_DOMAIN/push/YOUR_GENERATED_ID_HERE
-```
-
-Replace `YOUR_GENERATED_ID_HERE` with the ID from Step 2.
+- Paste the URL you copied from OmniFetch Notification Debug
+- Format will be: `https://[worker-domain]/push/[your-unique-identifier]`
 
 **Authorization Header**:
 
 ```text
-Bearer YOUR_BETA_PASSWORD_HERE
+Basic [base64-encoded-credentials]
 ```
 
-This password is provided separately in Discord.
+The authorization credentials are:
+- Username: `omnifetch-beta`
+- Password: Your beta key (provided separately)
+
+To create the authorization header:
+1. Combine username and password with a colon: `omnifetch-beta:YOUR_BETA_KEY`
+2. Base64 encode this string
+3. Add "Basic " prefix to the encoded string
+
+Example format:
+```text
+Basic b21uaWZldGNoLWJldGE6WU9VUl9CRVRBX0tFWQ==
+```
 
 **JSON Payload**: Use the default Jellyseerr webhook payload
 
-### Step 4: Configure Events
+### Step 5: Configure Events
 
 Enable these notification triggers:
 
@@ -80,7 +98,7 @@ Enable these notification triggers:
 - ⚪ Issue Resolved
 - ⚪ Issue Reopened
 
-### Step 5: Test Webhook
+### Step 6: Test Webhook
 
 1. In Jellyseerr webhook settings
 2. Click **Test** button next to the OmniFetch webhook
