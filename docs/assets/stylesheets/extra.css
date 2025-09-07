@@ -413,6 +413,36 @@ img:active {
   }
 }
 
+/* Desktop image sizing - make screenshots smaller on larger displays */
+@media screen and (min-width: 76.25em) {
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 60%;
+    max-height: 500px;
+    width: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
+  }
+  
+  /* Even more conservative sizing for very large displays */
+  @media screen and (min-width: 100em) {
+    .md-typeset img[src*="push-notifications"],
+    .md-typeset img[src*="add-service"],
+    .md-typeset img[src*="Settings"],
+    .md-typeset img[src*="onboarding"],
+    .md-typeset img[src*="discovery"] {
+      max-width: 45%;
+      max-height: 600px;
+    }
+  }
+}
+
 /* Mobile table improvements - proper responsive tables with headers */
 @media screen and (max-width: 48em) {
   /* Show tables as proper responsive tables with styling */
