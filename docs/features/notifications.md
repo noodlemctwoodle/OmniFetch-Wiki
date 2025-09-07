@@ -2,6 +2,8 @@
 
 OmniFetch provides comprehensive notification support to keep you informed about your media services across all your Apple devices.
 
+![Enable Notifications](../assets/images/settings/enable-notifications.png)
+
 ## Types of Notifications
 
 ### Push Notifications

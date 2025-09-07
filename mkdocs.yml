@@ -143,6 +143,9 @@ nav:
   - Getting Started:
     - Installation: setup/installation.md
     - Quick Start: setup/quick-start.md
+  - Release Notes:
+    - Latest: release-notes/index.md
+    - Version 0.0.4: release-notes/v0.0.4.md
   - OmniFetch App:
     - Overview: app/index.md
     - Settings:

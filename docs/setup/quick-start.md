@@ -18,7 +18,7 @@ Before starting, ensure you have:
    - **Enable iCloud Sync**: Recommended to sync settings across devices
    - **Not Now**: You can skip and use local storage only
 
-![OmniFetch Onboarding](../assets/images/Settings/onboarding.png)
+![OmniFetch Onboarding](../assets/images/settings/onboarding.png)
 
 The onboarding screen highlights the benefits of iCloud sync:
 
@@ -30,7 +30,7 @@ The onboarding screen highlights the benefits of iCloud sync:
 
 ### Quick Setup
 
-![OmniFetch Settings](../assets/images/Settings/settings.png)
+![OmniFetch Settings](../assets/images/settings/settings.png)
 
 1. **Tap "Add Service"** on the main screen
 2. **Select Service Type** from the list:
