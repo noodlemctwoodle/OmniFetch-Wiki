@@ -4,17 +4,17 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 ## Latest Release
 
-### [Version 0.0.4](v0.0.4.md) - *September 2025*
+### [Version 0.0.4 Build(244)](v0.0.4-244.md) - *September 9, 2025*
 
-**Major Infrastructure Improvements and Feature Enhancements**
+**Infrastructure Improvements and Webhook Enhancements**
 
-- **New**: Push Notifications (Private Beta) - Real-time updates for all your services
-- **Enhanced**: Completely redesigned user interface with modern navigation
-- **Improved**: Enhanced security with biometric authentication
-- **Optimized**: Significant performance improvements and smoother animations
-- **Better**: Enhanced service compatibility and user experience
+- **Enhanced**: Webhook system with improved beta password validation
+- **Modernized**: Cloudflare Worker separation and backend infrastructure
+- **Improved**: Internationalization framework with comprehensive i18n support
+- **Streamlined**: Repository structure and resource organization
+- **Better**: Developer experience and system reliability
 
-[**View Full Release Notes →**](v0.0.4.md)
+[**View Full Release Notes →**](v0.0.4-244.md)
 
 ---
 
@@ -22,7 +22,8 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| [0.0.4](v0.0.4.md) | January 2025 | Push notifications, UI redesign, performance optimizations |
+| [0.0.4 Build(244)](v0.0.4-244.md) | September 9, 2025 | Infrastructure improvements, webhook enhancements, i18n framework |
+| [0.0.4 Build(239)](v0.0.4-239.md) | September 8, 2025 | Push notifications, UI redesign, performance optimizations |
 
 ---
 

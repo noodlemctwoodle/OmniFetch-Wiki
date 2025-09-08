@@ -88,6 +88,21 @@ plugins:
       lang: en
   - minify:
       minify_html: true
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_themed: true
+      auto_caption: true
+      caption_position: bottom
+      skip_classes:
+        - no-lightbox
+        - twemoji
 
 # Custom CSS
 extra_css:
@@ -145,7 +160,8 @@ nav:
     - Quick Start: setup/quick-start.md
   - Release Notes:
     - Latest: release-notes/index.md
-    - Version 0.0.4: release-notes/v0.0.4.md
+    - Build 244: release-notes/v0.0.4-244.md
+    - Build 239: release-notes/v0.0.4-239.md
   - OmniFetch App:
     - Overview: app/index.md
     - Settings:
