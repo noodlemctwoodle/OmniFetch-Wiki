@@ -155,10 +155,6 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
-  - Release Notes:
-    - Latest: release-notes/index.md
-    - Build 248: release-notes/v0.0.4-248.md
-    - Build 239: release-notes/v0.0.4-239.md
   - OmniFetch App:
     - Overview: app/index.md
     - Installation: app/installation.md
@@ -195,5 +191,9 @@ nav:
   - Troubleshooting:
     - Common Issues: troubleshooting/common-issues.md
     - FAQ: troubleshooting/faq.md
+  - Release Notes:
+    - Latest: release-notes/index.md
+    - Build 248: release-notes/v0.0.4-248.md
+    - Build 239: release-notes/v0.0.4-239.md
   - Contributing:
     - Translation Guide: contributing/translation-guide.md
