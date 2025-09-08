@@ -4,7 +4,7 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 ## Latest Release
 
-### [Version 0.0.4 Build(244)](v0.0.4-244.md) - *September 9, 2025*
+### [Version 0.0.4 Build(248)](v0.0.4-248.md) - *September 8, 2025*
 
 **Infrastructure Improvements and Webhook Enhancements**
 
@@ -14,7 +14,7 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 - **Streamlined**: Repository structure and resource organization
 - **Better**: Developer experience and system reliability
 
-[**View Full Release Notes →**](v0.0.4-244.md)
+[**View Full Release Notes →**](v0.0.4-248.md)
 
 ---
 
@@ -22,8 +22,8 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| [0.0.4 Build(244)](v0.0.4-244.md) | September 9, 2025 | Infrastructure improvements, webhook enhancements, i18n framework |
-| [0.0.4 Build(239)](v0.0.4-239.md) | September 8, 2025 | Push notifications, UI redesign, performance optimizations |
+| [0.0.4 Build(248)](v0.0.4-248.md) | September 8, 2025 | Infrastructure improvements, webhook enhancements, i18n framework |
+| [0.0.4 Build(239)](v0.0.4-239.md) | September 7, 2025 | Push notifications, UI redesign, performance optimizations |
 
 ---
 
