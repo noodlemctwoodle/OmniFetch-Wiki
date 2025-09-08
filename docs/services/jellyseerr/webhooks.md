@@ -54,6 +54,7 @@ Webhook notifications provide real-time push notifications when request events o
 **Name**: `OmniFetch`
 
 **Webhook URL**:
+
 - Paste the URL you copied from OmniFetch Notification Debug
 - Format will be: `https://[worker-domain]/push/[your-unique-identifier]`
 
@@ -64,15 +65,18 @@ Basic [base64-encoded-credentials]
 ```
 
 The authorization credentials are:
+
 - Username: `omnifetch-beta`
 - Password: Your beta key (provided separately)
 
 To create the authorization header:
+
 1. Combine username and password with a colon: `omnifetch-beta:YOUR_BETA_KEY`
 2. Base64 encode this string
 3. Add "Basic " prefix to the encoded string
 
 Example format:
+
 ```text
 Basic b21uaWZldGNoLWJldGE6WU9VUl9CRVRBX0tFWQ==
 ```

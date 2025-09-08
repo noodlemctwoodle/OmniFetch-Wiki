@@ -155,18 +155,20 @@ markdown_extensions:
 # Navigation
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: setup/installation.md
-    - Quick Start: setup/quick-start.md
   - Release Notes:
     - Latest: release-notes/index.md
     - Build 248: release-notes/v0.0.4-248.md
     - Build 239: release-notes/v0.0.4-239.md
   - OmniFetch App:
     - Overview: app/index.md
+    - Installation: app/installation.md
+    - Configuration: app/configuration.md
+    - Features:
+      - Webhooks: app/features/webhooks.md
+      - Widgets: app/features/widgets.md
+      - CloudKit Sync: app/features/cloudkit-sync.md
     - Settings:
       - Initial Setup: app/settings/initial-setup.md
-      - Notifications: app/settings/notifications.md
   - Services:
     - Overview: services/index.md
     - Sonarr:
@@ -190,11 +192,6 @@ nav:
       - Setup: services/sabnzbd/setup.md
       - Webhooks: services/sabnzbd/webhooks.md
       - Script: services/sabnzbd/omnifetch-webhook.py
-  - Features:
-    - Notifications: features/notifications.md
-    - Webhooks: features/webhooks.md
-    - Widgets: features/widgets.md
-    - CloudKit Sync: features/cloudkit-sync.md
   - Troubleshooting:
     - Common Issues: troubleshooting/common-issues.md
     - FAQ: troubleshooting/faq.md

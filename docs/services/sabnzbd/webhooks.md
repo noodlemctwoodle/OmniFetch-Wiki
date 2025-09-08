@@ -377,7 +377,6 @@ def handle_disk_space_low():
     )
 ```
 
-
 ### Logging and Debugging
 
 Add debug logging to script:

@@ -25,4 +25,4 @@ Join the TestFlight beta to get early access to new features:
 
 ## Next Steps
 
-After successful installation, proceed to the [Quick Start Guide](quick-start.md) to configure your first media service and start monitoring your stack.
+After successful installation, proceed to [Initial Setup](settings/initial-setup.md) to configure the app and add your first media service.

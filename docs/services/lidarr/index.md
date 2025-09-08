@@ -9,6 +9,7 @@ Lidarr is a music collection manager for Usenet and BitTorrent users. OmniFetch 
 ## Documentation
 
 ### Setup & Configuration
+
 - **[Initial Setup](setup.md)** - Add Lidarr to OmniFetch
 - **[API Configuration](setup.md)** - API key and connection settings
 - **[Webhook Notifications](webhooks.md)** - Beta webhook configuration

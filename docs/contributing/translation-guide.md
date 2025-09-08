@@ -5,21 +5,26 @@ Thank you for helping translate OmniFetch! Your contributions help make the app 
 ## 🌍 Getting Started
 
 ### Prerequisites
+
 - Basic understanding of JSON format
 - Familiarity with the app's functionality (recommended to use the app first)
 - Text editor that supports UTF-8 encoding
 
 ### Language Support
+
 OmniFetch uses iOS's native localization system. The app automatically detects and uses the device's language setting.
 
 ## 📝 Translation Process
 
 ### Step 1: Get the Template
+
 1. Download `translation-template.json` from this folder
 2. Create a copy and rename it to your language code (e.g., `es.json` for Spanish, `fr.json` for French)
 
 ### Step 2: Fill in Metadata
+
 Update the `_contributor_info` section:
+
 ```json
 "language_code": "es",        // ISO 639-1 code
 "language_name": "Spanish",   // Full language name
@@ -29,13 +34,16 @@ Update the `_contributor_info` section:
 ```
 
 ### Step 3: Translate Strings
+
 For each translation key:
+
 1. Read the `english` value
 2. Consider the `context` provided
 3. Fill in the `value` field with your translation
 4. Respect the `max_length` constraint if specified
 
 Example:
+
 ```json
 "save": {
   "key": "ui.actions.save",
@@ -49,12 +57,14 @@ Example:
 ## 📋 Translation Guidelines
 
 ### General Rules
+
 1. **Be Concise**: Mobile UI has limited space. Respect max_length constraints.
 2. **Be Consistent**: Use the same translation for the same term throughout.
 3. **Keep Product Names**: Service names like "Sonarr", "Radarr" should not be translated.
 4. **Technical Terms**: Common technical terms (API, URL, etc.) may remain in English if widely understood.
 
 ### UI Context
+
 - **Navigation**: Keep short (< 20 characters) for tab bars
 - **Buttons**: Action words, imperative mood (< 15 characters)
 - **Status Messages**: Clear and informative (< 30 characters)
@@ -63,7 +73,9 @@ Example:
 ### Specific Considerations
 
 #### Service Names
+
 Do NOT translate:
+
 - Sonarr
 - Radarr
 - Lidarr
@@ -74,7 +86,9 @@ Do NOT translate:
 - Plex
 
 #### Technical Terms
+
 Consider keeping in English if commonly used:
+
 - API Key
 - URL
 - Port
@@ -83,12 +97,14 @@ Consider keeping in English if commonly used:
 ## 🧪 Testing Your Translation
 
 ### Developer Testing
+
 1. Place your translation file in the appropriate .lproj folder
 2. Build and run the app in Xcode
 3. Use Debug Menu > Localization to switch languages
 4. Test all screens and features
 
 ### String Length Testing
+
 - Navigation titles must fit in tab bars
 - Button text must not overflow
 - Error messages should be readable on small screens
@@ -96,6 +112,7 @@ Consider keeping in English if commonly used:
 ## 📤 Submitting Your Translation
 
 ### Via GitHub (Preferred)
+
 1. Fork the OmniFetch repository
 2. Create a new branch: `translation-[language_code]`
 3. Add your translation files to: `OmniFetch/Resources/[language_code].lproj/`
@@ -104,7 +121,9 @@ Consider keeping in English if commonly used:
    - Description: Translation coverage percentage and any notes
 
 ### Via Email
+
 Send your completed JSON file to the development team with:
+
 - Subject: "OmniFetch Translation - [Language]"
 - Attach the completed JSON file
 - Include any notes or questions
@@ -112,6 +131,7 @@ Send your completed JSON file to the development team with:
 ## ✅ Quality Checklist
 
 Before submitting, ensure:
+
 - [ ] All required fields have translations
 - [ ] Translations respect max_length constraints
 - [ ] Service names remain untranslated
@@ -123,13 +143,17 @@ Before submitting, ensure:
 ## 🔄 Updates and Maintenance
 
 ### Version Updates
+
 When new features are added:
+
 1. We'll update the template with new strings
 2. Existing translators will be notified
 3. Only new/changed strings need updating
 
 ### Reporting Issues
+
 If you find translation issues:
+
 1. Open an issue on GitHub
 2. Specify the language and string key
 3. Suggest the correction
@@ -137,7 +161,8 @@ If you find translation issues:
 ## 💬 Common Translations Reference
 
 ### English → Spanish Example
-```
+
+```text
 Save → Guardar
 Cancel → Cancelar
 Settings → Configuración
@@ -147,7 +172,8 @@ Loading... → Cargando...
 ```
 
 ### English → French Example
-```
+
+```text
 Save → Enregistrer
 Cancel → Annuler
 Settings → Paramètres
@@ -157,7 +183,8 @@ Loading... → Chargement...
 ```
 
 ### English → German Example
-```
+
+```text
 Save → Speichern
 Cancel → Abbrechen
 Settings → Einstellungen
@@ -169,10 +196,11 @@ Loading... → Laden...
 ## 📞 Support
 
 Need help with translation?
+
 - Open a GitHub issue with the "translation" label
 - Contact the development team
 - Join our community discussions
 
-## 🙏 Thank You!
+## 🙏 Thank You
 
 Your contribution helps make OmniFetch accessible to more users worldwide. We appreciate your time and effort!

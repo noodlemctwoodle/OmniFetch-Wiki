@@ -30,15 +30,19 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 ## What's New Overview
 
 ### Push Notifications
+
 Real-time notifications for downloads, requests, and service events across Sonarr, Radarr, Lidarr, SABnzbd, and Jellyseerr.
 
 ### Modern Interface
+
 Complete UI redesign with drag-to-reorder tabs, enhanced navigation, and service-specific optimizations.
 
 ### Enhanced Security
+
 Biometric authentication protection and improved security throughout the app.
 
 ### Performance
+
 Significant speed improvements, reduced memory usage, and smoother animations.
 
 ---

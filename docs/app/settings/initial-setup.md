@@ -17,16 +17,19 @@ When you first open OmniFetch, you'll go through an initial setup process.
 OmniFetch requires several permissions to function properly:
 
 #### Notifications
+
 - **Purpose**: Receive push notifications for service events
 - **Required**: Yes, for webhook notifications
 - **Action**: Tap "Allow" when prompted
 
 #### Background App Refresh
+
 - **Purpose**: Keep service data updated in background
 - **Required**: Recommended for real-time monitoring
 - **Action**: Enable in iOS Settings if prompted
 
 #### iCloud Access
+
 - **Purpose**: Sync configurations across devices
 - **Required**: Optional but recommended
 - **Action**: Allow access for CloudKit sync
@@ -67,6 +70,7 @@ After permissions are granted:
 ### Connection Testing
 
 OmniFetch automatically tests:
+
 - Network connectivity
 - API key validity
 - Service version compatibility

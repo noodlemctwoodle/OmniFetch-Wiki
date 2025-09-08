@@ -58,41 +58,49 @@ Once beta access is enabled:
 ### Core Events
 
 #### Download/Import Completed
+
 - **Event**: Album successfully downloaded and imported
 - **Includes**: Quality upgrades
 - **Notification**: "Artist Name - Album Name downloaded successfully"
 
 #### Media Grabbed
+
 - **Event**: Album grabbed from indexer
 - **Notification**: "Artist Name - Album Name grabbed from IndexerName"
 
 #### Test Notification
+
 - **Event**: Manual test from Lidarr
 - **Notification**: "Test notification from Lidarr"
 
 ### File Management Events
 
 #### Files Renamed
+
 - **Event**: Music files renamed/organized
 - **Notification**: "Artist Name - Album Name files renamed"
 
 #### Track File Deleted
+
 - **Event**: Music file deleted from disk
 - **Notification**: "Artist Name - Track Name deleted"
 
 ### Library Events
 
 #### Artist Deleted
+
 - **Event**: Artist removed from Lidarr
 - **Notification**: "Artist Name removed from library"
 
 #### Album Deleted
+
 - **Event**: Album removed from Lidarr
 - **Notification**: "Artist Name - Album Name removed from library"
 
 ### System Events
 
 #### Health Issues
+
 - **Event**: Lidarr detects system problems
 - **Priority**: High
 - **Examples**:
@@ -101,6 +109,7 @@ Once beta access is enabled:
   - "Root folder missing"
 
 #### Application Updates
+
 - **Event**: Lidarr update available
 - **Notification**: "Lidarr update available: v1.0.9"
 
@@ -116,22 +125,26 @@ Once beta access is enabled:
 ### Recommended Settings
 
 **Essential Notifications:**
+
 - ✅ Download/Import Completed
 - ✅ Health Issues
 - ✅ Download Failed
 
 **Optional Notifications:**
+
 - ⚪ Media Grabbed
 - ⚪ Files Renamed
 - ⚪ Quality Upgraded
 
 **Avoid Overload:**
+
 - ❌ Test notifications (after initial test)
 - ❌ Verbose file operations
 
 ### Notification Sounds
 
 Configure custom sounds:
+
 1. iOS Settings → Notifications → OmniFetch
 2. Choose notification sound
 3. Or set per-service sounds in app
@@ -143,6 +156,7 @@ Configure custom sounds:
 **Issue**: OmniFetch connection not appearing in Lidarr
 
 **Solutions:**
+
 1. Verify beta key is saved
 2. Edit and re-save Lidarr in OmniFetch
 3. Check Lidarr API permissions
@@ -153,6 +167,7 @@ Configure custom sounds:
 **Issue**: Test notification doesn't arrive
 
 **Check:**
+
 - iOS notification permissions
 - Beta key validity
 - Internet connectivity
@@ -163,6 +178,7 @@ Configure custom sounds:
 **Issue**: Receiving multiple notifications for same event
 
 **Fix:**
+
 1. Remove any manual webhook configurations
 2. Ensure only one OmniFetch connection exists
 3. Disable Lidarr's built-in notifications
@@ -172,16 +188,17 @@ Configure custom sounds:
 **Issue**: Webhook returns authentication error
 
 **Solutions:**
+
 - Re-enter beta key in OmniFetch
 - Generate new webhook (if using manual setup)
 - Contact support for key verification
 
 ## Advanced Configuration
 
-
 ### Performance Optimization
 
 **Best Practices:**
+
 - Limit notifications to essential events
 - Use quiet hours for overnight periods
 - Group notifications when possible
@@ -190,6 +207,7 @@ Configure custom sounds:
 ### Debug Information
 
 For troubleshooting:
+
 1. Go to **Settings** → **Developer**
 2. Enable **Debug Logging**
 3. Check webhook status and errors
@@ -198,6 +216,7 @@ For troubleshooting:
 ## Beta Limitations
 
 Current beta limitations:
+
 - Webhook URL changes require reconfiguration
 - Some events may have delays
 - Rate limiting during high activity

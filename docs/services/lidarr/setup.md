@@ -69,6 +69,7 @@ For additional configuration options, tap **Advanced Settings**:
 ![Advanced Settings Lidarr](../../assets/images/add-service/add-service-lidarr-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
+
 - Custom timeout settings
 - SSL certificate validation
 - Request headers
@@ -85,11 +86,13 @@ For additional configuration options, tap **Advanced Settings**:
 3. Look for the success message
 
 **If test succeeds:**
+
 - ✅ Connection established
 - ✅ API key valid
 - ✅ Lidarr version compatible
 
 **If test fails:**
+
 - ❌ Check URL format and accessibility
 - ❌ Verify API key is correct
 - ❌ Ensure Lidarr is running
