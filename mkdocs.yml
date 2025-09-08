@@ -1,6 +1,6 @@
 site_name: OmniFetch
 site_url: https://omnifetch.app
-site_description: Comprehensive documentation for OmniFetch - A SwiftUI application for monitoring and managing media services
+site_description: OmniFetch is a powerful iOS application designed to streamline your media service management. With 1CloudKit sync, and real-time notifications, you can monitor your services from anywhere.
 
 # Repository (commented out to hide from header)
 # repo_name: noodlemctwoodle/OmniFetch-Wiki
