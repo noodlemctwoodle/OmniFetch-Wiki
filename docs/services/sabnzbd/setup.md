@@ -138,8 +138,8 @@ For webhook notifications, you need a unique ID:
    - Queue Complete ✅
    - Disk Space Low ✅
 
-!!! tip "Push Notification Examples"
-    See what SABnzbd notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+!!! tip "Push Notification Setup"
+    For detailed webhook and notification configuration for SABnzbd, see the [SABnzbd Webhooks Guide](webhooks.md).
 
 ## Queue Management
 

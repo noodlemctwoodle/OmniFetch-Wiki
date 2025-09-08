@@ -168,8 +168,8 @@ For webhook notifications, you need a unique ID:
    - Request Declined
    - New Request (if admin)
 
-!!! tip "Push Notification Examples"
-    See what Jellyseerr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+!!! tip "Push Notification Setup"
+    For detailed webhook and notification configuration for Jellyseerr, see the [Jellyseerr Webhooks Guide](webhooks.md).
 
 ## Request Management
 

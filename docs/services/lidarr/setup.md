@@ -133,8 +133,8 @@ If you have beta access:
    - Health Issues ✅
    - Artist Deleted
 
-!!! tip "Push Notification Examples"
-    See what Lidarr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+!!! tip "Push Notification Setup"
+    For detailed webhook and notification configuration for Lidarr, see the [Lidarr Webhooks Guide](webhooks.md).
 
 ## Verification Steps
 

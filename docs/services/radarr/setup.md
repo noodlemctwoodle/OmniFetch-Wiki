@@ -130,8 +130,8 @@ If you have beta access:
    - Health Issues ✅
    - Movie Deleted
 
-!!! tip "Push Notification Examples"
-    See what Radarr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+!!! tip "Push Notification Setup"
+    For detailed webhook and notification configuration for Radarr, see the [Radarr Webhooks Guide](webhooks.md).
 
 ## Verification Steps
 

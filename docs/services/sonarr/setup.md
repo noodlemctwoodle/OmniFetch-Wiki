@@ -126,8 +126,8 @@ If you have beta access:
    - Health Issues ✅
    - Series Deleted
 
-!!! tip "Push Notification Examples"
-    See what Sonarr notifications look like in the [Notifications Guide](../../features/notifications.md#push-notification-examples).
+!!! tip "Push Notification Setup"
+    For detailed webhook and notification configuration for Sonarr, see the [Sonarr Webhooks Guide](webhooks.md).
 
 ## Verification Steps
 

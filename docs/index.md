@@ -79,19 +79,19 @@ OmniFetch integrates seamlessly with these popular media services:
 
 <div class="grid cards" markdown>
 
-- [**Installation**](setup/installation.md)
+- [**Installation**](app/installation.md)
 
     ---
 
     Download and install OmniFetch on your iPhone. Currently available for iOS 17.0+, with iPad, Apple TV, and Mac support coming soon.
 
-- [**Quick Start**](setup/quick-start.md)
+- [**Initial Setup**](app/settings/initial-setup.md)
 
     ---
 
     Get up and running in minutes with our step-by-step setup guide. Configure your first service and test notifications.
 
-- [**Configuration**](setup/configuration.md)
+- [**Configuration**](app/configuration.md)
 
     ---
 
