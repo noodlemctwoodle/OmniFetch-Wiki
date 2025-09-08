@@ -27,13 +27,20 @@ Webhook notifications provide real-time push notifications when download events 
 
 ![SABnzbd Push Notifications](../../assets/images/push-notifications/sabnzbd-push-notifications.png)
 
-### Step 2: Generate Webhook ID
+### Step 2: Enable Jellyseerr Notifications
 
-1. In OmniFetch, go to **Settings** → **Developer**
-2. Tap **"Generate ID for Service"**
-3. Select **SABnzbd**
-4. Copy the generated unique ID
-5. Keep this ID for script configuration
+1. In OmniFetch, go to **Settings** → **Notification Settings**
+2. Find **SabNZB** in the service list
+3. Toggle the switch to **ON**
+4. The webhook URL will be automatically generated
+
+### Step 3: Retrieve Webhook URL
+
+1. Go to **Settings** → Tap **About OmniFetch** 5x → **Notification Debug**
+2. Scroll to **Webhook URLs** section
+3. Find your **SabNZB Webhook URL**
+4. Tap **Copy** to copy the URL to clipboard
+5. Keep this URL for the next step
 
 ### Step 3: Download Webhook Script
 
@@ -52,6 +59,7 @@ Usage: Place in SABnzbd scripts directory and configure in notification settings
 
 import sys
 import json
+import time
 import urllib.request
 import urllib.parse
 from urllib.error import URLError, HTTPError
@@ -62,25 +70,25 @@ BETA_PASSWORD = "YOUR_BETA_PASSWORD_HERE"
 
 def send_notification(event_type, title, message, status="info"):
     """Send notification to OmniFetch webhook"""
-    
+
     payload = {
         "type": event_type,
         "title": title,
         "message": message,
         "status": status,
-        "timestamp": int(time.time()) if 'time' in sys.modules else None
+        "timestamp": int(time.time())
     }
-    
+
     headers = {
         'Content-Type': 'application/json',
-        'Authorization': f'Bearer {BETA_PASSWORD}',
-        'User-Agent': 'SABnzbd-OmniFetch-Webhook/1.0'
+        'Authorization': f'Basic {BETA_PASSWORD}',
+        'User-Agent': 'OmniFetch/1.0'
     }
-    
+
     try:
         data = json.dumps(payload).encode('utf-8')
         req = urllib.request.Request(WEBHOOK_URL, data=data, headers=headers)
-        
+
         with urllib.request.urlopen(req, timeout=30) as response:
             if response.status == 200:
                 print(f"Notification sent successfully: {title}")
@@ -88,7 +96,7 @@ def send_notification(event_type, title, message, status="info"):
             else:
                 print(f"Webhook failed with status {response.status}")
                 return False
-                
+
     except HTTPError as e:
         print(f"HTTP Error: {e.code} - {e.reason}")
         return False
@@ -101,11 +109,27 @@ def send_notification(event_type, title, message, status="info"):
 
 def main():
     """Main function called by SABnzbd"""
-    
-    if len(sys.argv) < 8:
-        print("Error: Insufficient arguments provided by SABnzbd")
+
+    if len(sys.argv) < 2:
+        print("Error: No arguments provided by SABnzbd")
         sys.exit(1)
     
+    # Handle test notifications (fewer arguments)
+    if len(sys.argv) < 8:
+        # This is likely a test notification
+        event_type = "test_notification"
+        title = "SABnzbd Test"
+        message = "Test notification from SABnzbd"
+        status = "info"
+        
+        success = send_notification(event_type, title, message, status)
+        if success:
+            print("Test notification sent successfully")
+            sys.exit(0)
+        else:
+            print("Failed to send test notification")
+            sys.exit(1)
+
     # SABnzbd provides these arguments:
     # 1: Final folder
     # 2: Original name
@@ -115,16 +139,16 @@ def main():
     # 6: Category
     # 7: Group
     # 8: Status (0=OK, 1=failed verification, 2=failed unpack, 3=1+2)
-    
+
     final_folder = sys.argv[1]
     original_name = sys.argv[2] 
     clean_name = sys.argv[3]
     indexer = sys.argv[4] if len(sys.argv) > 4 else "Unknown"
-    status_code = sys.argv[7] if len(sys.argv) > 7 else "0"
-    
+    status_code = sys.argv[8] if len(sys.argv) > 8 else "0"
+
     # Determine event type and status
     status_code = int(status_code)
-    
+
     if status_code == 0:
         event_type = "download_complete"
         title = "Download Complete"
@@ -150,10 +174,10 @@ def main():
         title = "Unknown Status"
         message = f"{clean_name} completed with unknown status"
         status = "warning"
-    
+
     # Send notification
     success = send_notification(event_type, title, message, status)
-    
+
     if success:
         print(f"OmniFetch notification sent for: {clean_name}")
         sys.exit(0)
@@ -162,7 +186,6 @@ def main():
         sys.exit(1)
 
 if __name__ == "__main__":
-    import time
     main()
 ```
 
@@ -170,25 +193,46 @@ if __name__ == "__main__":
 
 1. Replace `YOUR_GENERATED_ID_HERE` with your unique ID from Step 2
 2. Replace `YOUR_BETA_PASSWORD_HERE` with password provided by support
-3. Save the script as `omnifetch-webhook.py`
-4. Make it executable: `chmod +x omnifetch-webhook.py`
 
 ### Step 5: Install Script in SABnzbd
 
 1. Copy script to SABnzbd scripts directory:
    - **Linux**: `/opt/sabnzbd/scripts/`
    - **Docker**: `/scripts/` (mounted volume)
-   - **Windows**: `Scripts` folder in SABnzbd directory
+   - **unRAID**: `/mnt/user/appdata/sabnzbd/scripts/`
+2. Save the script as `omnifetch-webhook.py`
+3. Make it executable: `chmod +x omnifetch-webhook.py`
 
-2. Open SABnzbd web interface
-3. Go to **Config** → **Notifications**
-4. Under **Script**, select `omnifetch-webhook.py`
-5. Enable for these events:
+### Step 6: Configure ubRAID (Optional)
+
+1. Edit the SabNZBd contatiner
+2. Add a new path
+
+![unRAID Container Path](../../assets/images/push-notifications/sabnzbd-unraid-path.png)
+
+```text
+Name: SAB_NOTIFICATION_PARAMETERS
+Container Path: /scripts
+Host Path: /mnt/user/appdata/sabnzbd/scripts/
+```
+
+![unRAID Container Path](../../assets/images/push-notifications/sabnzbd-container-scripts.png)
+
+### Step 7: Configure SabNZBd
+
+1. Open SABnzbd web interface
+2. Go to **Config** → **Folders**
+3. Select the scripts Folder
+4. Go to **Config** → **Notifications**
+5. Under **Script**, select `omnifetch-webhook.py`
+6. Enable for these events:
    - ✅ On Download Complete
    - ✅ On Download Failed
    - ✅ On Queue Complete (optional)
 
-### Step 6: Test Notification
+![SABnzbd Scripts Folder](../../assets/images/push-notifications/sabnzbd-folder-script.png)
+
+### Step 8: Test Notification
 
 1. Add a small test download to SABnzbd
 2. Wait for completion
