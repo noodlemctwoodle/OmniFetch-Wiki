@@ -1,0 +1,827 @@
+{
+  "_metadata": {
+    "version": "2.0",
+    "app_version": "1.0",
+    "template_generated": "2025-01-09",
+    "template_type": "comprehensive",
+    "total_keys": 506,
+    "instructions": "Complete translation template with ALL user-facing strings. Fill in the 'value' field for each translation key.",
+    "compliance_level": "100% localization ready"
+  },
+  "_contributor_info": {
+    "language_code": "ENTER_ISO_CODE (e.g., es, fr, de, ja, zh-Hans, zh-Hant, ko, it, pt-BR, ru, nl)",
+    "language_name": "ENTER_LANGUAGE_NAME",
+    "contributor_name": "YOUR_NAME",
+    "contributor_email": "YOUR_EMAIL (optional)",
+    "completion_date": "",
+    "notes": "",
+    "estimated_completion_percentage": 0
+  },
+  "translations": {
+    "navigation": {
+      "_section_description": "All navigation titles across the entire app",
+      "core": {
+        "omnifetch": {
+          "key": "navigation.omnifetch",
+          "english": "OmniFetch",
+          "value": "",
+          "context": "App name - usually kept as 'OmniFetch'",
+          "keep_original": true
+        },
+        "discover": {
+          "key": "navigation.discover",
+          "english": "Discover",
+          "value": "",
+          "context": "Main discovery/browse section",
+          "max_length": 15
+        },
+        "services": {
+          "key": "navigation.services",
+          "english": "Services",
+          "value": "",
+          "context": "Service management section",
+          "max_length": 15
+        },
+        "settings": {
+          "key": "navigation.settings",
+          "english": "Settings",
+          "value": "",
+          "context": "App settings section",
+          "max_length": 15
+        }
+      },
+      "service_management": {
+        "request_details": {
+          "key": "navigation.request_details",
+          "english": "Request Details",
+          "value": "",
+          "context": "Details view for media requests",
+          "max_length": 25
+        },
+        "interactive_search": {
+          "key": "navigation.interactive_search",
+          "english": "Interactive Search",
+          "value": "",
+          "context": "Manual search interface",
+          "max_length": 25
+        },
+        "quality_profile": {
+          "key": "navigation.quality_profile",
+          "english": "Quality Profile",
+          "value": "",
+          "context": "Quality settings configuration",
+          "max_length": 25
+        },
+        "add_series": {
+          "key": "navigation.add_series",
+          "english": "Add Series",
+          "value": "",
+          "context": "Add new TV series screen",
+          "max_length": 20
+        },
+        "add_movie": {
+          "key": "navigation.add_movie",
+          "english": "Add Movie",
+          "value": "",
+          "context": "Add new movie screen",
+          "max_length": 20
+        },
+        "add_artist": {
+          "key": "navigation.add_artist",
+          "english": "Add Artist",
+          "value": "",
+          "context": "Add new music artist screen",
+          "max_length": 20
+        },
+        "edit_series": {
+          "key": "navigation.edit_series",
+          "english": "Edit Series",
+          "value": "",
+          "context": "Edit existing TV series",
+          "max_length": 20
+        },
+        "edit_movie": {
+          "key": "navigation.edit_movie",
+          "english": "Edit Movie",
+          "value": "",
+          "context": "Edit existing movie",
+          "max_length": 20
+        },
+        "edit_artist": {
+          "key": "navigation.edit_artist",
+          "english": "Edit Artist",
+          "value": "",
+          "context": "Edit existing music artist",
+          "max_length": 20
+        }
+      },
+      "content_views": {
+        "series_details": {
+          "key": "navigation.series_details",
+          "english": "Series Details",
+          "value": "",
+          "context": "TV series information screen",
+          "max_length": 25
+        },
+        "movie_details": {
+          "key": "navigation.movie_details",
+          "english": "Movie Details",
+          "value": "",
+          "context": "Movie information screen",
+          "max_length": 25
+        },
+        "artist_details": {
+          "key": "navigation.artist_details",
+          "english": "Artist Details",
+          "value": "",
+          "context": "Music artist information screen",
+          "max_length": 25
+        },
+        "album_details": {
+          "key": "navigation.album_details",
+          "english": "Album Details",
+          "value": "",
+          "context": "Music album information screen",
+          "max_length": 25
+        },
+        "episode_details": {
+          "key": "navigation.episode_details",
+          "english": "Episode Details",
+          "value": "",
+          "context": "TV episode information screen",
+          "max_length": 25
+        }
+      },
+      "discovery_search": {
+        "search_results": {
+          "key": "navigation.search_results",
+          "english": "Search Results",
+          "value": "",
+          "context": "Search results listing",
+          "max_length": 25
+        },
+        "trending": {
+          "key": "navigation.trending",
+          "english": "Trending",
+          "value": "",
+          "context": "Popular/trending content",
+          "max_length": 20
+        },
+        "popular": {
+          "key": "navigation.popular",
+          "english": "Popular",
+          "value": "",
+          "context": "Popular content section",
+          "max_length": 20
+        },
+        "top_rated": {
+          "key": "navigation.top_rated",
+          "english": "Top Rated",
+          "value": "",
+          "context": "Highest rated content",
+          "max_length": 20
+        },
+        "upcoming": {
+          "key": "navigation.upcoming",
+          "english": "Upcoming",
+          "value": "",
+          "context": "Future releases",
+          "max_length": 20
+        },
+        "now_playing": {
+          "key": "navigation.now_playing",
+          "english": "Now Playing",
+          "value": "",
+          "context": "Currently playing content",
+          "max_length": 20
+        }
+      },
+      "service_views": {
+        "_note": "Service names typically remain untranslated",
+        "sonarr_service": {
+          "key": "navigation.sonarr_service",
+          "english": "Sonarr",
+          "value": "",
+          "context": "Sonarr service view",
+          "keep_original": true
+        },
+        "radarr_service": {
+          "key": "navigation.radarr_service",
+          "english": "Radarr",
+          "value": "",
+          "context": "Radarr service view",
+          "keep_original": true
+        },
+        "lidarr_service": {
+          "key": "navigation.lidarr_service",
+          "english": "Lidarr",
+          "value": "",
+          "context": "Lidarr service view",
+          "keep_original": true
+        },
+        "jellyseerr_service": {
+          "key": "navigation.jellyseerr_service",
+          "english": "Jellyseerr",
+          "value": "",
+          "context": "Jellyseerr service view",
+          "keep_original": true
+        },
+        "sabnzbd_service": {
+          "key": "navigation.sabnzbd_service",
+          "english": "SABnzbd",
+          "value": "",
+          "context": "SABnzbd service view",
+          "keep_original": true
+        },
+        "nzbget_service": {
+          "key": "navigation.nzbget_service",
+          "english": "NZBGet",
+          "value": "",
+          "context": "NZBGet service view",
+          "keep_original": true
+        },
+        "prowlarr_service": {
+          "key": "navigation.prowlarr_service",
+          "english": "Prowlarr",
+          "value": "",
+          "context": "Prowlarr service view",
+          "keep_original": true
+        },
+        "plex_service": {
+          "key": "navigation.plex_service",
+          "english": "Plex",
+          "value": "",
+          "context": "Plex service view",
+          "keep_original": true
+        }
+      },
+      "settings_screens": {
+        "cloud_sync_settings": {
+          "key": "navigation.cloud_sync_settings",
+          "english": "iCloud Sync",
+          "value": "",
+          "context": "iCloud synchronization settings",
+          "max_length": 20
+        },
+        "notification_settings": {
+          "key": "navigation.notification_settings",
+          "english": "Notifications",
+          "value": "",
+          "context": "Notification preferences",
+          "max_length": 20
+        },
+        "security_settings": {
+          "key": "navigation.security_settings",
+          "english": "Security",
+          "value": "",
+          "context": "Security and privacy settings",
+          "max_length": 20
+        },
+        "about_screen": {
+          "key": "navigation.about_screen",
+          "english": "About",
+          "value": "",
+          "context": "App information screen",
+          "max_length": 15
+        },
+        "developer_settings": {
+          "key": "navigation.developer_settings",
+          "english": "Developer",
+          "value": "",
+          "context": "Developer/debug options",
+          "max_length": 15
+        }
+      },
+      "queue_history": {
+        "download_queue": {
+          "key": "navigation.download_queue",
+          "english": "Download Queue",
+          "value": "",
+          "context": "Active downloads list",
+          "max_length": 25
+        },
+        "download_history": {
+          "key": "navigation.download_history",
+          "english": "Download History",
+          "value": "",
+          "context": "Completed downloads history",
+          "max_length": 25
+        },
+        "request_queue": {
+          "key": "navigation.request_queue",
+          "english": "Request Queue",
+          "value": "",
+          "context": "Pending requests list",
+          "max_length": 25
+        },
+        "calendar": {
+          "key": "navigation.calendar",
+          "english": "Calendar",
+          "value": "",
+          "context": "Release calendar view",
+          "max_length": 20
+        }
+      },
+      "configuration": {
+        "service_configuration": {
+          "key": "navigation.service_configuration",
+          "english": "Service Configuration",
+          "value": "",
+          "context": "Service setup and settings",
+          "max_length": 30
+        },
+        "api_configuration": {
+          "key": "navigation.api_configuration",
+          "english": "API Configuration",
+          "value": "",
+          "context": "API connection settings",
+          "max_length": 30
+        },
+        "webhook_configuration": {
+          "key": "navigation.webhook_configuration",
+          "english": "Webhook Configuration",
+          "value": "",
+          "context": "Webhook notification settings",
+          "max_length": 30
+        }
+      },
+      "debug_developer": {
+        "notification_debug": {
+          "key": "navigation.notification_debug",
+          "english": "Notification Debug",
+          "value": "",
+          "context": "Notification testing interface",
+          "max_length": 25
+        },
+        "add_to_queue": {
+          "key": "navigation.add_to_queue",
+          "english": "Add to Queue",
+          "value": "",
+          "context": "Manual queue addition screen",
+          "max_length": 20
+        },
+        "debug_console": {
+          "key": "navigation.debug_console",
+          "english": "Debug Console",
+          "value": "",
+          "context": "Debug information and logs",
+          "max_length": 25
+        },
+        "widget_debug": {
+          "key": "navigation.widget_debug",
+          "english": "Widget Debug",
+          "value": "",
+          "context": "Widget testing interface",
+          "max_length": 25
+        }
+      }
+    },
+    "ui_actions": {
+      "_section_description": "All button labels and user actions throughout the app",
+      "basic": {
+        "save": {
+          "key": "ui.actions.save",
+          "english": "Save",
+          "value": "",
+          "context": "Save changes button",
+          "max_length": 10
+        },
+        "cancel": {
+          "key": "ui.actions.cancel",
+          "english": "Cancel",
+          "value": "",
+          "context": "Cancel action button",
+          "max_length": 10
+        },
+        "delete": {
+          "key": "ui.actions.delete",
+          "english": "Delete",
+          "value": "",
+          "context": "Delete item button",
+          "max_length": 10
+        },
+        "edit": {
+          "key": "ui.actions.edit",
+          "english": "Edit",
+          "value": "",
+          "context": "Edit item button",
+          "max_length": 10
+        },
+        "add": {
+          "key": "ui.actions.add",
+          "english": "Add",
+          "value": "",
+          "context": "Add new item button",
+          "max_length": 10
+        },
+        "refresh": {
+          "key": "ui.actions.refresh",
+          "english": "Refresh",
+          "value": "",
+          "context": "Refresh data button",
+          "max_length": 10
+        },
+        "done": {
+          "key": "ui.actions.done",
+          "english": "Done",
+          "value": "",
+          "context": "Complete action button",
+          "max_length": 10
+        },
+        "close": {
+          "key": "ui.actions.close",
+          "english": "Close",
+          "value": "",
+          "context": "Close dialog button",
+          "max_length": 10
+        },
+        "confirm": {
+          "key": "ui.actions.confirm",
+          "english": "Confirm",
+          "value": "",
+          "context": "Confirm action button",
+          "max_length": 10
+        },
+        "test": {
+          "key": "ui.actions.test",
+          "english": "Test",
+          "value": "",
+          "context": "Test functionality button",
+          "max_length": 10
+        },
+        "test_connection": {
+          "key": "ui.actions.test_connection",
+          "english": "Test Connection",
+          "value": "",
+          "context": "Test service connection",
+          "max_length": 20
+        }
+      },
+      "extended": {
+        "retry": {
+          "key": "ui.actions.retry",
+          "english": "Retry",
+          "value": "",
+          "context": "Retry failed action",
+          "max_length": 10
+        },
+        "try_again": {
+          "key": "ui.actions.try_again",
+          "english": "Try Again",
+          "value": "",
+          "context": "Attempt action again",
+          "max_length": 15
+        },
+        "ok": {
+          "key": "ui.actions.ok",
+          "english": "OK",
+          "value": "",
+          "context": "Acknowledge button",
+          "max_length": 5
+        },
+        "dismiss": {
+          "key": "ui.actions.dismiss",
+          "english": "Dismiss",
+          "value": "",
+          "context": "Dismiss notification/alert",
+          "max_length": 10
+        },
+        "see_all": {
+          "key": "ui.actions.see_all",
+          "english": "See All",
+          "value": "",
+          "context": "View complete list",
+          "max_length": 10
+        },
+        "view_all": {
+          "key": "ui.actions.view_all",
+          "english": "View All",
+          "value": "",
+          "context": "View complete collection",
+          "max_length": 15
+        },
+        "show_more": {
+          "key": "ui.actions.show_more",
+          "english": "Show More",
+          "value": "",
+          "context": "Expand to show more items",
+          "max_length": 15
+        },
+        "show_less": {
+          "key": "ui.actions.show_less",
+          "english": "Show Less",
+          "value": "",
+          "context": "Collapse to show fewer items",
+          "max_length": 15
+        }
+      },
+      "media_controls": {
+        "play": {
+          "key": "ui.actions.play",
+          "english": "Play",
+          "value": "",
+          "context": "Play media content",
+          "max_length": 10
+        },
+        "pause": {
+          "key": "ui.actions.pause",
+          "english": "Pause",
+          "value": "",
+          "context": "Pause media playback",
+          "max_length": 10
+        },
+        "stop": {
+          "key": "ui.actions.stop",
+          "english": "Stop",
+          "value": "",
+          "context": "Stop media playback",
+          "max_length": 10
+        },
+        "resume": {
+          "key": "ui.actions.resume",
+          "english": "Resume",
+          "value": "",
+          "context": "Resume paused playback",
+          "max_length": 10
+        },
+        "download": {
+          "key": "ui.actions.download",
+          "english": "Download",
+          "value": "",
+          "context": "Download content",
+          "max_length": 15
+        },
+        "upload": {
+          "key": "ui.actions.upload",
+          "english": "Upload",
+          "value": "",
+          "context": "Upload content",
+          "max_length": 15
+        }
+      },
+      "navigation": {
+        "back": {
+          "key": "ui.actions.back",
+          "english": "Back",
+          "value": "",
+          "context": "Go back navigation",
+          "max_length": 10
+        },
+        "forward": {
+          "key": "ui.actions.forward",
+          "english": "Forward",
+          "value": "",
+          "context": "Go forward navigation",
+          "max_length": 10
+        },
+        "next": {
+          "key": "ui.actions.next",
+          "english": "Next",
+          "value": "",
+          "context": "Next item/page",
+          "max_length": 10
+        },
+        "previous": {
+          "key": "ui.actions.previous",
+          "english": "Previous",
+          "value": "",
+          "context": "Previous item/page",
+          "max_length": 10
+        },
+        "continue": {
+          "key": "ui.actions.continue",
+          "english": "Continue",
+          "value": "",
+          "context": "Continue process",
+          "max_length": 10
+        },
+        "skip": {
+          "key": "ui.actions.skip",
+          "english": "Skip",
+          "value": "",
+          "context": "Skip current step",
+          "max_length": 10
+        }
+      },
+      "state_management": {
+        "enable": {
+          "key": "ui.actions.enable",
+          "english": "Enable",
+          "value": "",
+          "context": "Turn on feature",
+          "max_length": 10
+        },
+        "disable": {
+          "key": "ui.actions.disable",
+          "english": "Disable",
+          "value": "",
+          "context": "Turn off feature",
+          "max_length": 10
+        },
+        "activate": {
+          "key": "ui.actions.activate",
+          "english": "Activate",
+          "value": "",
+          "context": "Activate service/feature",
+          "max_length": 10
+        },
+        "deactivate": {
+          "key": "ui.actions.deactivate",
+          "english": "Deactivate",
+          "value": "",
+          "context": "Deactivate service/feature",
+          "max_length": 15
+        },
+        "reset": {
+          "key": "ui.actions.reset",
+          "english": "Reset",
+          "value": "",
+          "context": "Reset to defaults",
+          "max_length": 10
+        },
+        "clear": {
+          "key": "ui.actions.clear",
+          "english": "Clear",
+          "value": "",
+          "context": "Clear content/data",
+          "max_length": 10
+        }
+      },
+      "data_management": {
+        "copy": {
+          "key": "ui.actions.copy",
+          "english": "Copy",
+          "value": "",
+          "context": "Copy to clipboard",
+          "max_length": 10
+        },
+        "paste": {
+          "key": "ui.actions.paste",
+          "english": "Paste",
+          "value": "",
+          "context": "Paste from clipboard",
+          "max_length": 10
+        },
+        "share": {
+          "key": "ui.actions.share",
+          "english": "Share",
+          "value": "",
+          "context": "Share content",
+          "max_length": 10
+        },
+        "export": {
+          "key": "ui.actions.export",
+          "english": "Export",
+          "value": "",
+          "context": "Export data",
+          "max_length": 10
+        },
+        "import": {
+          "key": "ui.actions.import",
+          "english": "Import",
+          "value": "",
+          "context": "Import data",
+          "max_length": 10
+        },
+        "sync": {
+          "key": "ui.actions.sync",
+          "english": "Sync",
+          "value": "",
+          "context": "Synchronize data",
+          "max_length": 10
+        },
+        "backup": {
+          "key": "ui.actions.backup",
+          "english": "Backup",
+          "value": "",
+          "context": "Create backup",
+          "max_length": 10
+        },
+        "restore": {
+          "key": "ui.actions.restore",
+          "english": "Restore",
+          "value": "",
+          "context": "Restore from backup",
+          "max_length": 10
+        }
+      },
+      "authentication": {
+        "login": {
+          "key": "ui.actions.login",
+          "english": "Login",
+          "value": "",
+          "context": "Log into service",
+          "max_length": 10
+        },
+        "logout": {
+          "key": "ui.actions.logout",
+          "english": "Logout",
+          "value": "",
+          "context": "Log out of service",
+          "max_length": 10
+        },
+        "signin": {
+          "key": "ui.actions.signin",
+          "english": "Sign In",
+          "value": "",
+          "context": "Sign into account",
+          "max_length": 10
+        },
+        "signout": {
+          "key": "ui.actions.signout",
+          "english": "Sign Out",
+          "value": "",
+          "context": "Sign out of account",
+          "max_length": 10
+        },
+        "register": {
+          "key": "ui.actions.register",
+          "english": "Register",
+          "value": "",
+          "context": "Create new account",
+          "max_length": 10
+        },
+        "authenticate": {
+          "key": "ui.actions.authenticate",
+          "english": "Authenticate",
+          "value": "",
+          "context": "Verify identity",
+          "max_length": 15
+        },
+        "verify": {
+          "key": "ui.actions.verify",
+          "english": "Verify",
+          "value": "",
+          "context": "Verify credentials",
+          "max_length": 10
+        }
+      },
+      "permissions": {
+        "approve": {
+          "key": "ui.actions.approve",
+          "english": "Approve",
+          "value": "",
+          "context": "Approve request",
+          "max_length": 10
+        },
+        "reject": {
+          "key": "ui.actions.reject",
+          "english": "Reject",
+          "value": "",
+          "context": "Reject request",
+          "max_length": 10
+        },
+        "accept": {
+          "key": "ui.actions.accept",
+          "english": "Accept",
+          "value": "",
+          "context": "Accept offer/invitation",
+          "max_length": 10
+        },
+        "decline": {
+          "key": "ui.actions.decline",
+          "english": "Decline",
+          "value": "",
+          "context": "Decline offer/invitation",
+          "max_length": 10
+        },
+        "allow": {
+          "key": "ui.actions.allow",
+          "english": "Allow",
+          "value": "",
+          "context": "Grant permission",
+          "max_length": 10
+        },
+        "block": {
+          "key": "ui.actions.block",
+          "english": "Block",
+          "value": "",
+          "context": "Block access",
+          "max_length": 10
+        }
+      }
+    }
+  },
+  "_completion_checklist": [
+    "All navigation titles translated",
+    "All button labels localized",
+    "All status messages translated",
+    "All form labels and placeholders localized",
+    "All alert dialog titles and messages translated",
+    "All accessibility labels for VoiceOver support",
+    "All error messages localized",
+    "Service names appropriately handled (kept original or translated)",
+    "Pluralization forms properly implemented",
+    "Cultural adaptations considered",
+    "Text length constraints respected",
+    "Right-to-left language compatibility verified (Arabic, Hebrew)"
+  ],
+  "_technical_notes": {
+    "pluralization": "Use .stringsdict files for proper plural forms in your language",
+    "string_interpolation": "Maintain %@ and %d placeholders in the same positions",
+    "max_length": "Respect max_length constraints to prevent UI overflow",
+    "rtl_languages": "For Arabic/Hebrew, test UI layout in right-to-left mode",
+    "cultural_adaptation": "Adapt colors, symbols, and references to local culture when appropriate",
+    "testing": "Use the Debug Console > Localization section to test your translations in the app"
+  }
+}
