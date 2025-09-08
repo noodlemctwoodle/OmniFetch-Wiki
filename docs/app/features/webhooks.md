@@ -1,5 +1,8 @@
 # Webhook Notifications
 
+!!! warning "Private Beta Access Required"
+    Webhook notifications are currently in **private beta** and require a private beta key to enable push notifications. Without a beta key, you can still monitor services through the app, but won't receive real-time webhook notifications for events.
+
 OmniFetch supports webhook-based push notifications to keep you updated on important events from your media services in real-time.
 
 ## Overview
