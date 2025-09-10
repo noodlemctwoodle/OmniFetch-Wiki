@@ -784,6 +784,313 @@ img:active {
   font-family: inherit;
 }
 
+/* ========== Cookie Consent Banner Improvements ========== */
+
+/* Enhanced overlay with better backdrop */
+.md-consent__overlay {
+  animation: overlay .25s both;
+  -webkit-backdrop-filter: blur(.2rem);
+  backdrop-filter: blur(.2rem);
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+/* Improved inner container with better positioning and spacing */
+.md-consent__inner {
+  animation: consent .5s cubic-bezier(.1,.7,.1,1) both;
+  background-color: var(--md-default-bg-color);
+  border: none;
+  border-radius: 16px;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 
+              0 4px 16px rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 4rem);
+  max-width: 580px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  z-index: 5;
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] .md-consent__inner {
+  background-color: var(--md-default-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 
+              0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced form padding and spacing */
+.md-consent__form {
+  padding: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Title styling */
+.md-consent h3 {
+  color: var(--md-primary-fg-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+/* Description text improvements */
+.md-consent__form p {
+  color: var(--md-default-fg-color);
+  margin: 0 0 1.5rem 0;
+  opacity: 0.85;
+}
+
+[data-md-color-scheme="slate"] .md-consent__form p {
+  color: var(--md-default-fg-color--light);
+  opacity: 0.9;
+}
+
+/* Settings section with better spacing */
+.md-consent__settings {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  display: none;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+input:checked + .md-consent__settings {
+  display: block;
+}
+
+/* Enhanced button controls */
+.md-consent__controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+/* Uniform Button Styling for Cookie Consent */
+.md-typeset .md-consent__controls .md-button {
+  /* Base uniform dimensions and layout */
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 0.75rem 1.5rem;
+  min-width: 120px;
+  min-height: 44px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  
+  /* Uniform transitions */
+  transition: all 0.2s ease;
+  cursor: pointer;
+  
+  /* Reset any inherited styles */
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Primary accept button - solid styling */
+.md-typeset .md-consent__controls .md-button--primary {
+  background: linear-gradient(135deg, var(--omnifetch-blue), var(--omnifetch-purple));
+  color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(57, 73, 171, 0.3);
+}
+
+.md-typeset .md-consent__controls .md-button--primary:hover {
+  background: linear-gradient(135deg, var(--md-primary-fg-color--light), #8b5cb5);
+  box-shadow: 0 4px 12px rgba(57, 73, 171, 0.4);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* Secondary settings button - outlined styling with uniform dimensions */
+.md-typeset .md-consent__controls .md-button:not(.md-button--primary) {
+  background: transparent;
+  border: 2px solid var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color);
+  box-shadow: none;
+}
+
+.md-typeset .md-consent__controls .md-button:not(.md-button--primary):hover {
+  background: var(--md-default-fg-color--lightest);
+  border-color: var(--md-default-fg-color--light);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme adjustments for uniform styling */
+[data-md-color-scheme="slate"] .md-typeset .md-consent__controls .md-button:not(.md-button--primary) {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-consent__controls .md-button:not(.md-button--primary):hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Checkbox styling improvements */
+.md-consent label {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.md-consent label:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+[data-md-color-scheme="slate"] .md-consent label:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.md-consent input[type="checkbox"] {
+  appearance: none;
+  background: var(--md-default-bg-color);
+  border: 2px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  cursor: pointer;
+  height: 18px;
+  margin: 0;
+  min-width: 18px;
+  width: 18px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.md-consent input[type="checkbox"]:checked {
+  background: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-consent input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.md-consent input[type="checkbox"]:hover {
+  border-color: var(--md-primary-fg-color);
+}
+
+/* Mobile responsive improvements */
+@media screen and (max-width: 48em) {
+  .md-consent__inner {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    border-radius: 12px;
+  }
+  
+  .md-consent__form {
+    padding: 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .md-consent h3 {
+    font-size: 1.15rem;
+  }
+  
+  .md-consent__controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .md-typeset .md-consent__controls .md-button {
+    width: 100%;
+    text-align: center;
+    min-width: auto;
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media screen and (min-width: 48em) and (max-width: 76.25em) {
+  .md-consent__inner {
+    max-width: 500px;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Desktop positioning */
+@media screen and (min-width: 76.25em) {
+  .md-consent__inner {
+    bottom: 2rem;
+    right: 2rem;
+    left: auto;
+    max-width: 420px;
+    width: 420px;
+  }
+}
+
+/* Animation improvements */
+@keyframes consent {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes overlay {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(.2rem);
+  }
+}
+
+/* Focus states for accessibility */
+.md-consent input[type="checkbox"]:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.md-typeset .md-consent__controls .md-button:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
 /* Responsive adjustments for image classes */
 @media screen and (max-width: 48em) {
   .img-large,
