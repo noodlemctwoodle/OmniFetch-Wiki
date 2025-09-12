@@ -99,6 +99,7 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.$|&[lg]t;'
+  - material-plausible
   - minify:
       minify_html: true
       minify_js: true
@@ -148,7 +149,6 @@ extra_css:
 extra_javascript:
   - assets/javascripts/consent.js
   - assets/javascripts/extra.js
-  - assets/javascripts/analytics.js
 
 # Extra configuration
 extra:
@@ -156,24 +156,26 @@ extra:
   version:
     provider: mike
     default: stable
+  # Plausible Analytics configuration
   analytics:
-    provider: google
-    property: !ENV [GOOGLE_ANALYTICS_KEY, ""]
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: This page was helpful
-          data: 1
-          note: >
-            Thanks for your feedback! Help us improve by
-            <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">sharing more details</a>.
-        - icon: material/emoticon-sad-outline
-          name: This page could be improved
-          data: 0
-          note: >
-            Thanks for your feedback! Help us improve by
-            <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">opening an issue</a>.
+    provider: plausible
+    domain: omnifetch.app
+    src: https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js
+  feedback:
+    title: Was this page helpful?
+    ratings:
+      - icon: material/emoticon-happy-outline
+        name: This page was helpful
+        data: 1
+        note: >
+          Thanks for your feedback! Help us improve by
+          <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">sharing more details</a>.
+      - icon: material/emoticon-sad-outline
+        name: This page could be improved
+        data: 0
+        note: >
+          Thanks for your feedback! Help us improve by
+          <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">opening an issue</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://noodlemctwoodle.github.io/OmniFetch-Wiki/
@@ -206,12 +208,12 @@ extra:
       target: "https://noodlemctwoodle.github.io/OmniFetch-Wiki/search/?q={search_term_string}"
       query-input: "required name=search_term_string"
   consent:
-    title: Cookie consent
+    title: Privacy & Analytics
     description: >
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      We use Plausible Analytics, a privacy-friendly analytics tool that doesn't use cookies
+      or collect personal data. It helps us understand how our documentation is used
+      without compromising your privacy. No tracking across websites, no personal
+      data collection, and fully GDPR compliant.
     actions:
       - accept
       - manage

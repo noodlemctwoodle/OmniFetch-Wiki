@@ -51,7 +51,7 @@ Significant speed improvements, reduced memory usage, and smoother animations.
 
 - **Setup Issues**: Visit our [App Setup](../app/settings/initial-setup.md)
 - **Troubleshooting**: Check our [Troubleshooting Section](../troubleshooting/common-issues.md)
-- **Service Help**: Browse [Service-Specific Guides](../services/)
+- **Service Help**: Browse [Service-Specific Guides](../services/index.md)
 
 ---
 
