@@ -221,9 +221,28 @@
   transform: translateY(-50%);
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   pointer-events: none;
   z-index: 10;
+  gap: 320px; /* Controls distance between arrows - adjust as needed */
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-controls {
+    gap: 200px; /* Closer on mobile */
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .carousel-controls {
+    gap: 280px; /* Medium gap for tablets */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .carousel-controls {
+    gap: 360px; /* Slightly wider for large screens */
+  }
 }
 
 .carousel-btn {
