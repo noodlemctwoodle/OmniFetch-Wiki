@@ -91,7 +91,7 @@ MD032: true  # Lists should be surrounded by blank lines
 
 MD033:
   # Inline HTML: allow specific elements commonly used in documentation
-  allowed_elements: ["br", "sub", "sup", "kbd", "mark", "details", "summary", "abbr", "div", "p", "h1", "h2", "h3", "h4", "h5", "h6", "em", "strong", "img"]
+  allowed_elements: ["br", "sub", "sup", "kbd", "mark", "details", "summary", "abbr", "div", "p", "h1", "h2", "h3", "h4", "h5", "h6", "em", "strong", "img", "a"]
 
 MD034: true  # Bare URL used (should use link syntax)
 

@@ -6,7 +6,7 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 ### [Version 0.0.4 Build(248)](v0.0.4-248.md) - *September 8, 2025*
 
-**Infrastructure Improvements and Webhook Enhancements**
+## Infrastructure Improvements and Webhook Enhancements
 
 - **Enhanced**: Webhook system with improved beta password validation
 - **Modernized**: Cloudflare Worker separation and backend infrastructure

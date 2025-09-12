@@ -1,6 +1,7 @@
 # Services Overview
 
-OmniFetch supports monitoring and management of various media services. Each service integration provides real-time status monitoring, management capabilities, and push notifications.
+OmniFetch supports monitoring and management of various media services. Each service integration
+provides real-time status monitoring, management capabilities, and push notifications.
 
 ## Supported Services
 
@@ -56,4 +57,5 @@ All services share common configuration options:
 
 ## Troubleshooting
 
-For service-specific issues, check the individual service documentation. For general connection issues, see the [Common Issues](../troubleshooting/common-issues.md) guide.
+For service-specific issues, check the individual service documentation. For general connection issues,
+see the [Common Issues](../troubleshooting/common-issues.md) guide.

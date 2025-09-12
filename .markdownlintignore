@@ -65,3 +65,11 @@ overrides/
 
 # Ignore any generated API documentation
 docs/api-reference/generated/
+
+# Ignore release notes formatting (emphasis as headings is intentional)
+docs/release-notes/v*.md
+
+# Ignore service documentation with intentional formatting for clarity
+docs/services/*/setup.md
+docs/services/*/webhooks.md
+docs/services/*/index.md

@@ -12,7 +12,9 @@ Welcome to the documentation for **OmniFetch** - a native SwiftUI application th
 
 ## Overview
 
-OmniFetch is a powerful iOS application designed to streamline your media service management. With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your services from anywhere. Support for iPad, Apple TV, and Mac is coming soon.
+OmniFetch is a powerful iOS application designed to streamline your media service management.
+With native SwiftUI interfaces, CloudKit sync, and real-time notifications, you can monitor your
+services from anywhere. Support for iPad, Apple TV, and Mac is coming soon.
 
 <div class="grid cards" markdown>
 
@@ -26,7 +28,8 @@ OmniFetch is a powerful iOS application designed to streamline your media servic
 
     ---
 
-    CloudKit integration keeps your configurations synchronized across all your Apple devices. Currently supports iPhone, with iPad, Apple TV, and Mac support coming soon.
+    CloudKit integration keeps your configurations synchronized across all your Apple devices.
+Currently supports iPhone, with iPad, Apple TV, and Mac support coming soon.
 
 - **Real-Time Alerts**
 
