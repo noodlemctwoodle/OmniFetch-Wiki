@@ -37,8 +37,8 @@ MD012:
   maximum: 2
 
 MD013:
-  # Line length: 120 characters for better readability in documentation
-  line_length: 120
+  # Line length: 150 characters for better readability in documentation
+  line_length: 150
   # Exclude code blocks and tables from line length checks
   code_blocks: false
   tables: false
@@ -54,7 +54,7 @@ MD020: true  # No space inside hashes on closed atx style header
 
 MD021: true  # Multiple spaces inside hashes on closed atx style header
 
-MD022: true  # Headers should be surrounded by blank lines
+MD022: false  # Headers should be surrounded by blank lines: disabled for flexible documentation formatting
 
 MD023: true  # Headers must start at the beginning of the line
 
@@ -68,9 +68,7 @@ MD025:
   front_matter_title: "^\\s*title\\s*[:=]"
   level: 1
 
-MD026:
-  # Trailing punctuation in header: common punctuation marks
-  punctuation: ".,;:!?"
+MD026: false  # Trailing punctuation in header: disabled for FAQ sections with questions
 
 MD027: true  # Multiple spaces after blockquote symbol
 

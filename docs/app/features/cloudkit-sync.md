@@ -1,10 +1,14 @@
 # CloudKit Sync
 
-OmniFetch uses Apple's CloudKit to synchronize your service configurations, preferences, and data across all your Apple devices seamlessly.
+OmniFetch uses Apple's CloudKit to synchronize your service configurations, preferences,
+and data across all your Apple devices seamlessly.
 
 ## Overview
 
-CloudKit sync ensures that your OmniFetch setup is consistent across all your devices. When you add a new service on your iPhone, it automatically appears on your iPad, Apple TV, and Mac. All your preferences, notification settings, and service configurations stay in sync.
+CloudKit sync ensures that your OmniFetch setup is consistent across all your devices.
+When you add a new service on your iPhone, it automatically appears on your iPad,
+Apple TV, and Mac. All your preferences, notification settings, and service
+configurations stay in sync.
 
 ## What Gets Synced
 
@@ -218,4 +222,5 @@ Monitor and manage your CloudKit usage:
 - **Real-Time Limits**: Not all changes sync instantly
 - **Conflict Priority**: Recent changes generally take priority in conflicts
 
-CloudKit sync makes OmniFetch a truly unified experience across all your Apple devices, ensuring your media monitoring setup is always available and up to date wherever you are.
+CloudKit sync makes OmniFetch a truly unified experience across all your Apple devices,
+ensuring your media monitoring setup is always available and up to date wherever you are.

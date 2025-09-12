@@ -8,11 +8,13 @@ OmniFetch provides home screen and lock screen widgets to give you quick access 
 Monitor the health and activity of your configured services at a glance.
 
 **Available Sizes:**
+
 - **Small**: Service name and status indicator
 - **Medium**: Service status with key metrics (queue count, recent activity)
 - **Large**: Detailed service overview with multiple metrics
 
 **Information Displayed:**
+
 - Service online/offline status
 - Current queue counts
 - Recent download activity
@@ -23,11 +25,13 @@ Monitor the health and activity of your configured services at a glance.
 Stay updated on media requests and approvals from Jellyseerr.
 
 **Available Sizes:**
+
 - **Small**: Request count and status
 - **Medium**: Recent requests with titles
 - **Large**: Detailed request list with user info and status
 
 **Information Displayed:**
+
 - Pending request count
 - Recently requested media
 - Approval status updates
@@ -37,11 +41,13 @@ Stay updated on media requests and approvals from Jellyseerr.
 See what TV episodes are airing soon or are ready to download.
 
 **Available Sizes:**
+
 - **Small**: Next episode count
 - **Medium**: Upcoming episodes this week
 - **Large**: Detailed episode schedule with air dates
 
 **Information Displayed:**
+
 - Episodes airing today/tomorrow
 - Unaired episode counts
 - Missing episode alerts
@@ -70,7 +76,7 @@ See what TV episodes are airing soon or are ready to download.
 ### Lock Screen Widgets (iOS 16+)
 
 1. **Long press** your lock screen
-2. **Tap "Customize"** 
+2. **Tap "Customize"**
 3. **Select "Lock Screen"**
 4. **Tap the widget area** below the clock
 5. **Choose OmniFetch** from the widget list
@@ -83,7 +89,7 @@ See what TV episodes are airing soon or are ready to download.
 Widgets automatically refresh to show current information:
 
 - **Smart Refresh**: Updates when you view your home screen
-- **Background Updates**: Periodic refresh when app is backgrounded  
+- **Background Updates**: Periodic refresh when app is backgrounded
 - **Manual Refresh**: Pull down on widget to force update
 - **Offline Indication**: Shows when services are unreachable
 
@@ -107,16 +113,19 @@ Personalize widgets to show what matters most:
 ### Service Status Widget Details
 
 **Green Status**: Service is online and responding
+
 - Shows current queue count
 - Displays recent activity summary
 - Updates every 15 minutes
 
 **Red Status**: Service is offline or error
+
 - Shows last successful connection
 - Indicates type of error (network, auth, etc.)
 - Prompts to check service configuration
 
 **Yellow Status**: Service has warnings
+
 - Shows warning details
 - Indicates partial functionality
 - Suggests checking service health
@@ -140,11 +149,13 @@ Personalize widgets to show what matters most:
 ### Widget Not Updating
 
 **Check App Permissions:**
+
 - Ensure OmniFetch has background app refresh enabled
 - Verify notification permissions are granted
 - Check that services are properly configured in the main app
 
 **Force Refresh:**
+
 - Pull down on the widget to refresh manually
 - Open OmniFetch app to trigger background sync
 - Remove and re-add the widget if updates remain stalled
@@ -152,11 +163,13 @@ Personalize widgets to show what matters most:
 ### Widget Showing "No Data"
 
 **Service Configuration:**
+
 - Verify services are configured correctly in OmniFetch
 - Check that API keys are valid and services are accessible
 - Test service connections in the main app
 
 **Network Issues:**
+
 - Ensure device has internet connectivity
 - Verify services are reachable from your current network
 - Check if services require VPN access
@@ -164,11 +177,13 @@ Personalize widgets to show what matters most:
 ### Widget Display Issues
 
 **Text Too Small:**
+
 - Check iOS Display & Brightness settings
 - Adjust Dynamic Type settings for larger text
 - Use larger widget size for more readable content
 
 **Information Not Relevant:**
+
 - Long press widget and select "Edit Widget"
 - Change service or data source selection
 - Customize which information is displayed
@@ -176,16 +191,19 @@ Personalize widgets to show what matters most:
 ## Widget Best Practices
 
 ### Home Screen Organization
+
 - **Group Related Widgets**: Place service widgets near each other
 - **Size Appropriately**: Use small widgets for quick status, large for detailed info
 - **Strategic Placement**: Put most important widgets on main home screen page
 
 ### Battery Optimization
+
 - **Limit Widget Count**: Too many widgets can impact battery life
 - **Choose Efficient Data**: Some data types update more frequently than others
 - **Background Refresh**: Disable for widgets you check less frequently
 
 ### Information Priority
+
 - **Most Important First**: Configure widgets to show your highest priority information
 - **Avoid Redundancy**: Don't duplicate the same information across multiple widgets
 - **Regular Review**: Periodically review and adjust widget configuration

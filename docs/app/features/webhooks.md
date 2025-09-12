@@ -1,13 +1,20 @@
 # Webhook Notifications
 
 !!! warning "Private Beta Access Required"
-    Webhook notifications are currently in **private beta** and require a private beta key to enable push notifications. Without a beta key, you can still monitor services through the app, but won't receive real-time webhook notifications for events.
+    Webhook notifications are currently in **private beta** and require a private
+    beta key to enable push notifications. Without a beta key, you can still monitor
+    services through the app, but won't receive real-time webhook notifications
+    for events.
 
-OmniFetch supports webhook-based push notifications to keep you updated on important events from your media services in real-time.
+OmniFetch supports webhook-based push notifications to keep you updated on important
+events from your media services in real-time.
 
 ## Overview
 
-Webhooks allow your services (Sonarr, Radarr, Lidarr, etc.) to send instant notifications directly to your iPhone, iPad, or Apple TV when important events occur. This means you'll know immediately when downloads complete, new media is added, or issues need your attention.
+Webhooks allow your services (Sonarr, Radarr, Lidarr, etc.) to send instant notifications
+directly to your iPhone, iPad, or Apple TV when important events occur. This means
+you'll know immediately when downloads complete, new media is added, or issues need
+your attention.
 
 ## Supported Services
 

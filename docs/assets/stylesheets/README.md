@@ -1,21 +1,25 @@
 # OmniFetch Documentation - CSS Architecture
 
-This directory contains the modular CSS architecture for the OmniFetch documentation site. The previous single `extra.css` file (1,583 lines) has been reorganized into focused, maintainable modules.
+This directory contains the modular CSS architecture for the OmniFetch documentation
+site. The previous single `extra.css` file (1,583 lines) has been reorganized into
+focused, maintainable modules.
 
 ## File Structure
 
 The CSS files are loaded in a specific order to ensure proper cascade and dependencies:
 
 ### 1. `_base.css` (133 lines)
+
 - **Purpose**: CSS custom properties, root variables, and global resets
 - **Contains**:
-  - Brand color variables (--omnifetch-blue, --omnifetch-purple, etc.)
+  - Brand color variables (--OmniFetch-blue, --OmniFetch-purple, etc.)
   - Global image reset styles for transparency preservation
   - Custom scrollbar styling
   - Performance optimizations
   - Custom emoji styles
 
 ### 2. `_navigation.css` (93 lines)
+
 - **Purpose**: Header, navigation tabs, search, and footer styling
 - **Contains**:
   - Enhanced header with gradient background
@@ -25,6 +29,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Mobile navigation adaptations
 
 ### 3. `_components.css` (252 lines)
+
 - **Purpose**: Reusable UI components and widgets
 - **Contains**:
   - Enhanced cards for home page
@@ -36,6 +41,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Icon enhancements
 
 ### 4. `_layout.css` (256 lines)
+
 - **Purpose**: Responsive layout and mobile optimizations
 - **Contains**:
   - Mobile image optimizations
@@ -45,6 +51,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Responsive breakpoints for different screen sizes
 
 ### 5. `_consent.css` (636 lines)
+
 - **Purpose**: Cookie consent banner and privacy settings
 - **Contains**:
   - Enhanced overlay with backdrop blur
@@ -56,6 +63,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Accessibility features (focus states, high contrast, reduced motion)
 
 ### 6. `_gallery.css` (158 lines)
+
 - **Purpose**: Image gallery and lightbox functionality
 - **Contains**:
   - Image wrapper classes (img-large, img-medium, img-small, etc.)
@@ -65,6 +73,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Responsive image adjustments
 
 ### 7. `_animations.css` (48 lines)
+
 - **Purpose**: Keyframe animations and loading effects
 - **Contains**:
   - Page load fade-in animations
@@ -72,6 +81,7 @@ The CSS files are loaded in a specific order to ensure proper cascade and depend
   - Utility animation classes
 
 ### 8. `custom.css` (Empty placeholder)
+
 - **Purpose**: Site-specific overrides and customizations
 - **Usage**: Add any custom styling that doesn't fit into the modular structure
 
@@ -94,17 +104,20 @@ extra_css:
 ## Benefits of This Structure
 
 ### Maintainability
+
 - Each file focuses on a specific area of functionality
 - Files are reasonably sized (48-636 lines vs. 1,583 lines)
 - Easy to locate and modify specific styling
 - Reduced merge conflicts in version control
 
 ### Performance
+
 - Logical grouping allows for potential lazy loading
 - CSS cascade is preserved through proper load order
 - Minification works better with focused files
 
 ### Development Experience
+
 - Clear separation of concerns
 - Easy to understand which file to modify
 - Better code organization and documentation
@@ -140,6 +153,7 @@ Visit the local development server to verify styling changes before deployment.
 ## Color Scheme Support
 
 All files include proper support for both light and dark themes using:
+
 - `[data-md-color-scheme="slate"]` selectors for dark mode
 - CSS custom properties for consistent theming
 - Proper contrast ratios for accessibility
