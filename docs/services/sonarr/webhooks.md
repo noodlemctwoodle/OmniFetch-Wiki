@@ -77,7 +77,7 @@ Once beta access is enabled:
 
 #### Files Renamed
 
-- **Event**: Episode files renamed/organized
+- **Event**: Episode files renamed/organised
 - **Notification**: "3 episodes renamed in Show Name"
 
 #### Episode Deleted
@@ -214,7 +214,7 @@ Current beta limitations:
 **Q: Do I need to configure anything in Sonarr?**
 A: No, OmniFetch handles everything automatically once beta key is entered.
 
-**Q: Can I customize the webhook URL?**
+**Q: Can I customise the webhook URL?**
 A: No, the webhook URL is managed by OmniFetch.
 
 **Q: Will webhooks work without beta key?**

@@ -239,7 +239,7 @@ Configure custom sounds:
 
 ### Custom Payload Templates
 
-You can customize the JSON payload sent to OmniFetch:
+You can customise the JSON payload sent to OmniFetch:
 
 ```json
 {

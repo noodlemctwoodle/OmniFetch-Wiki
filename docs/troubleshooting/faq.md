@@ -71,7 +71,7 @@ Check these common issues:
 - **Webhooks**: Your services immediately send notifications to OmniFetch when events occur
 - Webhooks provide faster, real-time notifications with less battery usage
 
-### Can I customize notification sounds
+### Can I customise notification sounds
 
 Yes! Go to iOS Settings → Notifications → OmniFetch → Sounds to choose different
 notification sounds. You can also set different sounds for different types of
@@ -88,7 +88,7 @@ notifications.
 
 ### How does CloudKit sync work
 
-CloudKit automatically synchronizes your service configurations, app preferences,
+CloudKit automatically synchronises your service configurations, app preferences,
 and settings across all your Apple devices using the same Apple ID. Changes made on
 one device appear on others within minutes.
 
@@ -114,7 +114,7 @@ Yes, but OmniFetch uses minimal iCloud storage - typically less than 1MB for mos
 
 ### Why is OmniFetch using battery
 
-Background activity is normal for monitoring apps. To optimize battery usage:
+Background activity is normal for monitoring apps. To optimise battery usage:
 
 - Increase refresh intervals for less critical services
 - Disable background refresh for services you check manually

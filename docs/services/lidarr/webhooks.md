@@ -77,7 +77,7 @@ Once beta access is enabled:
 
 #### Files Renamed
 
-- **Event**: Music files renamed/organized
+- **Event**: Music files renamed/organised
 - **Notification**: "Artist Name - Album Name files renamed"
 
 #### Track File Deleted
@@ -227,7 +227,7 @@ Current beta limitations:
 **Q: Do I need to configure anything in Lidarr?**
 A: No, OmniFetch handles everything automatically once beta key is entered.
 
-**Q: Can I customize the webhook URL?**
+**Q: Can I customise the webhook URL?**
 A: No, the webhook URL is managed by OmniFetch.
 
 **Q: Will webhooks work without beta key?**

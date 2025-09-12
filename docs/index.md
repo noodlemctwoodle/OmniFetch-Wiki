@@ -1,5 +1,5 @@
 
-<div align="center">
+<div align="centre">
   <h1>OmniFetch Documentation</h1>
   <p><em>Comprehensive monitoring and management for your media services</em></p>
 </div>
@@ -28,7 +28,7 @@ services from anywhere. Support for iPad, Apple TV, and Mac is coming soon.
 
     ---
 
-    CloudKit integration keeps your configurations synchronized across all your Apple devices.
+    CloudKit integration keeps your configurations synchronised across all your Apple devices.
 Currently supports iPhone, with iPad, Apple TV, and Mac support coming soon.
 
 - **Real-Time Alerts**
@@ -64,7 +64,7 @@ OmniFetch integrates seamlessly with these popular media services:
     - **Real-time monitoring** of all your services
     - **CloudKit sync** across all your devices
     - **Push notifications** for important events
-    - **Native SwiftUI** interface optimized for each platform
+    - **Native SwiftUI** interface optimised for each platform
 
 === "Advanced Features"
 
@@ -75,7 +75,7 @@ OmniFetch integrates seamlessly with these popular media services:
 
 === "Platform Features"
 
-    - **iPhone optimization** with full iOS integration
+    - **iPhone optimisation** with full iOS integration
     - **iPad support** coming soon with split-view and multitasking
     - **Apple TV interface** coming soon with remote navigation
     - **Mac Catalyst** support coming soon for desktop usage
@@ -119,7 +119,7 @@ OmniFetch is built with cutting-edge Apple technologies:
 
 - **SwiftUI** - Declarative user interface framework
 - **SwiftData** - Local data persistence and caching
-- **CloudKit** - Cross-device synchronization
+- **CloudKit** - Cross-device synchronisation
 - **Swift Concurrency** - Modern async/await patterns
 - **@Observable** - Reactive state management (iOS 17+)
 

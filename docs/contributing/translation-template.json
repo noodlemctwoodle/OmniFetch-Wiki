@@ -6,7 +6,7 @@
     "template_type": "comprehensive",
     "total_keys": 506,
     "instructions": "Complete translation template with ALL user-facing strings. Fill in the 'value' field for each translation key.",
-    "compliance_level": "100% localization ready"
+    "compliance_level": "100% localisation ready"
   },
   "_contributor_info": {
     "language_code": "ENTER_ISO_CODE (e.g., es, fr, de, ja, zh-Hans, zh-Hant, ko, it, pt-BR, ru, nl)",
@@ -260,7 +260,7 @@
           "key": "navigation.cloud_sync_settings",
           "english": "iCloud Sync",
           "value": "",
-          "context": "iCloud synchronization settings",
+          "context": "iCloud synchronisation settings",
           "max_length": 20
         },
         "notification_settings": {
@@ -432,7 +432,7 @@
           "key": "ui.actions.close",
           "english": "Close",
           "value": "",
-          "context": "Close dialog button",
+          "context": "Close dialogue button",
           "max_length": 10
         },
         "confirm": {
@@ -804,12 +804,12 @@
   },
   "_completion_checklist": [
     "All navigation titles translated",
-    "All button labels localized",
+    "All button labels localised",
     "All status messages translated",
-    "All form labels and placeholders localized",
-    "All alert dialog titles and messages translated",
+    "All form labels and placeholders localised",
+    "All alert dialogue titles and messages translated",
     "All accessibility labels for VoiceOver support",
-    "All error messages localized",
+    "All error messages localised",
     "Service names appropriately handled (kept original or translated)",
     "Pluralization forms properly implemented",
     "Cultural adaptations considered",
@@ -821,7 +821,7 @@
     "string_interpolation": "Maintain %@ and %d placeholders in the same positions",
     "max_length": "Respect max_length constraints to prevent UI overflow",
     "rtl_languages": "For Arabic/Hebrew, test UI layout in right-to-left mode",
-    "cultural_adaptation": "Adapt colors, symbols, and references to local culture when appropriate",
+    "cultural_adaptation": "Adapt colours, symbols, and references to local culture when appropriate",
     "testing": "Use the Debug Console > Localization section to test your translations in the app"
   }
 }

@@ -23,7 +23,7 @@ Comprehensive documentation for configuring and using the OmniFetch application.
 
 - **[Webhooks](features/webhooks.md)** - Configure webhook notifications
 - **[Widgets](features/widgets.md)** - Home screen widget configuration
-- **[CloudKit Sync](features/cloudkit-sync.md)** - Cross-device synchronization setup
+- **[CloudKit Sync](features/cloudkit-sync.md)** - Cross-device synchronisation setup
 
 ## Troubleshooting
 

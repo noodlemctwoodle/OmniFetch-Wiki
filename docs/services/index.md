@@ -44,7 +44,7 @@ All services share common configuration options:
 
 ### Sync Settings
 
-- **CloudKit Sync**: Enable cross-device synchronization
+- **CloudKit Sync**: Enable cross-device synchronisation
 - **Refresh Interval**: How often to refresh data from the service
 - **Cache Duration**: How long to cache service data locally
 

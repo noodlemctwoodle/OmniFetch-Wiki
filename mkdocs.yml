@@ -207,19 +207,8 @@ extra:
       type: "SearchAction"
       target: "https://noodlemctwoodle.github.io/OmniFetch-Wiki/search/?q={search_term_string}"
       query-input: "required name=search_term_string"
-  consent:
-    title: Privacy & Analytics
-    description: >
-      We use Plausible Analytics, a privacy-friendly analytics tool that doesn't use cookies
-      or collect personal data. It helps us understand how our documentation is used
-      without compromising your privacy. No tracking across websites, no personal
-      data collection, and fully GDPR compliant.
-    actions:
-      - accept
-      - manage
-    cookies:
-      analytics: false
-      github: true
+  # Consent system disabled - Plausible Analytics doesn't require consent
+  # It's privacy-friendly, cookieless, and GDPR compliant by design
 
 # Markdown Extensions
 markdown_extensions:
@@ -336,3 +325,4 @@ nav:
     - Build 239: release-notes/v0.0.4-239.md
   - Contributing:
     - Translation Guide: contributing/translation-guide.md
+  - Analytics & Privacy: analytics.md

@@ -2,7 +2,7 @@
 
 Thank you for helping translate OmniFetch! Your contributions help make the app accessible to users worldwide.
 
-## 🌍 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -12,9 +12,9 @@ Thank you for helping translate OmniFetch! Your contributions help make the app 
 
 ### Language Support
 
-OmniFetch uses iOS's native localization system. The app automatically detects and uses the device's language setting.
+OmniFetch uses iOS's native localisation system. The app automatically detects and uses the device's language setting.
 
-## 📝 Translation Process
+## Translation Process
 
 ### Step 1: Get the Template
 
@@ -54,7 +54,7 @@ Example:
 }
 ```
 
-## 📋 Translation Guidelines
+## Translation Guidelines
 
 ### General Rules
 
@@ -94,7 +94,7 @@ Consider keeping in English if commonly used:
 - Port
 - Token
 
-## 🧪 Testing Your Translation
+## Testing Your Translation
 
 ### Developer Testing
 
@@ -109,7 +109,7 @@ Consider keeping in English if commonly used:
 - Button text must not overflow
 - Error messages should be readable on small screens
 
-## 📤 Submitting Your Translation
+## Submitting Your Translation
 
 ### Via GitHub (Preferred)
 
@@ -128,7 +128,7 @@ Send your completed JSON file to the development team with:
 - Attach the completed JSON file
 - Include any notes or questions
 
-## ✅ Quality Checklist
+## Quality Checklist
 
 Before submitting, ensure:
 
@@ -140,7 +140,7 @@ Before submitting, ensure:
 - [ ] Metadata section is complete
 - [ ] File is valid JSON (use jsonlint.com to verify)
 
-## 🔄 Updates and Maintenance
+## Updates and Maintenance
 
 ### Version Updates
 
@@ -158,7 +158,7 @@ If you find translation issues:
 2. Specify the language and string key
 3. Suggest the correction
 
-## 💬 Common Translations Reference
+## Common Translations Reference
 
 ### English → Spanish Example
 
@@ -193,7 +193,7 @@ Error → Fehler
 Loading... → Laden...
 ```
 
-## 📞 Support
+## Support
 
 Need help with translation?
 
@@ -201,6 +201,6 @@ Need help with translation?
 - Contact the development team
 - Join our community discussions
 
-## 🙏 Thank You
+## Thank You
 
 Your contribution helps make OmniFetch accessible to more users worldwide. We appreciate your time and effort!

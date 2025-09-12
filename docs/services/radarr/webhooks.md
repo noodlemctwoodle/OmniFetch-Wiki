@@ -77,7 +77,7 @@ Once beta access is enabled:
 
 #### Files Renamed
 
-- **Event**: Movie files renamed/organized
+- **Event**: Movie files renamed/organised
 - **Notification**: "Movie Name (2023) renamed"
 
 #### Movie Deleted
@@ -222,7 +222,7 @@ Current beta limitations:
 **Q: Do I need to configure anything in Radarr?**
 A: No, OmniFetch handles everything automatically once beta key is entered.
 
-**Q: Can I customize the webhook URL?**
+**Q: Can I customise the webhook URL?**
 A: No, the webhook URL is managed by OmniFetch.
 
 **Q: Will webhooks work without beta key?**

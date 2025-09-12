@@ -1,6 +1,6 @@
 # CloudKit Sync
 
-OmniFetch uses Apple's CloudKit to synchronize your service configurations, preferences,
+OmniFetch uses Apple's CloudKit to synchronise your service configurations, preferences,
 and data across all your Apple devices seamlessly.
 
 ## Overview
@@ -160,7 +160,7 @@ CloudKit sync follows Apple's strict privacy guidelines:
 
 - End-to-end encryption for sensitive data
 - No ads or tracking based on your data
-- Apple doesn't scan or analyze your OmniFetch content
+- Apple doesn't scan or analyse your OmniFetch content
 - Data stays in your personal iCloud account
 
 ## Managing Sync
