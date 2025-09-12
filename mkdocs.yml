@@ -217,6 +217,9 @@ extra:
     actions:
       - accept
       - manage
+    cookies:
+      analytics: false
+      github: true
 
 # Markdown Extensions
 markdown_extensions:
