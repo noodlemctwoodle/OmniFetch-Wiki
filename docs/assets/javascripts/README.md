@@ -2,7 +2,7 @@
 
 This directory contains JavaScript files used to enhance the OmniFetch documentation experience.
 
-## 📁 File Structure
+## File Structure
 
 ### Active JavaScript Files
 
@@ -12,9 +12,10 @@ This directory contains JavaScript files used to enhance the OmniFetch documenta
 | `consent.js` | Privacy Consent Management | Handles cookie consent for analytics (currently disabled as Plausible Analytics is privacy-friendly) |
 | `extra.js` | Custom Extensions | Placeholder for additional custom functionality and site-specific enhancements |
 
-## 🎠 Carousel.js
+## Carousel.js
 
 **Features:**
+
 - **Infinite Auto-Scroll**: Cycles through 12+ app screenshots every 4 seconds
 - **Manual Navigation**: Previous/next buttons and clickable indicators
 - **Keyboard Support**: Arrow key navigation
@@ -24,6 +25,7 @@ This directory contains JavaScript files used to enhance the OmniFetch documenta
 - **User Interaction**: Pauses auto-scroll on hover/interaction
 
 **Implementation:**
+
 ```javascript
 // Initializes automatically on pages with #heroCarousel element
 new HeroCarousel('heroCarousel');
@@ -31,11 +33,12 @@ new HeroCarousel('heroCarousel');
 
 **Image Sets**: Includes screenshots from Discover, Sonarr, Radarr, Lidarr, and Jellyseerr views.
 
-## 🍪 Consent.js
+## Consent.js
 
 **Current Status**: Configured but disabled since Plausible Analytics doesn't require user consent.
 
 **Features:**
+
 - GDPR-compliant consent management
 - Apple-inspired UI design with smooth animations
 - Theme-aware styling for light/dark modes
@@ -44,17 +47,18 @@ new HeroCarousel('heroCarousel');
 
 **Note**: File remains for potential future use if analytics requiring consent are added.
 
-## 📄 Extra.js
+## Extra.js
 
 **Purpose**: Reserved for additional site-specific JavaScript functionality.
 
 **Usage**: Currently contains only placeholder content. Future enhancements can be added here for:
+
 - Custom search functionality
 - Enhanced navigation features
 - Site-specific interactive elements
 - Performance optimizations
 
-## ⚙️ Configuration
+## Configuration
 
 JavaScript files are loaded via `mkdocs.yml`:
 
@@ -67,30 +71,32 @@ extra_javascript:
 
 **Loading Order**: Files load in the specified order, allowing for proper dependency management.
 
-## 🎨 CSS Dependencies
+## CSS Dependencies
 
 JavaScript functionality depends on corresponding CSS in:
+
 - `assets/stylesheets/custom.css` - Carousel styling
 - `assets/stylesheets/_consent.css` - Consent banner styling
 - `assets/stylesheets/_components.css` - Interactive component styles
 
-## 📱 Browser Support
+## Browser Support
 
 All JavaScript is written using modern ES6+ features with broad browser support:
+
 - **Chrome/Edge**: 88+
 - **Firefox**: 85+
 - **Safari**: 14+
 - **iOS Safari**: 14+
 - **Android Chrome**: 88+
 
-## 🚀 Performance Considerations
+## Performance Considerations
 
 - **Lazy Loading**: Carousel images load progressively
 - **GPU Acceleration**: CSS transforms use hardware acceleration
 - **Memory Management**: Proper cleanup of event listeners
 - **Bundle Size**: Minimal footprint with no external dependencies
 
-## 🔧 Development Guidelines
+## Development Guidelines
 
 When adding new JavaScript functionality:
 
@@ -101,7 +107,7 @@ When adding new JavaScript functionality:
 5. **Theme Awareness**: Support both light and dark themes
 6. **Error Handling**: Graceful degradation if features fail to load
 
-## 📋 Maintenance Notes
+## Maintenance Notes
 
 - **Carousel**: Auto-scroll timing can be adjusted in `HeroCarousel` constructor
 - **Theme Detection**: Uses MkDocs Material's `data-md-color-scheme` attribute
@@ -110,4 +116,4 @@ When adding new JavaScript functionality:
 
 ---
 
-*Last updated: September 2024*
+Last updated: September 2024
