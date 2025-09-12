@@ -71,7 +71,19 @@ jobs:
             # Return empty string for ENV tags during validation
             return ''
         
+        # Add constructor to ignore Python object references
+        def python_constructor(loader, node):
+            # Return the string representation for Python objects
+            return str(node.value)
+        
+        # Register all MkDocs-specific tag constructors
         MkDocsYAMLLoader.add_constructor('!ENV', env_constructor)
+        MkDocsYAMLLoader.add_constructor('tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg', python_constructor)
+        MkDocsYAMLLoader.add_constructor('tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji', python_constructor)
+        MkDocsYAMLLoader.add_constructor('tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format', python_constructor)
+        
+        # Add a generic handler for any python/name tags we might have missed
+        MkDocsYAMLLoader.add_multi_constructor('tag:yaml.org,2002:python/', python_constructor)
         
         try:
             with open('mkdocs.yml', 'r') as f:
@@ -85,6 +97,11 @@ jobs:
                 print(f'❌ Missing required fields: {missing_fields}')
                 sys.exit(1)
             print('✅ All required configuration fields present')
+            
+            # Additional validation
+            if 'theme' in config and 'name' in config['theme']:
+                print(f\"✅ Theme configured: {config['theme']['name']}\")
+            
         except Exception as e:
             print(f'❌ Configuration validation failed: {e}')
             sys.exit(1)
