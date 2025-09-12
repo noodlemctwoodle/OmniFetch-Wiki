@@ -146,21 +146,40 @@ jobs:
                         link_path.startswith('tel:')):
                         continue
                     
+                    # Strip any anchors from the path
+                    clean_path = link_path.split('#')[0] if '#' in link_path else link_path
+                    
                     # Resolve relative paths
-                    if link_path.startswith('../'):
+                    if clean_path.startswith('../'):
                         # Handle relative paths
                         base_dir = os.path.dirname(filepath)
-                        target_path = os.path.normpath(os.path.join(base_dir, link_path))
-                    elif link_path.startswith('./'):
+                        target_path = os.path.normpath(os.path.join(base_dir, clean_path))
+                    elif clean_path.startswith('./'):
                         # Handle current directory paths
                         base_dir = os.path.dirname(filepath)
-                        target_path = os.path.normpath(os.path.join(base_dir, link_path[2:]))
+                        target_path = os.path.normpath(os.path.join(base_dir, clean_path[2:]))
+                    elif clean_path.startswith('/'):
+                        # Handle absolute paths from docs root
+                        target_path = os.path.join('docs', clean_path[1:])
                     else:
-                        # Handle root-relative paths
-                        target_path = os.path.join('docs', link_path)
+                        # Handle relative paths from current directory
+                        base_dir = os.path.dirname(filepath)
+                        target_path = os.path.normpath(os.path.join(base_dir, clean_path))
                     
                     # Check if target file exists
+                    # Also check for directory/index.md pattern
                     if not os.path.exists(target_path):
+                        # If path ends with / check for index.md
+                        if clean_path.endswith('/'):
+                            index_path = os.path.join(target_path, 'index.md')
+                            if os.path.exists(index_path):
+                                continue
+                        # Check if it's a directory with index.md
+                        elif os.path.isdir(target_path):
+                            index_path = os.path.join(target_path, 'index.md')
+                            if os.path.exists(index_path):
+                                continue
+                        
                         broken_links.append({
                             'file': filepath,
                             'link_text': link_text,
