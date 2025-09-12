@@ -1,0 +1,134 @@
+/* =================================================================
+ * OmniFetch Documentation - Base Variables and Root Styles
+ * Contains CSS custom properties, root variables, and global resets
+ * ================================================================= */
+
+/* CSS Custom Properties */
+:root {
+  /* Primary Color Variables */
+  --md-primary-fg-color: #3949AB;
+  --md-primary-fg-color--light: #5C6BC0;
+  --md-primary-fg-color--dark: #303F9F;
+  --md-accent-fg-color: #FF6F00;
+  
+  /* OmniFetch Brand Colors */
+  --omnifetch-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --omnifetch-blue: #3949AB;
+  --omnifetch-blue-rgb: 57, 73, 171;
+  --omnifetch-purple: #764ba2;
+  --omnifetch-purple-rgb: 118, 75, 162;
+}
+
+/* =================================================================
+ * Global Image Resets and Transparency Preservation
+ * Critical for maintaining PNG transparency and removing borders
+ * ================================================================= */
+
+/* Remove default image borders globally and preserve transparency */
+.md-typeset img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Additional specificity for Material theme overrides */
+.md-content img,
+.md-typeset .md-content img,
+article img,
+.md-typeset article img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* Ensure no borders in any context and preserve alpha channel */
+img, 
+img:hover,
+img:focus,
+img:active {
+  border: 0 !important;
+  border-width: 0 !important;
+  border-style: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* =================================================================
+ * Custom Scrollbar for Webkit Browsers
+ * ================================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--omnifetch-gradient);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--md-primary-fg-color--dark);
+}
+
+/* =================================================================
+ * Performance Optimizations
+ * ================================================================= */
+
+/* Image performance optimizations */
+.md-typeset img {
+  /* Add loading attribute via CSS for browsers that support it */
+  content-visibility: auto;
+}
+
+/* Ensure images don't cause layout shift */
+.md-typeset img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Optimize large images - remove backgrounds that interfere with alpha channel */
+.md-typeset img[src*="push-notifications"],
+.md-typeset img[src*="add-service"],
+.md-typeset img[src*="Settings"],
+.md-typeset img[src*="onboarding"],
+.md-typeset img[src*="discovery"] {
+  background: none !important;
+  background-color: transparent !important;
+  transition: opacity 0.3s ease-in-out;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset img[src*="push-notifications"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="add-service"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="Settings"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="onboarding"],
+[data-md-color-scheme="slate"] .md-typeset img[src*="discovery"] {
+  background: none !important;
+  background-color: transparent !important;
+}
+
+/* =================================================================
+ * Custom Emoji Styles
+ * ================================================================= */
+
+.md-typeset img.twemoji {
+  vertical-align: text-bottom;
+  width: 1.2em;
+  height: 1.2em;
+}

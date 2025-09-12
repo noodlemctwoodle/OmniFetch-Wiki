@@ -1,0 +1,228 @@
+/* =================================================================
+ * OmniFetch Documentation - Image Gallery and Lightbox Styles
+ * Contains GLightbox customization and image management classes
+ * ================================================================= */
+
+/* =================================================================
+ * Image Wrapper Classes for Consistent Sizing
+ * ================================================================= */
+
+.img-wrapper {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.img-large {
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.img-medium {
+  max-width: 70%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.img-small {
+  max-width: 50%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.img-icon {
+  max-width: 32px;
+  max-height: 32px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0.3rem 0 0;
+  border-radius: 4px;
+}
+
+.img-screenshot {
+  max-width: 80%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-screenshot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Service logo specific styling */
+.img-service-logo {
+  max-width: 48px;
+  max-height: 48px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================================================
+ * Theme-Aware Images
+ * ================================================================= */
+
+.theme-images,
+.theme-aware-image {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.theme-aware-image img {
+  width: auto;
+  height: auto;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.light-mode-only {
+  display: block;
+}
+
+.dark-mode-only {
+  display: none;
+}
+
+/* For links with glightbox class */
+a.light-mode-only {
+  display: inline-block;
+}
+
+a.dark-mode-only {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .light-mode-only,
+[data-md-color-scheme="slate"] a.light-mode-only {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .dark-mode-only,
+[data-md-color-scheme="slate"] a.dark-mode-only {
+  display: block;
+}
+
+[data-md-color-scheme="slate"] a.dark-mode-only {
+  display: inline-block;
+}
+
+/* Responsive sizing for theme-aware images - matching hero image sizes */
+@media screen and (max-width: 768px) {
+  .theme-aware-image img {
+    max-height: 350px;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .theme-aware-image img {
+    max-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .theme-aware-image img {
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .theme-aware-image img {
+    max-height: 700px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .theme-aware-image img {
+    max-height: 750px;
+  }
+}
+
+/* =================================================================
+ * GLightbox Customization
+ * ================================================================= */
+
+/* Hide the description box in lightbox */
+.glightbox-clean .gslide-description,
+.gslide-description {
+  display: none !important;
+}
+
+/* Alternative: If you want to keep description but style it differently, uncomment below */
+/*
+.glightbox-clean .gslide-description {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  color: white;
+  font-family: inherit;
+}
+*/
+
+/* =================================================================
+ * Responsive Image Class Adjustments
+ * ================================================================= */
+
+/* Mobile responsive - Maintain Clean Layout */
+@media screen and (max-width: 48em) {
+  .img-large,
+  .img-medium,
+  .img-small,
+  .img-screenshot {
+    max-width: 95%;
+  }
+  
+  .img-service-logo {
+    max-width: 36px;
+    max-height: 36px;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  .img-large {
+    max-width: 75%;
+  }
+  
+  .img-medium {
+    max-width: 60%;
+  }
+  
+  .img-small {
+    max-width: 40%;
+  }
+  
+  .img-screenshot {
+    max-width: 65%;
+  }
+}

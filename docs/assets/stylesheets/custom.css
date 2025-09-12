@@ -1,0 +1,172 @@
+/* =================================================================
+ * OmniFetch Documentation - Custom Styles
+ * Contains custom styling for specific page elements
+ * ================================================================= */
+
+/* =================================================================
+ * Hero Image Styling (iPhone mockup on homepage)
+ * ================================================================= */
+
+.hero-image-container {
+  text-align: center !important;
+  margin: 1rem auto 1.5rem auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  /* Break out of content constraints and center on page */
+  max-width: none !important;
+  position: relative !important;
+  left: 31% !important;
+  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Fine-tune spacing between content and hero image */
+.md-typeset p + .hero-image-container {
+  margin-top: 1rem; /* Control spacing from preceding paragraph */
+}
+
+/* Fine-tune spacing from hero image to following sections */
+.hero-image-container + h2 {
+  margin-top: 1.5rem; /* Control spacing to following heading */
+}
+
+.hero-image {
+  width: auto !important;
+  height: auto !important;
+  max-height: 400px;
+  display: block !important;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 !important;
+  flex-shrink: 0;
+}
+
+/* Ensure images inside hero container are centered */
+.hero-image-container img {
+  margin: 0 auto !important;
+  display: inline-block !important;
+}
+
+/* Force centering with additional specificity */
+.md-typeset .hero-image-container {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+.md-typeset .hero-image-container img {
+  margin: 0 auto !important;
+  display: inline-block !important;
+}
+
+/* Maximum specificity override for theme conflicts */
+.md-content__inner .md-typeset .hero-image-container {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.md-content__inner .md-typeset .hero-image-container img,
+.md-content__inner .md-typeset .hero-image-container a img {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+}
+
+/* Mobile view - smaller image */
+@media screen and (max-width: 768px) {
+  .hero-image-container {
+    margin: 0.75rem auto 1rem auto; /* Reduced mobile margins */
+  }
+  
+  .hero-image {
+    max-height: 350px;
+    max-width: 90%;
+  }
+}
+
+/* Tablet view - medium size */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-image-container {
+    margin: 1rem auto 1.25rem auto; /* Reduced tablet margins */
+  }
+  
+  .hero-image {
+    max-height: 500px;
+  }
+}
+
+/* Desktop view - larger image */
+@media screen and (min-width: 1025px) {
+  .hero-image-container {
+    margin: 1.25rem auto 1.5rem auto; /* Moderate desktop margins */
+  }
+  
+  .hero-image {
+    max-height: 600px;
+  }
+}
+
+/* Large desktop view - even larger */
+@media screen and (min-width: 1440px) {
+  .hero-image-container {
+    margin: 1.5rem auto 1.75rem auto; /* Slightly larger margins for big screens */
+  }
+  
+  .hero-image {
+    max-height: 700px;
+  }
+}
+
+/* Ultra-wide screens */
+@media screen and (min-width: 1920px) {
+  .hero-image-container {
+    margin: 1.75rem auto 2rem auto; /* Maximum margins for ultra-wide */
+  }
+  
+  .hero-image {
+    max-height: 750px;
+  }
+}
+
+/* =================================================================
+ * Override default layout margins for hero images
+ * Prevents _layout.css from adding excessive spacing
+ * ================================================================= */
+
+/* Override layout margins for the hero image specifically */
+.hero-image-container img[src*="discovery"],
+.hero-image-container .hero-image {
+  margin: 0 !important; /* Override any layout CSS margins */
+  padding: 0 !important; /* Ensure no padding */
+}
+
+/* Override layout.css default image margins for discovery image */
+.md-typeset .hero-image-container img[src*="discovery"] {
+  margin: 0 !important; /* Override _layout.css default image margins */
+  display: inline-block !important; /* Maintain inline display */
+}
+
+/* Additional specificity for different breakpoints */
+@media screen and (max-width: 48em) {
+  .md-typeset .hero-image-container img[src*="discovery"] {
+    margin: 0 !important;
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 48em) and (max-width: 76.25em) {
+  .md-typeset .hero-image-container img[src*="discovery"] {
+    margin: 0 !important;
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-typeset .hero-image-container img[src*="discovery"] {
+    margin: 0 !important;
+    display: inline-block !important;
+  }
+}

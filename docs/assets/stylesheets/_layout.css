@@ -1,0 +1,257 @@
+/* =================================================================
+ * OmniFetch Documentation - Layout and Responsive Styles
+ * Contains responsive breakpoints, mobile optimizations, and layout adjustments
+ * ================================================================= */
+
+/* =================================================================
+ * Mobile Image Optimizations
+ * ================================================================= */
+
+@media screen and (max-width: 48em) {
+  /* Make all images responsive on mobile */
+  .md-typeset img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Specific sizing for screenshot images */
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 90%;
+    width: auto;
+    max-height: 500px;
+    object-fit: contain;
+  }
+  
+  /* Even smaller for inline service icons */
+  .md-typeset img[src*="service-icons"] {
+    max-width: 24px;
+    max-height: 24px;
+    display: inline-block;
+    margin: 0 0.3rem 0 0;
+    box-shadow: none;
+  }
+  
+  /* Optimize images in admonitions */
+  .md-typeset .admonition img {
+    max-width: 85%;
+    margin: 0.5rem auto;
+  }
+  
+  /* Center align images */
+  .md-typeset p img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =================================================================
+ * Tablet-Specific Image Sizing
+ * ================================================================= */
+
+@media screen and (min-width: 48em) and (max-width: 76.25em) {
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 80%;
+    display: block;
+    margin: 1.5rem auto;
+  }
+}
+
+/* =================================================================
+ * Desktop Image Sizing - Make Screenshots Smaller on Larger Displays
+ * ================================================================= */
+
+@media screen and (min-width: 76.25em) {
+  .md-typeset img[src*="push-notifications"],
+  .md-typeset img[src*="add-service"],
+  .md-typeset img[src*="Settings"],
+  .md-typeset img[src*="onboarding"],
+  .md-typeset img[src*="discovery"] {
+    max-width: 60%;
+    max-height: 500px;
+    width: auto;
+    display: block;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    object-fit: contain;
+  }
+  
+  /* Even more conservative sizing for very large displays */
+  @media screen and (min-width: 100em) {
+    .md-typeset img[src*="push-notifications"],
+    .md-typeset img[src*="add-service"],
+    .md-typeset img[src*="Settings"],
+    .md-typeset img[src*="onboarding"],
+    .md-typeset img[src*="discovery"] {
+      max-width: 45%;
+      max-height: 600px;
+    }
+  }
+}
+
+/* =================================================================
+ * Mobile Table Improvements - Proper Responsive Tables with Headers
+ * ================================================================= */
+
+@media screen and (max-width: 48em) {
+  /* Show tables as proper responsive tables with styling */
+  .md-typeset table:not([class]) {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.9em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  
+  .md-typeset table:not([class]) thead {
+    display: table-header-group;
+    background: var(--omnifetch-blue);
+    color: white;
+  }
+  
+  .md-typeset table:not([class]) th {
+    display: table-cell;
+    padding: 0.75rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-align: left;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .md-typeset table:not([class]) th:first-child {
+    padding-left: 0.75rem;
+  }
+  
+  .md-typeset table:not([class]) th:last-child {
+    padding-right: 0.75rem;
+  }
+  
+  .md-typeset table:not([class]) tbody {
+    display: table-row-group;
+  }
+  
+  .md-typeset table:not([class]) tr {
+    display: table-row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 1);
+  }
+  
+  .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.02);
+  }
+  
+  .md-typeset table:not([class]) tr:last-child {
+    border-bottom: none;
+  }
+  
+  .md-typeset table:not([class]) tbody tr:hover {
+    background: rgba(var(--omnifetch-blue-rgb, 57, 73, 171), 0.1) !important;
+  }
+  
+  .md-typeset table:not([class]) td {
+    display: table-cell;
+    padding: 0.8rem 0.6rem;
+    vertical-align: middle;
+    border: none;
+    line-height: 1.4;
+    word-wrap: break-word;
+    font-size: 0.85em;
+  }
+  
+  .md-typeset table:not([class]) td:first-child {
+    font-weight: 600;
+    padding-left: 0.75rem;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+  }
+  
+  /* Center images in table cells */
+  .md-typeset table:not([class]) td img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(2) {
+    color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(3) {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(4) {
+    color: rgba(0, 0, 0, 0.7);
+    padding-right: 0.75rem;
+  }
+  
+  /* Status column styling */
+  .md-typeset table:not([class]) td:nth-child(3) strong {
+    color: #22c55e;
+  }
+  
+  .md-typeset table:not([class]) td:nth-child(3):contains("Coming Soon") {
+    color: #f59e0b;
+  }
+  
+  /* Dynamic labels based on table structure - remove all hardcoded labels */
+  .md-typeset table:not([class]) td:before {
+    display: none !important;
+  }
+  
+  /* Dark theme mobile table styles */
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(30, 41, 59, 0.5);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) thead {
+    background: var(--omnifetch-purple);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr {
+    background: rgba(45, 55, 72, 0.3);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+    background: rgba(var(--omnifetch-purple-rgb, 118, 75, 162), 0.2) !important;
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:first-child {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(2) {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(3) {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  [data-md-color-scheme="slate"] .md-typeset table:not([class]) td:nth-child(4) {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}

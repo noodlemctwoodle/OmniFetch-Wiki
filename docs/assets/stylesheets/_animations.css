@@ -1,0 +1,49 @@
+/* =================================================================
+ * OmniFetch Documentation - Animations and Utilities
+ * Contains keyframe animations, loading effects, and utility classes
+ * ================================================================= */
+
+/* =================================================================
+ * Loading Animation for Better UX
+ * ================================================================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.md-content__inner {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* =================================================================
+ * Cookie Consent Animations
+ * ================================================================= */
+
+@keyframes consent {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes overlay {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(.2rem);
+  }
+}

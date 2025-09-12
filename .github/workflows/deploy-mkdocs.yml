@@ -1,15 +1,13 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy OmniFetch Documentation
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main, master ]
   pull_request:
-    branches:
-      - main
+    branches: [ main, master ]
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -18,33 +16,268 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  lint-and-test:
     runs-on: ubuntu-latest
+    name: Lint and Test Documentation
     
     steps:
-      - name: Checkout
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js for markdownlint
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: |
+          package.json
+          package-lock.json
+    
+    - name: Install markdownlint-cli
+      run: |
+        npm install -g markdownlint-cli markdownlint-cli2
+        echo "✓ Markdownlint installed successfully"
+    
+    - name: Lint Markdown files
+      run: |
+        echo "🔍 Running markdown linting..."
+        markdownlint docs/**/*.md --config .markdownlint.yml
+        echo "✅ Markdown linting passed"
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+        cache-dependency-path: requirements.txt
+    
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        echo "✓ Python dependencies installed"
+    
+    - name: Validate MkDocs configuration
+      run: |
+        echo "🔧 Validating MkDocs configuration..."
+        python -c "
+        import yaml
+        import sys
+        try:
+            with open('mkdocs.yml', 'r') as f:
+                config = yaml.safe_load(f)
+            print('✅ MkDocs configuration is valid YAML')
+            
+            # Check required fields
+            required_fields = ['site_name', 'nav', 'theme']
+            missing_fields = [field for field in required_fields if field not in config]
+            if missing_fields:
+                print(f'❌ Missing required fields: {missing_fields}')
+                sys.exit(1)
+            print('✅ All required configuration fields present')
+        except Exception as e:
+            print(f'❌ Configuration validation failed: {e}')
+            sys.exit(1)
+        "
+    
+    - name: Check for broken internal links
+      run: |
+        echo "🔗 Checking for broken internal links..."
+        python -c "
+        import os
+        import re
+        import sys
+        
+        def check_internal_links():
+            broken_links = []
+            docs_files = []
+            
+            # Get all markdown files
+            for root, dirs, files in os.walk('docs'):
+                for file in files:
+                    if file.endswith('.md'):
+                        docs_files.append(os.path.join(root, file))
+            
+            # Check each file for internal links
+            for filepath in docs_files:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Find markdown links [text](path)
+                links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
+                
+                for link_text, link_path in links:
+                    # Skip external links, anchors, and special links
+                    if (link_path.startswith('http') or 
+                        link_path.startswith('#') or 
+                        link_path.startswith('mailto:') or
+                        link_path.startswith('tel:')):
+                        continue
+                    
+                    # Resolve relative paths
+                    if link_path.startswith('../'):
+                        # Handle relative paths
+                        base_dir = os.path.dirname(filepath)
+                        target_path = os.path.normpath(os.path.join(base_dir, link_path))
+                    elif link_path.startswith('./'):
+                        # Handle current directory paths
+                        base_dir = os.path.dirname(filepath)
+                        target_path = os.path.normpath(os.path.join(base_dir, link_path[2:]))
+                    else:
+                        # Handle root-relative paths
+                        target_path = os.path.join('docs', link_path)
+                    
+                    # Check if target file exists
+                    if not os.path.exists(target_path):
+                        broken_links.append({
+                            'file': filepath,
+                            'link_text': link_text,
+                            'link_path': link_path,
+                            'resolved_path': target_path
+                        })
+            
+            if broken_links:
+                print('❌ Broken internal links found:')
+                for link in broken_links:
+                    print(f'  {link[\"file\"]}: \"{link[\"link_text\"]}\" -> {link[\"link_path\"]} (resolved: {link[\"resolved_path\"]})')
+                return False
+            else:
+                print('✅ No broken internal links found')
+                return True
+        
+        if not check_internal_links():
+            sys.exit(1)
+        "
+    
+    - name: Validate image references
+      run: |
+        echo "🖼️ Validating image references..."
+        python -c "
+        import os
+        import re
+        import sys
+        
+        def check_image_references():
+            missing_images = []
+            docs_files = []
+            
+            # Get all markdown files
+            for root, dirs, files in os.walk('docs'):
+                for file in files:
+                    if file.endswith('.md'):
+                        docs_files.append(os.path.join(root, file))
+            
+            for filepath in docs_files:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Find image references ![alt](path)
+                images = re.findall(r'!\[([^\]]*)\]\(([^)]+)\)', content)
+                
+                for alt_text, img_path in images:
+                    # Skip external images
+                    if img_path.startswith('http'):
+                        continue
+                    
+                    # Resolve image path
+                    if img_path.startswith('../'):
+                        base_dir = os.path.dirname(filepath)
+                        target_path = os.path.normpath(os.path.join(base_dir, img_path))
+                    elif img_path.startswith('./'):
+                        base_dir = os.path.dirname(filepath)
+                        target_path = os.path.normpath(os.path.join(base_dir, img_path[2:]))
+                    else:
+                        target_path = os.path.join('docs', img_path)
+                    
+                    if not os.path.exists(target_path):
+                        missing_images.append({
+                            'file': filepath,
+                            'alt_text': alt_text,
+                            'img_path': img_path,
+                            'resolved_path': target_path
+                        })
+            
+            if missing_images:
+                print('❌ Missing image files found:')
+                for img in missing_images:
+                    print(f'  {img[\"file\"]}: \"{img[\"alt_text\"]}\" -> {img[\"img_path\"]} (resolved: {img[\"resolved_path\"]})')
+                return False
+            else:
+                print('✅ All image references are valid')
+                return True
+        
+        if not check_image_references():
+            sys.exit(1)
+        "
+    
+    - name: Build documentation
+      run: |
+        echo "🏗️ Building MkDocs documentation..."
+        mkdocs build --clean --strict --verbose
+        echo "✅ Documentation build successful"
+    
+    - name: Test built site accessibility
+      run: |
+        echo "🧪 Testing site accessibility..."
+        python -m http.server 8000 --directory site &
+        SERVER_PID=$!
+        sleep 3
+        
+        # Test main pages are accessible
+        curl -f http://localhost:8000/ -o /dev/null -s || (echo "❌ Homepage not accessible" && kill $SERVER_PID && exit 1)
+        curl -f http://localhost:8000/search/ -o /dev/null -s || echo "⚠️ Search page not accessible (may be normal)"
+        
+        echo "✅ Site accessibility test passed"
+        kill $SERVER_PID
+    
+    - name: Generate build report
+      if: always()
+      run: |
+        echo "📊 Build Report" >> $GITHUB_STEP_SUMMARY
+        echo "=============" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Documentation Statistics" >> $GITHUB_STEP_SUMMARY
+        echo "- **Total Markdown files**: $(find docs/ -name '*.md' | wc -l)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Total Images**: $(find docs/ -type f \( -name '*.png' -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.gif' -o -name '*.svg' \) | wc -l)" >> $GITHUB_STEP_SUMMARY
+        echo "- **Site size**: $(du -sh site/ 2>/dev/null | cut -f1 || echo 'N/A')" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ -d "site" ]; then
+          echo "### Generated Pages" >> $GITHUB_STEP_SUMMARY
+          find site/ -name "*.html" | head -10 | sed 's/^/- /' >> $GITHUB_STEP_SUMMARY
+          if [ $(find site/ -name "*.html" | wc -l) -gt 10 ]; then
+            echo "- ... and $(( $(find site/ -name "*.html" | wc -l) - 10 )) more pages" >> $GITHUB_STEP_SUMMARY
+          fi
+        fi
+
+  build:
+    runs-on: ubuntu-latest
+    name: Build Documentation
+    needs: lint-and-test
+    
+    steps:
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
       
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-          
-      - name: Cache Python dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
             
-      - name: Install MkDocs and dependencies
-        run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
           
       - name: Build MkDocs site
-        run: mkdocs build --verbose --clean --strict
+        run: |
+          mkdocs build --clean --strict --verbose
+          echo "✅ Final build completed successfully"
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -55,14 +288,58 @@ jobs:
           path: ./site
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    name: Deploy to GitHub Pages
+    needs: [lint-and-test, build]
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+    
+    - name: Deployment success notification
+      run: |
+        echo "🚀 Documentation successfully deployed!" >> $GITHUB_STEP_SUMMARY
+        echo "📖 **Live Site**: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Deployment Details" >> $GITHUB_STEP_SUMMARY
+        echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Triggered by**: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+
+  notify:
+    runs-on: ubuntu-latest
+    name: Build Status Notification
+    needs: [lint-and-test, build, deploy]
+    if: always()
+    
+    steps:
+    - name: Build Status Summary
+      run: |
+        echo "## 📋 Build Status Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ needs.lint-and-test.result }}" == "success" ]; then
+          echo "✅ **Linting & Testing**: Passed" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Linting & Testing**: Failed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ "${{ needs.build.result }}" == "success" ]; then
+          echo "✅ **Build**: Passed" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Build**: Failed" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        if [ "${{ needs.deploy.result }}" == "success" ]; then
+          echo "✅ **Deployment**: Passed" >> $GITHUB_STEP_SUMMARY
+        elif [ "${{ needs.deploy.result }}" == "skipped" ]; then
+          echo "⏭️ **Deployment**: Skipped (not main branch)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "❌ **Deployment**: Failed" >> $GITHUB_STEP_SUMMARY
+        fi

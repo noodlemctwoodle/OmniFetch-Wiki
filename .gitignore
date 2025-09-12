@@ -3,6 +3,9 @@
 .AppleDouble
 .LSOverride
 
+# Claude Agents
+.claude
+
 # Icon must end with two \r
 Icon
 
@@ -98,3 +101,4 @@ venv.bak/
 *.tmp
 *.temp
 *.log
+

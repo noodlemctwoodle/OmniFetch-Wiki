@@ -1,4 +1,30 @@
-mkdocs>=1.5.0
-mkdocs-material>=9.4.0
-mkdocs-minify-plugin>=0.7.0
+# MkDocs Documentation Dependencies
+# Updated for professional documentation standards with verified packages and latest stable versions
+
+# Core MkDocs
+mkdocs>=1.6.1
+
+# Material Theme with enhanced features
+mkdocs-material>=9.6.19
+
+# Performance and optimization plugins
+mkdocs-minify-plugin>=0.8.0
+
+# Image and media enhancement
 mkdocs-glightbox>=0.5.1
+mkdocs-img2fig-plugin>=0.9.3
+
+# Navigation and search improvements
+mkdocs-awesome-pages-plugin>=2.10.1
+
+# Content management and validation
+mkdocs-literate-nav>=0.6.2
+mkdocs-section-index>=0.3.10
+
+# Additional dependencies for enhanced functionality
+PyYAML>=6.0.2
+Pillow>=10.0.0
+requests>=2.32.5
+
+# Development tools (installed separately via npm)
+# markdownlint-cli - install with: npm install -g markdownlint-cli

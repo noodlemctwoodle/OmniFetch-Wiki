@@ -1,0 +1,609 @@
+/* =================================================================
+ * OmniFetch Documentation - Privacy Consent System
+ * Premium Apple-inspired design with iOS-style toggle switches
+ * ================================================================= */
+
+/* =================================================================
+ * CSS Variables for Consent System
+ * ================================================================= */
+:root {
+  /* Apple-inspired colors */
+  --consent-toggle-on: #34c759;
+  --consent-toggle-off: #e5e5ea;
+  --consent-toggle-off-border: #c7c7cc;
+  --consent-toggle-handle: #ffffff;
+  --consent-card-bg: #ffffff;
+  --consent-card-border: #e5e5ea;
+  --consent-text-primary: #000000;
+  --consent-text-secondary: #8e8e93;
+  --consent-hover-bg: #f2f2f7;
+  --consent-focus-ring: rgba(0, 122, 255, 0.3);
+  --consent-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --consent-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --consent-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  --consent-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] {
+  --consent-toggle-on: #32d74b;
+  --consent-toggle-off: #39393d;
+  --consent-toggle-off-border: #48484a;
+  --consent-toggle-handle: #ffffff;
+  --consent-card-bg: #1c1c1e;
+  --consent-card-border: #39393d;
+  --consent-text-primary: #ffffff;
+  --consent-text-secondary: #98989d;
+  --consent-hover-bg: #2c2c2e;
+  --consent-focus-ring: rgba(10, 132, 255, 0.4);
+  --consent-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --consent-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.25);
+  --consent-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.3);
+  --consent-shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* =================================================================
+ * Overlay with Premium Backdrop Effect
+ * ================================================================= */
+.md-consent__overlay {
+  animation: overlayFadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 1;
+}
+
+[data-md-color-scheme="slate"] .md-consent__overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* =================================================================
+ * Main Consent Dialog - Premium Card Design
+ * ================================================================= */
+.md-consent__inner {
+  animation: dialogSlideUp 0.4s cubic-bezier(0.32, 0.72, 0, 1) both;
+  background: var(--consent-card-bg);
+  border: 1px solid var(--consent-card-border);
+  border-radius: 20px;
+  box-shadow: var(--consent-shadow-xl);
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 560px;
+  width: calc(100% - 4rem);
+  max-height: calc(100vh - 6rem);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+/* Form Container with Premium Spacing */
+.md-consent__form {
+  padding: 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+  overflow-y: auto;
+  max-height: calc(100vh - 12rem);
+}
+
+/* Title with Apple Typography */
+.md-consent h4,
+.md-consent h3 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  margin: 0 0 1rem 0 !important;
+  color: var(--consent-text-primary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif !important;
+}
+
+/* Description Text */
+.md-consent__form p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--consent-text-secondary);
+  margin: 0 0 2rem 0;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* =================================================================
+ * Privacy Settings Panel - Complete Redesign
+ * ================================================================= */
+.md-consent__settings {
+  display: none;
+  background: var(--consent-card-bg) !important;
+  border: 1px solid var(--consent-card-border) !important;
+  border-radius: 16px !important;
+  margin: 2rem 0 !important;
+  padding: 0 !important;
+  box-shadow: var(--consent-shadow-md) !important;
+  overflow: hidden !important;
+}
+
+/* Settings Header */
+.md-consent__settings::before {
+  content: "Privacy Settings" !important;
+  display: block !important;
+  background: linear-gradient(135deg, #007AFF, #5856D6) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+  padding: 1.25rem 2rem !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif !important;
+}
+
+/* Settings Content Container */
+.md-consent__settings > * {
+  padding: 2rem !important;
+}
+
+/* Hide Material's task list styles */
+.md-consent__settings ul {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 2rem !important;
+}
+
+.md-consent__settings li {
+  list-style: none !important;
+  margin: 0 0 1.25rem 0 !important;
+  padding: 0 !important;
+}
+
+.md-consent__settings li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Hide Material's green checkmarks */
+.md-consent__settings .task-list-indicator {
+  display: none !important;
+}
+
+/* =================================================================
+ * Service Option Cards - Apple Style
+ * ================================================================= */
+.md-consent__settings label,
+.md-consent__settings .task-list-control {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 1.5rem 2rem !important;
+  background: var(--consent-card-bg) !important;
+  border: 1px solid var(--consent-card-border) !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  min-height: 72px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.md-consent__settings label:hover,
+.md-consent__settings .task-list-control:hover {
+  background: var(--consent-hover-bg) !important;
+  border-color: var(--consent-text-secondary) !important;
+  transform: translateX(2px) !important;
+  box-shadow: var(--consent-shadow-md) !important;
+}
+
+/* Service Name Text */
+.md-consent__settings label span:not(.task-list-indicator) {
+  flex: 1 !important;
+  font-size: 1.0625rem !important;
+  font-weight: 600 !important;
+  color: var(--consent-text-primary) !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.3 !important;
+  margin-right: 1.5rem !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif !important;
+}
+
+/* =================================================================
+ * iOS-Style Toggle Switch - Universal Implementation
+ * ================================================================= */
+/* Target ALL checkboxes in settings panel */
+.md-consent__settings input[type="checkbox"] {
+  /* Reset all styles */
+  all: unset !important;
+  /* Hide default checkbox */
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  /* Switch dimensions */
+  width: 51px !important;
+  height: 31px !important;
+  min-width: 51px !important;
+  max-width: 51px !important;
+  /* Switch styling */
+  background: var(--consent-toggle-off) !important;
+  border: 1px solid var(--consent-toggle-off-border) !important;
+  border-radius: 15.5px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  display: inline-block !important;
+  flex-shrink: 0 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Switch ON State */
+.md-consent__settings input[type="checkbox"]:checked {
+  background: var(--consent-toggle-on) !important;
+  border-color: var(--consent-toggle-on) !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Switch Handle */
+.md-consent__settings input[type="checkbox"]::before {
+  content: "" !important;
+  position: absolute !important;
+  width: 27px !important;
+  height: 27px !important;
+  border-radius: 13.5px !important;
+  background: var(--consent-toggle-handle) !important;
+  top: 1px !important;
+  left: 1px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15),
+              0 1px 1px rgba(0, 0, 0, 0.16),
+              0 3px 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Handle Position when ON */
+.md-consent__settings input[type="checkbox"]:checked::before {
+  transform: translateX(20px) !important;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.18),
+              0 1px 1px rgba(0, 0, 0, 0.18),
+              0 3px 1px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Hide any ::after pseudo elements */
+.md-consent__settings input[type="checkbox"]::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hover Effects */
+.md-consent__settings input[type="checkbox"]:hover:not(:checked) {
+  background: #d1d1d6 !important;
+  border-color: #c7c7cc !important;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings input[type="checkbox"]:hover:not(:checked) {
+  background: #48484a !important;
+  border-color: #545456 !important;
+}
+
+.md-consent__settings input[type="checkbox"]:hover:checked {
+  background: #4cd964 !important;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings input[type="checkbox"]:hover:checked {
+  background: #48d95f !important;
+}
+
+/* Focus States */
+.md-consent__settings input[type="checkbox"]:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 4px var(--consent-focus-ring) !important;
+}
+
+/* Active State Animation */
+.md-consent__settings input[type="checkbox"]:active::before {
+  width: 31px !important;
+}
+
+.md-consent__settings input[type="checkbox"]:checked:active::before {
+  transform: translateX(16px) !important;
+  width: 31px !important;
+}
+
+/* =================================================================
+ * Premium Button Controls - Uniform Design
+ * ================================================================= */
+.md-consent__controls {
+  display: flex !important;
+  gap: 1rem !important;
+  margin-top: 2rem !important;
+  padding-top: 1.5rem !important;
+  border-top: 1px solid var(--consent-card-border) !important;
+}
+
+.md-typeset .md-consent__controls .md-button {
+  flex: 1 !important;
+  padding: 0.875rem 1.5rem !important;
+  border-radius: 12px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+  min-height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif !important;
+  -webkit-tap-highlight-color: transparent !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Primary Button - Gradient Style */
+.md-typeset .md-consent__controls .md-button--primary {
+  background: linear-gradient(135deg, #007AFF, #5856D6) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3) !important;
+}
+
+.md-typeset .md-consent__controls .md-button--primary:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.4) !important;
+  background: linear-gradient(135deg, #0051D5, #4339D0) !important;
+  color: white !important;
+}
+
+.md-typeset .md-consent__controls .md-button--primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 10px rgba(0, 122, 255, 0.3) !important;
+}
+
+/* Secondary Button - Outlined Style with equal size */
+.md-typeset .md-consent__controls .md-button:not(.md-button--primary),
+.md-typeset .md-consent__controls label.md-button {
+  background: transparent !important;
+  color: var(--consent-text-primary) !important;
+  border: 2px solid var(--consent-card-border) !important;
+  box-shadow: none !important;
+  padding: 0.875rem 1.5rem !important;
+  min-height: 48px !important;
+}
+
+.md-typeset .md-consent__controls .md-button:not(.md-button--primary):hover,
+.md-typeset .md-consent__controls label.md-button:hover {
+  background: var(--consent-hover-bg) !important;
+  border-color: var(--consent-text-secondary) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* =================================================================
+ * Show/Hide Settings Toggle
+ * ================================================================= */
+input[type="checkbox"]#__settings:checked + .md-consent__settings {
+  display: block !important;
+  animation: settingsExpand 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Hide the manage settings checkbox itself */
+input[type="checkbox"]#__settings {
+  display: none !important;
+}
+
+/* =================================================================
+ * Animations
+ * ================================================================= */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialogSlideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes settingsExpand {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 600px;
+    transform: translateY(0);
+  }
+}
+
+/* =================================================================
+ * Responsive Design - Mobile First
+ * ================================================================= */
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+  .md-consent__inner {
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
+    animation: mobileSlideUp 0.4s cubic-bezier(0.32, 0.72, 0, 1) both;
+  }
+  
+  .md-consent__form {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .md-consent h4,
+  .md-consent h3 {
+    font-size: 1.5rem !important;
+  }
+  
+  .md-consent__controls {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  .md-typeset .md-consent__controls .md-button {
+    width: 100% !important;
+  }
+  
+  .md-consent__settings label,
+  .md-consent__settings .task-list-control {
+    padding: 1.25rem 1.5rem !important;
+  }
+  
+  .md-consent__settings > * {
+    padding: 1.5rem !important;
+  }
+  
+  .md-consent__settings ul {
+    padding: 1.5rem !important;
+  }
+  
+  .md-consent__settings label span {
+    font-size: 1rem !important;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .md-consent__inner {
+    max-width: 500px;
+    bottom: 2rem;
+  }
+  
+  .md-consent__form {
+    padding: 2rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .md-consent__inner:hover {
+    box-shadow: var(--consent-shadow-xl), 0 25px 70px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Mobile Animation */
+@keyframes mobileSlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* =================================================================
+ * Dark Theme Adjustments
+ * ================================================================= */
+[data-md-color-scheme="slate"] .md-consent__inner {
+  background: var(--consent-card-bg) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings {
+  background: var(--consent-card-bg) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings label,
+[data-md-color-scheme="slate"] .md-consent__settings .task-list-control {
+  background: var(--consent-card-bg) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-md-color-scheme="slate"] .md-consent__settings label:hover,
+[data-md-color-scheme="slate"] .md-consent__settings .task-list-control:hover {
+  background: var(--consent-hover-bg) !important;
+  border-color: var(--consent-text-secondary) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-consent__controls .md-button:not(.md-button--primary) {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: var(--consent-text-primary) !important;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-consent__controls .md-button:not(.md-button--primary):hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* =================================================================
+ * Accessibility Features
+ * ================================================================= */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .md-consent__settings {
+    border-width: 2px !important;
+  }
+  
+  .md-consent__settings label,
+  .md-consent__settings .task-list-control {
+    border-width: 2px !important;
+  }
+  
+  .md-consent__settings input[type="checkbox"] {
+    border-width: 2px !important;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .md-consent__overlay,
+  .md-consent__inner,
+  .md-consent__settings,
+  .md-consent__settings label,
+  .md-consent__settings input[type="checkbox"],
+  .md-consent__settings input[type="checkbox"]::before,
+  .md-typeset .md-consent__controls .md-button {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .md-consent__settings input[type="checkbox"]:checked::before {
+    transform: translateX(20px) !important;
+  }
+  
+  .md-consent__settings input[type="checkbox"]:active::before {
+    width: 27px !important;
+  }
+  
+  input[type="checkbox"]#__settings:checked + .md-consent__settings {
+    display: block !important;
+    opacity: 1;
+    max-height: none;
+  }
+}
+
+/* Keyboard Navigation Enhancement */
+.md-consent *:focus-visible {
+  outline: 2px solid #007AFF !important;
+  outline-offset: 2px !important;
+}
+
+/* =================================================================
+ * Print Styles
+ * ================================================================= */
+@media print {
+  .md-consent__overlay,
+  .md-consent__inner {
+    display: none !important;
+  }
+}

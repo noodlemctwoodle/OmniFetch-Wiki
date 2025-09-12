@@ -1,0 +1,67 @@
+# Ignore auto-generated files and directories
+site/
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+
+# Ignore build artifacts
+dist/
+build/
+*.egg-info/
+
+# Ignore temporary files
+*.tmp
+*.temp
+*~
+.DS_Store
+Thumbs.db
+
+# Ignore specific auto-generated markdown files
+CHANGELOG.md
+LICENSE.md
+CONTRIBUTORS.md
+
+# Ignore documentation templates and drafts
+docs/.templates/
+docs/drafts/
+*.draft.md
+*.template.md
+
+# Ignore version control files
+.git/
+.gitignore
+.gitkeep
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore MkDocs specific files
+mkdocs.yml
+overrides/
+
+# Ignore specific documentation sections that may have different formatting requirements
+# (uncomment if needed)
+# docs/api/auto-generated/
+# docs/release-notes/auto-generated/
+
+# Ignore translation files that may have different formatting
+# docs/translations/
+
+# Ignore any backup files
+*.backup
+*.bak
+*.orig
+
+# Ignore log files
+*.log
+
+# Ignore any generated API documentation
+docs/api-reference/generated/

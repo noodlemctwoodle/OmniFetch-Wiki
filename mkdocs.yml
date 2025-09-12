@@ -1,13 +1,16 @@
-site_name: OmniFetch
-site_url: https://omnifetch.app
-site_description: OmniFetch is a powerful iOS application designed to streamline your media service management. With CloudKit sync, and real-time notifications, you can monitor your services from anywhere.
+# Site Configuration
+site_name: "OmniFetch"
+site_url: "https://noodlemctwoodle.github.io/OmniFetch-Wiki/"
+site_description: "Comprehensive documentation for OmniFetch - A powerful iOS application for monitoring and managing media services including Sonarr, Radarr, Lidarr, Jellyseerr, and SABnzbd with CloudKit sync and real-time notifications."
+site_author: "OmniFetch Development Team"
 
-# Repository (commented out to hide from header)
-# repo_name: noodlemctwoodle/OmniFetch-Wiki
-# repo_url: https://github.com/noodlemctwoodle/OmniFetch-Wiki
+# Repository information
+repo_name: "noodlemctwoodle/OmniFetch-Wiki"
+repo_url: "https://github.com/noodlemctwoodle/OmniFetch-Wiki"
+edit_uri: "edit/main/docs/"
 
 # Copyright
-copyright: Copyright &copy; 2025 OmniFetch
+copyright: "Copyright &copy; 2025 OmniFetch. All rights reserved."
 
 # Configuration
 theme:
@@ -38,7 +41,9 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   features:
+    # Announcements
     - announce.dismiss
+    # Content
     - content.action.edit
     - content.action.view
     - content.code.annotate
@@ -46,12 +51,16 @@ theme:
     - content.code.select
     - content.tabs.link
     - content.tooltips
+    - content.footnote.tooltips
+    # Header
     - header.autohide
+    # Navigation
     - navigation.expand
     - navigation.footer
     - navigation.indexes
     - navigation.instant
     - navigation.instant.prefetch
+    - navigation.instant.progress
     - navigation.path
     - navigation.prune
     - navigation.sections
@@ -59,10 +68,13 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.tracking
+    # Search
     - search.highlight
     - search.share
     - search.suggest
+    # Table of contents
     - toc.follow
+    - toc.integrate
   icon:
     edit: material/pencil
     view: material/eye
@@ -86,8 +98,16 @@ theme:
 plugins:
   - search:
       lang: en
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.$|&[lg]t;'
   - minify:
       minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_empty_space: true
+      cache_safe: true
+  # Note: optimize plugin not available, removed for compatibility
   - glightbox:
       touchNavigation: true
       loop: false
@@ -100,19 +120,103 @@ plugins:
       auto_themed: true
       auto_caption: true
       caption_position: bottom
+      background: rgba(0, 0, 0, 0.9)
       skip_classes:
         - no-lightbox
         - twemoji
+  - awesome-pages:
+      filename: .pages
+      collapse_single_pages: false
+      strict: false
+  - img2fig
+  - section-index
+  # Note: social plugin not available, removed for compatibility
+  # Social media cards feature would require mkdocs-material[imaging]
 
-# Custom CSS
+# Custom CSS and JavaScript
 extra_css:
-  - assets/stylesheets/extra.css
+  # Load CSS files in logical order for proper cascade
+  - assets/stylesheets/_base.css          # Variables and root styles first
+  - assets/stylesheets/_navigation.css    # Header and navigation
+  - assets/stylesheets/_components.css    # Cards, buttons, tables, admonitions
+  - assets/stylesheets/_layout.css        # Responsive layout and mobile styles
+  - assets/stylesheets/_gallery.css       # Image gallery and lightbox
+  - assets/stylesheets/_consent.css       # Cookie consent banner
+  - assets/stylesheets/_animations.css    # Keyframe animations and effects
+  - assets/stylesheets/custom.css         # Keep existing custom overrides
+
+extra_javascript:
+  - assets/javascripts/consent.js
+  - assets/javascripts/extra.js
+  - assets/javascripts/analytics.js
 
 # Extra configuration
 extra:
   generator: false
+  version:
+    provider: mike
+    default: stable
+  analytics:
+    provider: google
+    property: !ENV [GOOGLE_ANALYTICS_KEY, ""]
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >
+            Thanks for your feedback! Help us improve by
+            <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">sharing more details</a>.
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >
+            Thanks for your feedback! Help us improve by
+            <a href="https://github.com/noodlemctwoodle/OmniFetch-Wiki/issues/new/?title=[Feedback]+{title}+-+{url}" target="_blank" rel="noopener">opening an issue</a>.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://noodlemctwoodle.github.io/OmniFetch-Wiki/
+      name: OmniFetch on GitHub
+    - icon: fontawesome/brands/app-store-ios
+      link: https://apps.apple.com/app/omnifetch/id1234567890
+      name: Download on App Store
+  status:
+    new: "New feature documentation"
+    deprecated: "This feature is deprecated"
+  tags:
+    iOS: ios
+    Configuration: config
+    Webhooks: webhooks
+    Services: services
+  # Schema.org structured data
+  schema:
+    type: "WebSite"
+    name: "OmniFetch Documentation"
+    url: "https://noodlemctwoodle.github.io/OmniFetch-Wiki/"
+    description: "Comprehensive documentation for OmniFetch iOS application"
+    author:
+      type: "Organization"
+      name: "OmniFetch Development Team"
+    sameAs:
+      - "https://github.com/noodlemctwoodle/OmniFetch"
+      - "https://apps.apple.com/app/omnifetch"
+    potentialAction:
+      type: "SearchAction"
+      target: "https://noodlemctwoodle.github.io/OmniFetch-Wiki/search/?q={search_term_string}"
+      query-input: "required name=search_term_string"
+  consent:
+    title: Cookie consent
+    description: >
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
 
-# Extensions
+# Markdown Extensions
 markdown_extensions:
   - abbr
   - admonition
@@ -120,21 +224,35 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - meta
   - toc:
       permalink: true
-      title: On this page
+      title: "On this page"
+      permalink_title: "Anchor link to this section"
+      toc_depth: 3
+      separator: "-"
+  - tables
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.highlight:
       anchor_linenums: true
       auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
       line_spans: __span
       pygments_lang_class: true
+      use_pygments: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink:
@@ -142,14 +260,30 @@ markdown_extensions:
       repo_url_shorthand: true
       user: noodlemctwoodle
       repo: OmniFetch-Wiki
+      provider: github
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+      restrict_base_path: false
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: chart
+          class: chart
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.tasklist:
       custom_checkbox: true
+      clickable_checkbox: true
   - pymdownx.tilde
 
 # Navigation
