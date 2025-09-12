@@ -61,9 +61,21 @@ jobs:
         python -c "
         import yaml
         import sys
+        
+        # Custom YAML loader that ignores MkDocs-specific tags
+        class MkDocsYAMLLoader(yaml.SafeLoader):
+            pass
+        
+        # Add constructor to ignore !ENV tag
+        def env_constructor(loader, node):
+            # Return empty string for ENV tags during validation
+            return ''
+        
+        MkDocsYAMLLoader.add_constructor('!ENV', env_constructor)
+        
         try:
             with open('mkdocs.yml', 'r') as f:
-                config = yaml.safe_load(f)
+                config = yaml.load(f, Loader=MkDocsYAMLLoader)
             print('✅ MkDocs configuration is valid YAML')
             
             # Check required fields
