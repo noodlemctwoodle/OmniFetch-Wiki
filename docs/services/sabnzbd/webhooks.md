@@ -219,15 +219,11 @@ if __name__ == "__main__":
 1. Edit the SabNZBd contatiner
 2. Add a new path
 
-![unRAID Container Path](../../assets/images/app/sabnzbd/sabnzbd-unraid-path.png)
-
 ```text
 Name: SAB_NOTIFICATION_PARAMETERS
 Container Path: /scripts
 Host Path: /mnt/user/appdata/sabnzbd/scripts/
 ```
-
-![unRAID Container Path](../../assets/images/app/sabnzbd/sabnzbd-container-scripts.png)
 
 ### Step 7: Configure SabNZBd
 
@@ -241,7 +237,7 @@ Host Path: /mnt/user/appdata/sabnzbd/scripts/
    - ✅ On Download Failed
    - ✅ On Queue Complete (optional)
 
-![SABnzbd Scripts Folder](../../assets/images/app/sabnzbd/sabnzbd-folder-script.png)
+<!-- Screenshot: SABnzbd Scripts Folder configuration -->
 
 ### Step 8: Test Notification
 
