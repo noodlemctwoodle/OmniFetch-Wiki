@@ -9,21 +9,21 @@ provides real-time status monitoring, management capabilities, and push notifica
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![Sonarr](../assets/images/service-icons/sonarr-logo.png){ width="24" } [Sonarr](sonarr/index.md) | TV Shows | **Supported** | Queue, Calendar, Library, Search |
-| ![Radarr](../assets/images/service-icons/radarr-logo.png){ width="24" } [Radarr](radarr/index.md) | Movies | **Supported** | Queue, Calendar, Library, Search |
-| ![Lidarr](../assets/images/service-icons/lidarr-logo.png){ width="24" } [Lidarr](lidarr/index.md) | Music | **Supported** | Queue, Calendar, Library, Search |
+| ![Sonarr](../assets/images/app/service-icons/sonarr-logo.png){ width="24" } [Sonarr](sonarr/index.md) | TV Shows | **Supported** | Queue, Calendar, Library, Search |
+| ![Radarr](../assets/images/app/service-icons/radarr-logo.png){ width="24" } [Radarr](radarr/index.md) | Movies | **Supported** | Queue, Calendar, Library, Search |
+| ![Lidarr](../assets/images/app/service-icons/lidarr-logo.png){ width="24" } [Lidarr](lidarr/index.md) | Music | **Supported** | Queue, Calendar, Library, Search |
 
 ### Request Management
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![Jellyseerr](../assets/images/service-icons/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr/index.md) | Requests | **Supported** | Requests, Approvals, Search |
+| ![Jellyseerr](../assets/images/app/service-icons/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr/index.md) | Requests | **Supported** | Requests, Approvals, Search |
 
 ### Download Clients
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![SABnzbd](../assets/images/service-icons/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd/index.md) | Usenet | **Supported** | Queue, History, Statistics |
+| ![SABnzbd](../assets/images/app/service-icons/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd/index.md) | Usenet | **Supported** | Queue, History, Statistics |
 
 ## Common Configuration
 

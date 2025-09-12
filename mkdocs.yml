@@ -16,8 +16,8 @@ copyright: "Copyright &copy; 2025 OmniFetch. All rights reserved."
 theme:
   name: material
   language: en
-  logo: assets/images/omnifetch-icon.png
-  favicon: assets/images/omnifetch-icon.png
+  logo: assets/images/app/omnifetch-icon.png
+  favicon: assets/images/app/omnifetch-icon.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -149,6 +149,7 @@ extra_css:
 extra_javascript:
   - assets/javascripts/consent.js
   - assets/javascripts/extra.js
+  - assets/javascripts/carousel.js
 
 # Extra configuration
 extra:

@@ -6,8 +6,15 @@
 
 Welcome to the documentation for **OmniFetch** - a native SwiftUI application that provides unified monitoring and management for your entire media stack.
 
-<div class="hero-image-container">
-  <img src="assets/images/discovery.png" alt="OmniFetch iPhone App Interface" class="hero-image">
+<div class="hero-carousel-container" id="heroCarousel">
+  <div class="hero-carousel-track">
+    <!-- Images will be dynamically loaded -->
+  </div>
+  <div class="carousel-controls">
+    <button class="carousel-btn carousel-prev" aria-label="Previous image">‹</button>
+    <button class="carousel-btn carousel-next" aria-label="Next image">›</button>
+  </div>
+  <div class="carousel-indicators"></div>
 </div>
 
 ## Overview
@@ -51,11 +58,11 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| <img src="assets/images/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
-| <img src="assets/images/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
-| <img src="assets/images/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
-| <img src="assets/images/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
+| <img src="assets/images/app/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="assets/images/app/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
+| <img src="assets/images/app/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
+| <img src="assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
+| <img src="assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Key Features
 

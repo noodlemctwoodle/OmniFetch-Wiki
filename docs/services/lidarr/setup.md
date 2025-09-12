@@ -28,7 +28,7 @@ Complete guide for adding Lidarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Lidarr**
 
-![Add Service Lidarr](../../assets/images/add-service/add-service-lidarr-iphone-16-pro.png)
+![Add Service Lidarr](../../assets/images/app/settings/add-service/add-service-lidarr-iphone-16-pro.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your Lidarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Lidarr](../../assets/images/add-service/add-service-lidarr-advsettings-iphone-16-pro.png)
+![Advanced Settings Lidarr](../../assets/images/app/settings/add-service/add-service-lidarr-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
 

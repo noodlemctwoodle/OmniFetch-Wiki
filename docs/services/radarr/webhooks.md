@@ -23,7 +23,18 @@ Webhook notifications provide real-time push notifications when events occur in 
 5. Beta features are now activated
 6. Enable the button to on
 
-![Radarr Push Notifications](../../assets/images/push-notifications/radarr-push-notifications.png)
+<div class="hero-image-container">
+  <a href="../../assets/images/app/settings/notifications-push/settings-push-radarr-light.png" class="glightbox light-mode-only"
+     data-gallery="Radarr Push Notifications" data-glightbox="title: Radarr Push Notifications">
+    <img src="../../assets/images/app/settings/notifications-push/settings-push-radarr-dark.png"
+         alt="Radarr Push Notifications Light Mode" class="hero-image">
+  </a>
+  <a href="../../assets/images/app/settings/notifications-push/settings-push-radarr-dark.png" class="glightbox dark-mode-only"
+     data-gallery="Radarr Push Notifications" data-glightbox="title: Radarr Push Notifications">
+    <img src="../../assets/images/app/settings/notifications-push/settings-push-radarr-light.png"
+         alt="Radarr Push Notifications Dark Mode" class="hero-image">
+  </a>
+</div>
 
 ### Step 2: Automatic Webhook Configuration
 

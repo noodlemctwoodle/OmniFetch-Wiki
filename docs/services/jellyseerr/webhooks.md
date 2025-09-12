@@ -26,7 +26,18 @@ Webhook notifications provide real-time push notifications when request events o
 5. Beta features are now activated
 6. Enable the button to on
 
-![Jellyseerr Push Notifications](../../assets/images/push-notifications/jellyseerr-push-notifications.png)
+<div class="hero-image-container">
+  <a href="../../assets/images/app/discover/settings-push-jellyseerr-light.png" class="glightbox light-mode-only"
+     data-gallery="Jellyseerr Push Notifications" data-glightbox="title: Jellyseerr Push Notifications">
+    <img src="../../assets/images/app/discover/settings-push-jellyseerr-dark.png"
+         alt="Jellyseerr Push Notifications Light Mode" class="hero-image">
+  </a>
+  <a href="../../assets/images/app/settings/notifications-push/settings-push-jellyseerr-dark.png" class="glightbox dark-mode-only"
+     data-gallery="Jellyseerr Push Notifications" data-glightbox="title: Jellyseerr Push Notifications">
+    <img src="../../assets/images/app/discover/settings-push-jellyseerr-light.png"
+         alt="Jellyseerr Push Notifications Dark Mode" class="hero-image">
+  </a>
+</div>
 
 ### Step 2: Enable Jellyseerr Notifications
 

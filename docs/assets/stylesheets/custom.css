@@ -170,3 +170,201 @@
     display: inline-block !important;
   }
 }
+
+/* =================================================================
+ * Hero Carousel Styling (Infinite scroll image carousel)
+ * ================================================================= */
+
+.hero-carousel-container {
+  text-align: center !important;
+  margin: 1rem auto 1.5rem auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  display: block !important;
+  max-width: none !important;
+  position: relative !important;
+  left: 31% !important;
+  transform: translateX(-50%) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  overflow: hidden;
+}
+
+.hero-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.hero-carousel-item {
+  flex: 0 0 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-carousel-item img {
+  width: auto !important;
+  height: auto !important;
+  max-height: 400px;
+  display: block !important;
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0 !important;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.carousel-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hero-carousel-container:hover .carousel-btn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background: var(--md-primary-fg-color);
+  transform: scale(1.2);
+}
+
+/* Dark mode support */
+[data-md-color-scheme="slate"] .carousel-btn {
+  background: rgba(255, 255, 255, 0.5);
+  color: black;
+}
+
+[data-md-color-scheme="slate"] .carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+[data-md-color-scheme="slate"] .carousel-indicator {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments for carousel */
+@media screen and (max-width: 768px) {
+  .hero-carousel-container {
+    margin: 0.75rem auto 1rem auto;
+  }
+  
+  .hero-carousel-item img {
+    max-height: 350px;
+    max-width: 90%;
+  }
+  
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .hero-carousel-container {
+    margin: 1rem auto 1.25rem auto;
+  }
+  
+  .hero-carousel-item img {
+    max-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .hero-carousel-container {
+    margin: 1.25rem auto 1.5rem auto;
+  }
+  
+  .hero-carousel-item img {
+    max-height: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-carousel-container {
+    margin: 1.5rem auto 1.75rem auto;
+  }
+  
+  .hero-carousel-item img {
+    max-height: 700px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .hero-carousel-container {
+    margin: 1.75rem auto 2rem auto;
+  }
+  
+  .hero-carousel-item img {
+    max-height: 750px;
+  }
+}
+
+/* =================================================================
+ * Light/Dark Mode Image Visibility for Carousel
+ * ================================================================= */
+
+/* Light mode - show light images, hide dark images */
+.hero-carousel-item .light-mode-only {
+  display: block !important;
+}
+
+.hero-carousel-item .dark-mode-only {
+  display: none !important;
+}
+
+/* Dark mode - show dark images, hide light images */
+[data-md-color-scheme="slate"] .hero-carousel-item .light-mode-only {
+  display: none !important;
+}
+
+[data-md-color-scheme="slate"] .hero-carousel-item .dark-mode-only {
+  display: block !important;
+}

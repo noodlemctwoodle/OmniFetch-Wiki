@@ -25,7 +25,18 @@ Webhook notifications provide real-time push notifications when download events 
 5. Beta features are now activated
 6. Enable the button to on
 
-![SABnzbd Push Notifications](../../assets/images/push-notifications/sabnzbd-push-notifications.png)
+<div class="hero-image-container">
+  <a href="../../assets/images/app/settings/notifications-push/settings-push-sabnzbd-light.png" class="glightbox light-mode-only"
+     data-gallery="SABnzbd Push Notifications" data-glightbox="title: SABnzbd Push Notifications">
+    <img src="../../assets/images/app/settings/notifications-push/settings-push-sabnzbd-dark.png"
+         alt="SABnzbd Push Notifications Light Mode" class="hero-image">
+  </a>
+  <a href="../../assets/images/app/settings/notifications-push/settings-push-sabnzbd-dark.png" class="glightbox dark-mode-only"
+     data-gallery="SABnzbd Push Notifications" data-glightbox="title: SABnzbd Push Notifications">
+    <img src="../../assets/images/app/settings/notifications-push/settings-push-sabnzbd-light.png"
+         alt="SABnzbd Push Notifications Dark Mode" class="hero-image">
+  </a>
+</div>
 
 ### Step 2: Enable Jellyseerr Notifications
 
@@ -208,7 +219,7 @@ if __name__ == "__main__":
 1. Edit the SabNZBd contatiner
 2. Add a new path
 
-![unRAID Container Path](../../assets/images/push-notifications/sabnzbd-unraid-path.png)
+![unRAID Container Path](../../assets/images/app/sabnzbd/sabnzbd-unraid-path.png)
 
 ```text
 Name: SAB_NOTIFICATION_PARAMETERS
@@ -216,7 +227,7 @@ Container Path: /scripts
 Host Path: /mnt/user/appdata/sabnzbd/scripts/
 ```
 
-![unRAID Container Path](../../assets/images/push-notifications/sabnzbd-container-scripts.png)
+![unRAID Container Path](../../assets/images/app/sabnzbd/sabnzbd-container-scripts.png)
 
 ### Step 7: Configure SabNZBd
 
@@ -230,7 +241,7 @@ Host Path: /mnt/user/appdata/sabnzbd/scripts/
    - ✅ On Download Failed
    - ✅ On Queue Complete (optional)
 
-![SABnzbd Scripts Folder](../../assets/images/push-notifications/sabnzbd-folder-script.png)
+![SABnzbd Scripts Folder](../../assets/images/app/sabnzbd/sabnzbd-folder-script.png)
 
 ### Step 8: Test Notification
 
