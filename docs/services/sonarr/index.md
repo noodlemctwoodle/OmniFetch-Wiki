@@ -1,9 +1,5 @@
 # Sonarr
 
-Comprehensive documentation for Sonarr TV show management integration with OmniFetch.
-
-## Overview
-
 Sonarr is a PVR for Usenet and BitTorrent users. It monitors multiple RSS feeds for
 new episodes of your favourite shows and will grab, sort, and rename them. OmniFetch
 provides comprehensive monitoring and notification capabilities for Sonarr.

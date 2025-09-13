@@ -35,6 +35,7 @@ Complete guide for adding Sonarr to OmniFetch.
 Enter your Sonarr connection details:
 
 #### Server Address
+
 - Enter hostname or IP address only
 - **Examples**:
   - Remote: `sonarr.mydomain.com`
@@ -42,14 +43,17 @@ Enter your Sonarr connection details:
   - Docker: `sonarr` (container name)
 
 #### Port
+
 - Default Sonarr port: `8989`
 - Change if using custom port
 
 #### Use HTTPS
+
 - Enable if using SSL/TLS
 - Most local installations use HTTP
 
 #### API Key
+
 - Paste the API key you copied from Sonarr
 - Ensure no extra spaces before or after
 
@@ -65,6 +69,7 @@ For additional configuration options, tap **Advanced Settings**:
 ![Advanced Settings Sonarr](../../assets/images/app/settings/add-service/add-service-sonarr-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
+
 - Custom timeout settings
 - SSL certificate validation
 - Request headers
@@ -81,11 +86,13 @@ For additional configuration options, tap **Advanced Settings**:
 3. Look for the success message
 
 **If test succeeds:**
+
 - ✅ Connection established
 - ✅ API key valid
 - ✅ Sonarr version compatible
 
 **If test fails:**
+
 - ❌ Check URL format and accessibility
 - ❌ Verify API key is correct
 - ❌ Ensure Sonarr is running

@@ -1,9 +1,5 @@
 # Lidarr
 
-Comprehensive documentation for Lidarr music management integration with OmniFetch.
-
-## Overview
-
 Lidarr is a music collection manager for Usenet and BitTorrent users. OmniFetch provides comprehensive monitoring and notification capabilities for Lidarr.
 
 ## Documentation

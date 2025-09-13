@@ -69,6 +69,7 @@ For additional configuration options, tap **Advanced Settings**:
 ![Advanced Settings SABnzbd](../../assets/images/app/settings/add-service/add-service-sabnzbd-advsettings-iphone-16-pro.png)
 
 **Advanced Options Include:**
+
 - Custom timeout settings
 - SSL certificate validation
 - Request headers
@@ -85,11 +86,13 @@ For additional configuration options, tap **Advanced Settings**:
 3. Look for the success message
 
 **If test succeeds:**
+
 - ✅ Connection established
 - ✅ API key valid
 - ✅ SABnzbd version compatible
 
 **If test fails:**
+
 - ❌ Check URL format and accessibility
 - ❌ Verify API key is correct
 - ❌ Ensure SABnzbd is running
@@ -155,6 +158,7 @@ For webhook notifications, you need a unique ID:
 ### Queue Controls
 
 **Available Actions:**
+
 - Pause/Resume individual downloads
 - Delete items from queue
 - Change download priority
@@ -163,6 +167,7 @@ For webhook notifications, you need a unique ID:
 ### Speed Limiting
 
 Control bandwidth usage:
+
 - Set speed limits for different times
 - Pause all downloads
 - Resume with speed restrictions

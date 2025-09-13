@@ -48,7 +48,7 @@ Complete guide for adding Jellyseerr to OmniFetch.
 
 #### For Local Connection
 
-**Server Address**
+##### Server Address
 
 - Enter hostname or IP address only
 - **Examples**:
@@ -56,31 +56,31 @@ Complete guide for adding Jellyseerr to OmniFetch.
   - Local: `192.168.1.100`
   - Docker: `jellyseerr` (container name)
 
-**Port**
+##### Port
 
 - Default Jellyseerr port: `5055`
 - Change if using custom port
 
-**Use HTTPS**
+##### Use HTTPS
 
 - Enable if using SSL/TLS
 - Most local installations use HTTP
 
-**API Key**
+##### API Key
 
 - Paste the API key you copied from Jellyseerr
 - Ensure no extra spaces before or after
 
 #### For Plex Integration
 
-**Plex Server Details**
+##### Plex Server Details
 
 - Configure Plex server connection
 - Jellyseerr requests will integrate with Plex
 
 #### For Jellyfin Integration
 
-**Jellyfin Server Details**
+##### Jellyfin Server Details
 
 - Configure Jellyfin server connection
 - Jellyseerr requests will integrate with Jellyfin
@@ -189,7 +189,7 @@ For webhook notifications, you need a unique ID:
 - View request details and comments
 
 **For Users:**
-1
+
 - View your submitted requests
 - Check approval status
 - See availability notifications
