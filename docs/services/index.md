@@ -15,14 +15,14 @@ provides real-time status monitoring, management capabilities, and push notifica
 
 ### Request Management
 
-| Service | Type | Status | Features |
-|---------|------|--------|----------|
+| Service | Type | Features |
+|---------|------|----------|
 | <img src="assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
 
 ### Download Clients
 
-| Service | Type | Status | Features |
-|---------|------|--------|----------|
+| Service | Type | Features |
+|---------|------|----------|
 | <img src="assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Common Configuration
