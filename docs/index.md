@@ -58,7 +58,7 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/service-sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
 | <img src="assets/images/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
 | <img src="assets/images/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
 | <img src="assets/images/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |

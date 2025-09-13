@@ -9,7 +9,7 @@ provides real-time status monitoring, management capabilities, and push notifica
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="../assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](service-sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="../assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
 | <img src="../assets/images/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](radarr/index.md) | Movies | Library management, download tracking, health monitoring |
 | <img src="../assets/images/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
 
