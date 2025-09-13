@@ -24,14 +24,14 @@ Webhook notifications provide real-time push notifications when events occur in 
 6. Enable the button to on
 
 <div class="hero-image-container">
-  <a href="../../assets/images/app/settings/notifications-push/settings-push-sonarr-light.png" class="glightbox light-mode-only"
+  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sonarr-light.png" class="glightbox light-mode-only"
      data-gallery="Sonarr Push Notifications" data-glightbox="title: Sonarr Push Notifications">
-    <img src="../../assets/images/app/settings/notifications-push/settings-push-sonarr-light.png"
+    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sonarr-light.png"
          alt="Sonarr Push Notifications Light Mode" class="hero-image">
   </a>
-  <a href="../../assets/images/app/settings/notifications-push/settings-push-sonarr-dark.png" class="glightbox dark-mode-only"
+  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sonarr-dark.png" class="glightbox dark-mode-only"
      data-gallery="Sonarr Push Notifications" data-glightbox="title: Sonarr Push Notifications">
-    <img src="../../assets/images/app/settings/notifications-push/settings-push-sonarr-dark.png"
+    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sonarr-dark.png"
          alt="Sonarr Push Notifications Dark Mode" class="hero-image">
   </a>
 </div>

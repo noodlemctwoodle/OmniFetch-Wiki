@@ -94,14 +94,21 @@
   margin: 1.5rem 0;
 }
 
-.theme-aware-image img {
+.theme-images picture {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.theme-aware-image img,
+.theme-images img {
   width: auto;
   height: auto;
   max-height: 400px;
   display: block;
   margin: 0 auto;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .light-mode-only {

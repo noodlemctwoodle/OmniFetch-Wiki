@@ -99,7 +99,7 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.$|&[lg]t;'
-  - material-plausible
+  # - material-plausible  # Disabled - plugin not available
   - minify:
       minify_html: true
       minify_js: true
@@ -157,11 +157,11 @@ extra:
   version:
     provider: mike
     default: stable
-  # Plausible Analytics configuration
-  analytics:
-    provider: plausible
-    domain: omnifetch.app
-    src: https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js
+  # Plausible Analytics configuration (disabled - plugin not available)
+  # analytics:
+  #   provider: plausible
+  #   domain: omnifetch.app
+  #   src: https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.tagged-events.js
   feedback:
     title: Was this page helpful?
     ratings:
