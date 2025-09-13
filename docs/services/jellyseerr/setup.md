@@ -34,15 +34,15 @@ Complete guide for adding Jellyseerr to OmniFetch.
 
 #### Local Connection
 
-![Add Service Jellyseerr Local](../../assets/images/app/settings/add-service/add-service-jellyseerr-local-iphone-16-pro.png)
+![Add Service Jellyseerr Local](../../assets/images/settings-add-service/add-service-jellyseerr-local-light.png)
 
 #### Plex Integration
 
-![Add Service Jellyseerr Plex](../../assets/images/app/settings/add-service/add-service-jellyseerr-plex-iphone-16-pro.png)
+![Add Service Jellyseerr Plex](../../assets/images/settings-add-service/add-service-jellyseerr-plex-light.png)
 
 #### Jellyfin Integration
 
-![Add Service Jellyseerr Jellyfin](../../assets/images/app/settings/add-service/add-service-jellyseerr-jellyfin-iphone-16-pro.png)
+![Add Service Jellyseerr Jellyfin](../../assets/images/settings-add-service/add-service-jellyseerr-jellyfin-light.png)
 
 ### Step 3: Configure Connection
 
@@ -94,7 +94,7 @@ Complete guide for adding Jellyseerr to OmniFetch.
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Jellyseerr](../../assets/images/app/settings/add-service/add-service-jellyseer-advsettings-iphone-16-pro.png)
+![Advanced Settings Jellyseerr](../../assets/images/settings-add-service/add-service-jellyseerr-advsettings-light.png)
 
 **Advanced Options Include:**
 

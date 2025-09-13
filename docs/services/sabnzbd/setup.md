@@ -28,7 +28,7 @@ Complete guide for adding SABnzbd to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **SABnzbd**
 
-![Add Service SABnzbd](../../assets/images/app/settings/add-service/add-service-sabnzbd-iphone-16-pro.png)
+![Add Service SABnzbd](../../assets/images/settings-add-service/add-service-sabnzbd-light.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your SABnzbd connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings SABnzbd](../../assets/images/app/settings/add-service/add-service-sabnzbd-advsettings-iphone-16-pro.png)
+![Advanced Settings SABnzbd](../../assets/images/settings-add-service/add-service-sabnzbd-advsettings-light.png)
 
 **Advanced Options Include:**
 

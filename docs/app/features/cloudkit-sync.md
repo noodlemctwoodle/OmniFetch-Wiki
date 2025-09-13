@@ -6,9 +6,22 @@ and data across all your Apple devices seamlessly.
 ## Overview
 
 CloudKit sync ensures that your OmniFetch setup is consistent across all your devices.
-When you add a new service on your iPhone, it automatically appears on your iPad,
-Apple TV, and Mac. All your preferences, notification settings, and service
-configurations stay in sync.
+When enabled, your settings are automatically backed up to iCloud and synchronised
+in real-time. Your data is encrypted and stored securely in your private
+iCloud database.
+
+<div class="hero-image-container">
+  <a href="../../../assets/images/settings-icloud/settings-icloud-light.png" class="glightbox light-mode-only"
+     data-gallery="CloudKit Sync" data-glightbox="title: CloudKit Sync Settings">
+    <img src="../../../assets/images/settings-icloud/settings-icloud-light.png"
+         alt="CloudKit Sync Settings Light Mode" class="hero-image">
+  </a>
+  <a href="../../../assets/images/settings-icloud/settings-icloud-dark.png" class="glightbox dark-mode-only"
+     data-gallery="CloudKit Sync" data-glightbox="title: CloudKit Sync Settings">
+    <img src="../../../assets/images/settings-icloud/settings-icloud-dark.png"
+         alt="CloudKit Sync Settings Dark Mode" class="hero-image">
+  </a>
+</div>
 
 ## What Gets Synced
 
@@ -18,20 +31,6 @@ configurations stay in sync.
 - **Authentication**: API keys and credentials (encrypted)
 - **Custom Settings**: Service-specific preferences and options
 - **Connection Status**: Last known status and health information
-
-### App Preferences
-
-- **Notification Settings**: Push notification preferences per service
-- **Display Options**: Theme, layout, and interface preferences
-- **Widget Configuration**: Home screen widget settings and data sources
-- **Refresh Intervals**: How often to check services for updates
-
-### User Data
-
-- **Favorites**: Starred or bookmarked content
-- **History**: Recently viewed items and search history
-- **Custom Lists**: User-created collections and watchlists
-- **Usage Analytics**: App usage patterns for personalization (optional)
 
 ## Setting Up CloudKit Sync
 
@@ -43,6 +42,10 @@ configurations stay in sync.
 - **Network Access**: Devices need internet connection for syncing
 
 ### Initial Setup
+
+!!! warning "Important: Enable During Onboarding"
+    CloudKit sync must be enabled during the initial app onboarding process.
+    Enabling sync during onboarding ensures all your configurations are backed up from the start.
 
 1. **Enable iCloud**: Ensure you're signed in to iCloud in iOS Settings
 2. **First Device Setup**: Configure OmniFetch completely on your primary device
@@ -60,14 +63,14 @@ To verify sync is working:
 
 ## Sync Process
 
-### Automatic Syncing
+### How Sync Works
 
-CloudKit sync happens automatically in the background:
+CloudKit sync operates seamlessly with these key features:
 
-- **Real-Time**: Changes sync within seconds when devices are online
-- **Background Sync**: Updates download when app is backgrounded
-- **Launch Sync**: Full sync check when opening the app
-- **Conflict Resolution**: Automatic handling of conflicting changes
+- **Validated Configurations**: Only validated configurations sync across devices
+- **Quick Updates**: New configurations sync within 5-10 minutes
+- **Force Sync**: Pull down to force sync and refresh status
+- **Auto-Restore**: Reinstalling automatically restores synced configurations
 
 ### Manual Sync
 
@@ -80,21 +83,24 @@ Force a manual sync when needed:
 
 ## Sync Status
 
-### Indicators
+### Status Dashboard
 
-OmniFetch shows sync status in several ways:
+The iCloud Sync screen provides comprehensive status information:
 
-- **Cloud Icons**: Indicate sync status next to services
-- **Loading Indicators**: Show when sync is in progress  
-- **Error Badges**: Alert to sync problems or conflicts
-- **Status Messages**: Detailed sync information in settings
+- **iCloud Sync Toggle**: Blue cloud icon shows sync is active
+- **Sync Status**: Green indicator confirms "All configurations synced to iCloud"
+- **Total Configurations**: Displays count of all stored configurations
+- **Syncing to iCloud**: Real-time count of items currently syncing
+- **Last Sync**: Shows elapsed time since last sync (e.g., "Last synced in 0 seconds")
 
-### Status Types
+### Sync Details
 
-**Synced**: Service is up to date across all devices
-**Syncing**: Currently uploading or downloading changes
-**Error**: Sync failed - requires attention
-**Paused**: Sync temporarily disabled or offline
+The sync details section shows:
+
+- **Configuration Count**: Total number of service configurations (e.g., "5")
+- **Active Syncing**: Number of items currently uploading to iCloud
+- **Sync Timing**: Automatic sync occurs within 5-10 minutes of changes
+- **Force Refresh**: Pull down on any screen to trigger immediate sync
 
 ## Troubleshooting Sync Issues
 
@@ -125,8 +131,8 @@ OmniFetch shows sync status in several ways:
 
 **Reset CloudKit Data:**
 
-1. Go to OmniFetch Settings → CloudKit Sync
-2. Tap "Reset CloudKit Data" (this will clear all synced data)
+1. Go to OmniFetch Settings → tap five times on about
+2. Tap "Factory Reset" (this will clear all synced data and all setting)
 3. Confirm the reset action
 4. Reconfigure services from scratch
 5. Data will sync to other devices automatically
@@ -163,49 +169,6 @@ CloudKit sync follows Apple's strict privacy guidelines:
 - Apple doesn't scan or analyse your OmniFetch content
 - Data stays in your personal iCloud account
 
-## Managing Sync
-
-### Sync Settings
-
-Control how CloudKit sync behaves:
-
-- **Auto-Sync**: Enable/disable automatic syncing
-- **Sync on Cellular**: Allow syncing over cellular data
-- **Sync Frequency**: Control how often to check for updates
-- **Conflict Resolution**: Choose how to handle sync conflicts
-
-### Storage Management
-
-Monitor and manage your CloudKit usage:
-
-- **Storage Used**: View how much iCloud space OmniFetch uses
-- **Cleanup Options**: Remove old or unnecessary synced data
-- **Selective Sync**: Choose which data types to sync
-- **Local Cache**: Manage locally cached data from other devices
-
-## Best Practices
-
-### Optimal Sync Experience
-
-- **Stable Network**: Use Wi-Fi for initial sync of large configurations
-- **Regular Updates**: Keep OmniFetch updated on all devices
-- **Consistent Usage**: Regular app usage helps maintain sync accuracy
-- **Backup Important Data**: Export critical configurations as backup
-
-### Multi-Device Workflow
-
-- **Primary Device**: Designate one device for major configuration changes
-- **Consistent Timing**: Make changes when other devices can sync quickly
-- **Verify Changes**: Check that important changes sync to all devices
-- **Avoid Conflicts**: Don't make simultaneous changes on multiple devices
-
-### Performance Tips
-
-- **Background Refresh**: Enable Background App Refresh for best sync performance
-- **Good Storage**: Maintain adequate free space on all devices
-- **Network Quality**: Stable internet improves sync reliability
-- **iOS Updates**: Keep iOS updated for latest CloudKit improvements
-
 ## Limitations
 
 ### CloudKit Limits
@@ -218,7 +181,6 @@ Monitor and manage your CloudKit usage:
 ### Service Limitations
 
 - **Local-Only Services**: Services only accessible on local network don't sync status
-- **Large Data**: Very large datasets may sync slowly
 - **Real-Time Limits**: Not all changes sync instantly
 - **Conflict Priority**: Recent changes generally take priority in conflicts
 

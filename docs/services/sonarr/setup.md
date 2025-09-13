@@ -28,7 +28,7 @@ Complete guide for adding Sonarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Sonarr**
 
-![Add Service Sonarr](../../assets/images/app/settings/add-service/add-service-sonarr-iphone-16-pro.png)
+![Add Service Sonarr](../../assets/images/settings-add-service/add-service-sonarr-light.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your Sonarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Sonarr](../../assets/images/app/settings/add-service/add-service-sonarr-advsettings-iphone-16-pro.png)
+![Advanced Settings Sonarr](../../assets/images/settings-add-service/add-service-sonarr-advsettings-light.png)
 
 **Advanced Options Include:**
 

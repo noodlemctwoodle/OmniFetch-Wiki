@@ -28,7 +28,7 @@ Complete guide for adding Radarr to OmniFetch.
 3. Tap **"Add Service"**
 4. From **Service Type** dropdown, select **Radarr**
 
-![Add Service Radarr](../../assets/images/app/settings/add-service/add-service-radarr-iphone-16-pro.png)
+![Add Service Radarr](../../assets/images/settings-add-service/add-service-radarr-light.png)
 
 ### Step 3: Configure Connection
 
@@ -66,7 +66,7 @@ Enter your Radarr connection details:
 
 For additional configuration options, tap **Advanced Settings**:
 
-![Advanced Settings Radarr](../../assets/images/app/settings/add-service/add-service-radarr-advsettings-iphone-16-pro.png)
+![Advanced Settings Radarr](../../assets/images/settings-add-service/add-service-radarr-advsettings-light.png)
 
 **Advanced Options Include:**
 

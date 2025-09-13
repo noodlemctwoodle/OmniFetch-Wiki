@@ -24,14 +24,14 @@ Webhook notifications provide real-time push notifications when events occur in 
 6. Enable the button to on
 
 <div class="hero-image-container">
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-lidarr-light.png" class="glightbox light-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-lidarr-light.png" class="glightbox light-mode-only"
      data-gallery="Lidarr Push Notifications" data-glightbox="title: Lidarr Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-lidarr-light.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-lidarr-light.png"
          alt="Lidarr Push Notifications Light Mode" class="hero-image">
   </a>
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-lidarr-dark.png" class="glightbox dark-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-lidarr-dark.png" class="glightbox dark-mode-only"
      data-gallery="Lidarr Push Notifications" data-glightbox="title: Lidarr Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-lidarr-dark.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-lidarr-dark.png"
          alt="Lidarr Push Notifications Dark Mode" class="hero-image">
   </a>
 </div>

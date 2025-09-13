@@ -237,6 +237,95 @@
 }
 
 /* =================================================================
+ * Status Indicator Badges (App Style Pills)
+ * ================================================================= */
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+/* Downloaded/Available - Green */
+.status-badge.downloaded {
+  background: #34C759;
+}
+
+/* Downloading - Blue */
+.status-badge.downloading {
+  background: #007AFF;
+}
+
+/* Queued/Pending - Orange */
+.status-badge.queued {
+  background: #FF9500;
+}
+
+/* Missing/Warning - Orange */
+.status-badge.missing {
+  background: #FF9500;
+}
+
+/* Unavailable/Error - Red */
+.status-badge.error {
+  background: #FF3B30;
+}
+
+/* Unmonitored - Gray */
+.status-badge.unmonitored {
+  background: #8E8E93;
+}
+
+/* Wanted - Blue (like in the image) */
+.status-badge.wanted {
+  background: #007AFF;
+}
+
+/* Monitored - Green (like in the image) */
+.status-badge.monitored {
+  background: #34C759;
+}
+
+/* Dark mode adjustments */
+[data-md-color-scheme="slate"] .status-indicator {
+  color: #E5E5E7;
+}
+
+/* Status text styling */
+.status-text {
+  font-weight: 500;
+  color: var(--md-default-fg-color);
+}
+
+.status-description {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+  font-style: italic;
+}
+
+[data-md-color-scheme="slate"] .status-description {
+  color: #8E8E93;
+}
+
+/* =================================================================
  * Icon Enhancements
  * ================================================================= */
 

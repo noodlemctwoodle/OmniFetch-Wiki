@@ -58,11 +58,11 @@ OmniFetch integrates seamlessly with these popular media services:
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/app/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| <img src="assets/images/app/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
-| <img src="assets/images/app/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
-| <img src="assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
-| <img src="assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
+| <img src="assets/images/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/service-sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="assets/images/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
+| <img src="assets/images/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
+| <img src="assets/images/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
+| <img src="assets/images/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Key Features
 
@@ -120,15 +120,14 @@ OmniFetch integrates seamlessly with these popular media services:
 | **Apple TV** | tvOS 17.0+ | **Coming Soon** | Remote navigation, living room experience |
 | **Mac** | macOS 14.0+ | **Coming Soon** | Catalyst app, desktop workflows |
 
-## Modern Architecture
+## What Makes OmniFetch Special
 
-OmniFetch is built with cutting-edge Apple technologies:
+OmniFetch delivers a premium experience with features that matter:
 
-- **SwiftUI** - Declarative user interface framework
-- **SwiftData** - Local data persistence and caching
-- **CloudKit** - Cross-device synchronisation
-- **Swift Concurrency** - Modern async/await patterns
-- **@Observable** - Reactive state management (iOS 17+)
+- **Lightning Fast** - Instant app launch and smooth scrolling throughout
+- **Always in Sync** - Your settings automatically sync across all your Apple devices
+- **Offline Ready** - Access your data even without an internet connection
+- **Battery Friendly** - Efficient background updates that don't drain your battery
 
 ## Need Help?
 

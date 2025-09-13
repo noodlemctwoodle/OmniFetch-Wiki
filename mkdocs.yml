@@ -16,8 +16,8 @@ copyright: "Copyright &copy; 2025 OmniFetch. All rights reserved."
 theme:
   name: material
   language: en
-  logo: assets/images/app/omnifetch-icon.png
-  favicon: assets/images/app/omnifetch-icon.png
+  logo: assets/images/omnifetch-icon.png
+  favicon: assets/images/omnifetch-icon.png
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -292,6 +292,7 @@ nav:
       - Webhooks: app/features/webhooks.md
       - Widgets: app/features/widgets.md
       - CloudKit Sync: app/features/cloudkit-sync.md
+      - Biometrics: app/features/biometrics.md
     - Settings:
       - Initial Setup: app/settings/initial-setup.md
   - Services:
@@ -303,6 +304,10 @@ nav:
     - Radarr:
       - Overview: services/radarr/index.md
       - Setup: services/radarr/setup.md
+      - Features:
+        - Calendar: services/radarr/calendar.md
+        - Library: services/radarr/library.md
+        - Wanted: services/radarr/wanted.md
       - Webhooks: services/radarr/webhooks.md
     - Lidarr:
       - Overview: services/lidarr/index.md

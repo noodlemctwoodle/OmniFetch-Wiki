@@ -3,6 +3,40 @@
 SABnzbd is an open-source binary newsreader written in Python. It's the most popular SABnzbd client for downloading and processing content from Usenet.
 OmniFetch provides comprehensive monitoring and notification capabilities for SABnzbd.
 
+## Status Indicators
+
+Visual status markers used in OmniFetch for download queue items:
+
+<div class="status-indicator">
+  <span class="status-badge downloaded">Completed</span>
+  <span class="status-description">Download finished successfully</span>
+</div>
+
+<div class="status-indicator">
+  <span class="status-badge downloading">Downloading</span>
+  <span class="status-description">Currently downloading</span>
+</div>
+
+<div class="status-indicator">
+  <span class="status-badge queued">Queued</span>
+  <span class="status-description">Waiting in download queue</span>
+</div>
+
+<div class="status-indicator">
+  <span class="status-badge missing">Paused</span>
+  <span class="status-description">Download paused</span>
+</div>
+
+<div class="status-indicator">
+  <span class="status-badge error">Failed</span>
+  <span class="status-description">Download failed or incomplete</span>
+</div>
+
+<div class="status-indicator">
+  <span class="status-badge unmonitored">Extracting</span>
+  <span class="status-description">Processing/extracting files</span>
+</div>
+
 ## Documentation
 
 ### Setup & Configuration

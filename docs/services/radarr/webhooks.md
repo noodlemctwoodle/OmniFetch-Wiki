@@ -24,14 +24,14 @@ Webhook notifications provide real-time push notifications when events occur in 
 6. Enable the button to on
 
 <div class="hero-image-container">
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-radarr-light.png" class="glightbox light-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-radarr-light.png" class="glightbox light-mode-only"
      data-gallery="Radarr Push Notifications" data-glightbox="title: Radarr Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-radarr-light.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-radarr-light.png"
          alt="Radarr Push Notifications Light Mode" class="hero-image">
   </a>
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-radarr-dark.png" class="glightbox dark-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-radarr-dark.png" class="glightbox dark-mode-only"
      data-gallery="Radarr Push Notifications" data-glightbox="title: Radarr Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-radarr-dark.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-radarr-dark.png"
          alt="Radarr Push Notifications Dark Mode" class="hero-image">
   </a>
 </div>

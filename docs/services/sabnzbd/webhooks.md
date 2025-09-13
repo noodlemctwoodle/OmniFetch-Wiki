@@ -4,7 +4,8 @@ Configure push notifications for SABnzbd events using webhooks (beta feature).
 
 ## Overview
 
-Webhook notifications provide real-time push notifications when download events occur in SABnzbd. This feature requires beta access and a Python script configuration.
+Webhook notifications provide real-time push notifications when download events occur in SABnzbd.
+This feature requires beta access and a Python script configuration.
 
 ## Prerequisites
 
@@ -26,14 +27,14 @@ Webhook notifications provide real-time push notifications when download events 
 6. Enable the button to on
 
 <div class="hero-image-container">
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sabnzbd-light.png" class="glightbox light-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-sabnzbd-light.png" class="glightbox light-mode-only"
      data-gallery="SABnzbd Push Notifications" data-glightbox="title: SABnzbd Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sabnzbd-light.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-sabnzbd-light.png"
          alt="SABnzbd Push Notifications Light Mode" class="hero-image">
   </a>
-  <a href="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sabnzbd-dark.png" class="glightbox dark-mode-only"
+  <a href="../../assets/images/settings-notifications-push/settings-push-sabnzbd-dark.png" class="glightbox dark-mode-only"
      data-gallery="SABnzbd Push Notifications" data-glightbox="title: SABnzbd Push Notifications">
-    <img src="/OmniFetch-Wiki/assets/images/app/settings/notifications-push/settings-push-sabnzbd-dark.png"
+    <img src="../../assets/images/settings-notifications-push/settings-push-sabnzbd-dark.png"
          alt="SABnzbd Push Notifications Dark Mode" class="hero-image">
   </a>
 </div>
@@ -57,7 +58,7 @@ Webhook notifications provide real-time push notifications when download events 
 
 Download the OmniFetch webhook script:
 
-**omnifetch-webhook.py**:
+#### OmniFetch-webhook.py
 
 ```python
 #!/usr/bin/env python3
@@ -216,10 +217,10 @@ if __name__ == "__main__":
 
 ### Step 6: Configure ubRAID (Optional)
 
-1. Edit the SabNZBd contatiner
+1. Edit the SABnzbd contatiner
 2. Add a new path
 
-<img src="/OmniFetch-Wiki/assets/images/app/unraid/sabnzbd-unraid-path.png" alt="unRAID Container Path" width="600">
+<img src="../../assets/images/service-unraid/sabnzbd-unraid-path.png" alt="unRAID Container Path" width="600">
 
 ```text
 Name: SAB_NOTIFICATION_PARAMETERS
@@ -227,7 +228,7 @@ Container Path: /scripts
 Host Path: /mnt/user/appdata/sabnzbd/scripts/
 ```
 
-<img src="/OmniFetch-Wiki/assets/images/app/unraid/sabnzbd-container-scripts.png" alt="unRAID Container Scripts" width="600">
+<img src="../../assets/images/service-unraid/sabnzbd-container-scripts.png" alt="unRAID Container Scripts" width="600">
 
 ### Step 7: Configure SABnzbd
 
@@ -241,7 +242,7 @@ Host Path: /mnt/user/appdata/sabnzbd/scripts/
    - ✅ On Download Failed
    - ✅ On Queue Complete (optional)
 
-<img src="/OmniFetch-Wiki/assets/images/app/unraid/sabnzbd-folder-script.png" alt="SABnzbd Scripts Folder" width="600">
+<img src="../../assets/images/service-unraid/sabnzbd-folder-script.png" alt="SABnzbd Scripts Folder" width="600">
 
 ### Step 8: Test Notification
 
