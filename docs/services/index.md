@@ -9,21 +9,21 @@ provides real-time status monitoring, management capabilities, and push notifica
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/app/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
-| <img src="assets/images/app/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](radarr/index.md) | Movies | Library management, download tracking, health monitoring |
-| <img src="assets/images/app/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
+| <img src="../assets/images/app/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="../assets/images/app/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](radarr/index.md) | Movies | Library management, download tracking, health monitoring |
+| <img src="../assets/images/app/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
 
 ### Request Management
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
+| <img src="../assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
 
 ### Download Clients
 
 | Service | Type | Features |
 |---------|------|----------|
-| <img src="assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
+| <img src="../assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Common Configuration
 
