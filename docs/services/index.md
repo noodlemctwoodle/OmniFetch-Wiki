@@ -7,23 +7,23 @@ provides real-time status monitoring, management capabilities, and push notifica
 
 ### Download Managers
 
-| Service | Type | Status | Features |
-|---------|------|--------|----------|
-| ![Sonarr](../assets/images/app/service-icons/sonarr-logo.png){ width="24" } [Sonarr](sonarr/index.md) | TV Shows | **Supported** | Queue, Calendar, Library, Search |
-| ![Radarr](../assets/images/app/service-icons/radarr-logo.png){ width="24" } [Radarr](radarr/index.md) | Movies | **Supported** | Queue, Calendar, Library, Search |
-| ![Lidarr](../assets/images/app/service-icons/lidarr-logo.png){ width="24" } [Lidarr](lidarr/index.md) | Music | **Supported** | Queue, Calendar, Library, Search |
+| Service | Type | Features |
+|---------|------|----------|
+| <img src="assets/images/app/service-icons/sonarr-logo.png" width="32" alt="Sonarr"> [Sonarr](services/sonarr/index.md) | TV Shows | Queue monitoring, calendar view, automatic webhooks |
+| <img src="assets/images/app/service-icons/radarr-logo.png" width="32" alt="Radarr"> [Radarr](services/radarr/index.md) | Movies | Library management, download tracking, health monitoring |
+| <img src="assets/images/app/service-icons/lidarr-logo.png" width="32" alt="Lidarr"> [Lidarr](services/lidarr/index.md) | Music | Album monitoring, artist management, release tracking |
 
 ### Request Management
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![Jellyseerr](../assets/images/app/service-icons/jellyseerr-logo.png){ width="24" } [Jellyseerr](jellyseerr/index.md) | Requests | **Supported** | Requests, Approvals, Search |
+| <img src="assets/images/app/service-icons/jellyseerr-logo.png" width="32" alt="Jellyseerr"> [Jellyseerr](services/jellyseerr/index.md) | Requests | Request approval, user management, issue tracking |
 
 ### Download Clients
 
 | Service | Type | Status | Features |
 |---------|------|--------|----------|
-| ![SABnzbd](../assets/images/app/service-icons/sabnzbd-logo.png){ width="24" } [SABnzbd](sabnzbd/index.md) | Usenet | **Supported** | Queue, History, Statistics |
+| <img src="assets/images/app/service-icons/sabnzbd-logo.png" width="32" alt="SABnzbd"> [SABnzbd](services/sabnzbd/index.md) | Downloads | Queue management, completion tracking, system alerts |
 
 ## Common Configuration
 
