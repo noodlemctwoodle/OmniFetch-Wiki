@@ -4,15 +4,15 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 ## Latest Release
 
-### [Version 0.0.4 Build(273)](v0.0.4-273.md) - *September 22, 2025*
+### [Version 0.0.4 Build(273)](v0.0.4-273.md) - *September 21, 2025*
 
-## Documentation Enhancements and Visual Improvements
+## Navigation System & Infrastructure Improvements
 
-- **Enhanced**: Complete documentation reorganization with semantic asset structure
-- **Improved**: Comprehensive Radarr feature documentation with real implementation details
-- **Updated**: All service documentation to accurately reflect Swift codebase functionality
-- **Added**: CSS status badge components matching iOS app design
-- **Fixed**: Broken internal links and carousel functionality across documentation
+- **New**: Comprehensive deep link navigation system for seamless app navigation
+- **Enhanced**: Webhook infrastructure with sandbox environment and debug capabilities
+- **Improved**: Notification system with badge synchronization and deduplication
+- **Added**: Context menu functionality for media items with enhanced interactions
+- **Fixed**: Service integration issues for Radarr, Jellyseerr, and Sonarr
 
 [**View Full Release Notes →**](v0.0.4-273.md)
 
@@ -22,7 +22,7 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 | Version | Date | Highlights |
 |---------|------|------------|
-| [0.0.4 Build(273)](v0.0.4-273.md) | September 22, 2025 | Documentation enhancements, visual improvements, bug fixes |
+| [0.0.4 Build(273)](v0.0.4-273.md) | September 21, 2025 | Deep link navigation, webhook infrastructure, notification enhancements |
 | [0.0.4 Build(248)](v0.0.4-248.md) | September 8, 2025 | Infrastructure improvements, webhook enhancements, i18n framework |
 | [0.0.4 Build(239)](v0.0.4-239.md) | September 7, 2025 | Push notifications, UI redesign, performance optimisations |
 
