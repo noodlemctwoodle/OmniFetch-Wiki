@@ -4,17 +4,17 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 ## Latest Release
 
-### [Version 0.0.4 Build(248)](v0.0.4-248.md) - *September 8, 2025*
+### [Version 0.0.4 Build(273)](v0.0.4-273.md) - *September 22, 2025*
 
-## Infrastructure Improvements and Webhook Enhancements
+## Documentation Enhancements and Visual Improvements
 
-- **Enhanced**: Webhook system with improved beta password validation
-- **Modernized**: Cloudflare Worker separation and backend infrastructure
-- **Improved**: Internationalization framework with comprehensive i18n support
-- **Streamlined**: Repository structure and resource organisation
-- **Better**: Developer experience and system reliability
+- **Enhanced**: Complete documentation reorganization with semantic asset structure
+- **Improved**: Comprehensive Radarr feature documentation with real implementation details
+- **Updated**: All service documentation to accurately reflect Swift codebase functionality
+- **Added**: CSS status badge components matching iOS app design
+- **Fixed**: Broken internal links and carousel functionality across documentation
 
-[**View Full Release Notes →**](v0.0.4-248.md)
+[**View Full Release Notes →**](v0.0.4-273.md)
 
 ---
 
@@ -22,6 +22,7 @@ Welcome to the OmniFetch release notes! Here you'll find detailed information ab
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| [0.0.4 Build(273)](v0.0.4-273.md) | September 22, 2025 | Documentation enhancements, visual improvements, bug fixes |
 | [0.0.4 Build(248)](v0.0.4-248.md) | September 8, 2025 | Infrastructure improvements, webhook enhancements, i18n framework |
 | [0.0.4 Build(239)](v0.0.4-239.md) | September 7, 2025 | Push notifications, UI redesign, performance optimisations |
 

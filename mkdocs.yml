@@ -327,6 +327,7 @@ nav:
     - FAQ: troubleshooting/faq.md
   - Release Notes:
     - Latest: release-notes/index.md
+    - Build 273: release-notes/v0.0.4-273.md
     - Build 248: release-notes/v0.0.4-248.md
     - Build 239: release-notes/v0.0.4-239.md
   - Contributing:
